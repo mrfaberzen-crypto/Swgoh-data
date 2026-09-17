@@ -1,0 +1,2 @@
+# Swgoh-data
+Data
