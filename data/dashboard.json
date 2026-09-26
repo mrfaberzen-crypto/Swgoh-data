@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-09-26T10:52:48Z",
+  "refreshedAt": "2026-09-26T18:31:25Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 424,
-    "2": 36
+    "2": 28
   },
   "units": [
     {
@@ -206,7 +206,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 0,
+      "relic": 5,
       "mods": 6
     },
     {
@@ -1297,7 +1297,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "FENNECSHAND",
@@ -1378,6 +1378,16 @@
       "gear": 10,
       "relic": null,
       "mods": 1
+    },
+    {
+      "id": "GRIEVOUS",
+      "name": "General Grievous",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
     },
     {
       "id": "CHIRRUTIMWE",
@@ -1723,7 +1733,7 @@
       "id": "GEONOSIANSTARFIGHTER3",
       "name": "Geonosian Spy's Starfighter",
       "type": "Ship",
-      "stars": 2,
+      "stars": 3,
       "level": 1,
       "gear": null,
       "relic": null,
@@ -1757,7 +1767,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "JYNERSO",
