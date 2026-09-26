@@ -55,7 +55,7 @@ def dashboard(player, catalog, refreshed_at):
         base_id = unit["definitionId"].split(":")[0]
         definition = catalog.get(base_id, {})
         kind = definition.get("combatType")
-        tier = unit.get("relic", {}).get("currentTier", 0)
+        tier = (unit.get("relic") or {}).get("currentTier", 0)
         roster.append({
             "id": base_id, "name": definition.get("name", base_id),
             "type": {1: "Character", 2: "Ship"}.get(kind, "Unknown"),
