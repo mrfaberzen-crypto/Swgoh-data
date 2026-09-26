@@ -43,6 +43,8 @@ def catalog_from(game, localization):
         if name:
             catalog[base_id] = {"name": name, "combatType": unit["combatType"]}
     if not catalog:
+        print("Localization shape:", str(localization)[:1400])
+        print("Unit sample:", [{k: u.get(k) for k in ("id", "nameKey", "combatType")} for u in game["units"][:2]])
         raise ValueError("No localized units found; keeping previous data")
     return catalog
 
