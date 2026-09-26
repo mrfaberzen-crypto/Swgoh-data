@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faberzen · SWGOH roster</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101722;color:#edf2f8}
+*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:8px 0}h2{font-size:1.05rem;margin:0}
+a{color:#87caff}a.button{display:inline-block;border:1px solid #5692bd;border-radius:9px;padding:10px 14px;text-decoration:none}
+.muted{color:#a8b8ca}.eyebrow{color:#7ed6c2;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:24px 0}
+.card,.panel{background:#1b2735;border:1px solid #304055;border-radius:12px;padding:18px}
+.value{font-size:1.6rem;font-weight:750;margin:5px 0}.warning{color:#ffd28b}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}input,select{background:#111d2a;color:#fff;border:1px solid #4a5d72;border-radius:8px;padding:11px;font:inherit}input{flex:1;min-width:220px}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #304055}th{color:#a8b8ca;font-size:.8rem}tbody tr:hover{background:#243449}
+.tablewrap{overflow:auto}footer{margin:24px 0;color:#a8b8ca;font-size:.85rem}
+@media(max-width:600px){main{padding:15px}th,td{padding:10px 5px;font-size:.88rem}}
+</style>
+</head>
+<body><main>
+<header><div><div class="eyebrow">SWGOH command centre · first build</div><h1 id="name">Faberzen</h1><div class="muted" id="freshness">Loading roster…</div></div>
+<a class="button" href="https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml">Run roster refresh ↗</a></header>
+<section class="cards" aria-label="Roster summary">
+<div class="card"><div class="muted">Ally code</div><div class="value" id="ally">—</div></div>
+<div class="card"><div class="muted">Roster units</div><div class="value" id="total">—</div></div>
+<div class="card"><div class="muted">Seven star units</div><div class="value" id="seven">—</div></div>
+<div class="card"><div class="muted">Gear 13 units</div><div class="value" id="g13">—</div></div>
+<div class="card"><div class="muted">Fleet arena</div><div class="value" id="fleet">—</div></div>
+</section>
+<section class="panel"><h2>Roster</h2><p class="muted">Public account data. Search game identifiers; names will be added with localization data.</p>
+<div class="controls"><input id="search" type="search" placeholder="Search, e.g. CAPTAINREX or HOUNDSTOOTH" aria-label="Search roster"><select id="filter" aria-label="Filter roster"><option value="all">All units</option><option value="seven">Seven stars</option><option value="g13">Gear 13</option></select></div>
+<div class="muted" id="count"></div><div class="tablewrap"><table><thead><tr><th>Unit ID</th><th>Stars</th><th>Level</th><th>Gear tier*</th><th>Equipped mods</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="muted">* Raw current tier is shown for every unit; ships have different progression. Relic labels are deferred until game data is mapped.</p>
+</section><footer>This page loads the repository's latest saved Comlink response. “Run roster refresh” starts the GitHub workflow; reload this page after it completes. It does not change your game account.</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const endpoint='https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml';
+let units=[];
+function render(){
+ const term=$('search').value.trim().toUpperCase(),filter=$('filter').value;
+ const shown=units.filter(u=>u.definitionId?.toUpperCase().includes(term)&&(filter==='all'||(filter==='seven'&&u.currentRarity===7)||(filter==='g13'&&u.currentTier===13)));
+ $('count').textContent=shown.length+' of '+units.length+' units';
+ $('rows').replaceChildren(...shown.map(u=>{
+  const tr=document.createElement('tr');
+  const fields=[u.definitionId?.split(':')[0]||'Unknown',u.currentRarity??'—',u.currentLevel??'—',u.currentTier??'—',u.equippedStatMod?.length??0];
+  for(const value of fields){const td=document.createElement('td');td.textContent=String(value);tr.append(td)}
+  return tr;
+ }));
+}
+async function load(){
+ try{
+  const [p,r]=await Promise.all(['data/player.json','data/refresh.json'].map(async path=>{
+   const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error(path+' returned '+response.status);return response.json()
+  }));
+  if(!Array.isArray(p.rosterUnit)||String(p.allyCode)!=='843153117')throw Error('Unexpected roster response');
+  units=p.rosterUnit;
+  $('name').textContent=p.name||'Faberzen';$('ally').textContent=p.allyCode;
+  $('total').textContent=units.length;$('seven').textContent=units.filter(u=>u.currentRarity===7).length;
+  $('g13').textContent=units.filter(u=>u.currentTier===13).length;
+  $('fleet').textContent='#'+(p.pvpProfile?.find(x=>x.tab===2)?.rank??'—');
+  const date=new Date(r.refreshedAt),age=(Date.now()-date.getTime())/3600000;
+  $('freshness').textContent='Saved roster: '+(Number.isNaN(date.getTime())?'unknown':date.toLocaleString())+' · '+(p.guildName||'');
+  if(age>24)$('freshness').classList.add('warning');
+  render();
+ }catch(err){$('freshness').textContent='Could not load saved roster: '+err.message+' · Open the GitHub refresh action';$('freshness').classList.add('warning')}
+}
+$('search').addEventListener('input',render);$('filter').addEventListener('change',render);load();
+</script></body></html>
