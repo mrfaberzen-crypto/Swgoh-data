@@ -1,0 +1,38 @@
+import { chromium } from 'playwright';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+const data = JSON.parse(readFileSync('data/dashboard.json', 'utf8'));
+assert.ok(data.units.length > 0);
+assert.equal(data.units.filter(u => u.type === 'Unknown').length, 0, 'Missing unit definitions');
+assert.equal(data.units.filter(u => u.name === u.id).length, 0, 'Missing unit names');
+const browser = await chromium.launch({headless:true});
+const page = await browser.newPage({viewport:{width:1280,height:900}});
+const errors = [];
+page.on('pageerror', error => errors.push(error.message));
+try {
+  await page.goto('http://127.0.0.1:8000');
+  await page.waitForFunction(() => document.querySelector('#total').textContent !== '—');
+  assert.equal(await page.locator('#rows tr').count(), data.units.length);
+  await page.locator('#search').fill('Captain Rex');
+  assert.equal(await page.locator('#rows tr').count(), 1);
+  const rex = data.units.find(u => u.id === 'CAPTAINREX');
+  assert.ok((await page.locator('#rows').innerText()).includes('R' + rex.relic));
+  await page.locator('#search').fill('');
+  await page.locator('#filter').selectOption('ships');
+  assert.equal(await page.locator('#rows tr').count(), data.units.filter(u => u.type === 'Ship').length);
+  assert.equal(await page.locator('#rows tr').first().locator('td').nth(4).innerText(), '—');
+  await page.locator('#filter').selectOption('all');
+  await page.locator('#sort').selectOption('name');
+  await page.screenshot({path:'dashboard-desktop.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  await page.screenshot({path:'dashboard-mobile.png',fullPage:true});
+  assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Page overflows mobile viewport');
+  await page.locator('#search').fill('no_such_unit_999');
+  assert.equal(await page.locator('#rows tr').count(), 0);
+  assert.ok(await page.locator('#empty').isVisible());
+  await page.route('**/data/dashboard.json', route => route.fulfill({status:500,body:'error'}));
+  await page.locator('#reload').click();
+  await page.waitForFunction(() => document.querySelector('#status').textContent.includes('Keeping'));
+  assert.deepEqual(errors, []);
+  console.log('PASS: real roster, names, relics, ships, search, sort, mobile width and failed reload.');
+} finally { await browser.close(); }

@@ -6,6 +6,9 @@ on:
     paths:
       - ".github/workflows/refresh-player.yml"
       - ".github/refresh-request.txt"
+      - "scripts/**"
+      - "index.html"
+      - "app.js"
   workflow_dispatch:
   schedule:
     - cron: "17 18 * * *"
@@ -14,7 +17,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: refresh-swgoh-data
+  group: refresh-swgoh-data-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -55,14 +58,23 @@ jobs:
           cat comlink.log
           exit 1
 
-      - name: Fetch ally code 843153117
-        shell: bash
+      - name: Refresh localized roster
+        run: python3 scripts/refresh.py
+
+      - name: Check dashboard in Chromium
         run: |
-          set -euo pipefail
-          mkdir -p data
-          curl --fail --silent --show-error             --request POST             --header "Content-Type: application/json"             --data '{"payload":{"allyCode":"843153117"}}'             http://127.0.0.1:3000/player             -o data/player.json
-          jq -e '.playerId and (.rosterUnit | type == "array")' data/player.json >/dev/null
-          jq -n             --arg allyCode "843153117"             --arg refreshedAt "$(date -u +%Y-%m-%dT%H:%M:%SZ)"             '{allyCode: $allyCode, refreshedAt: $refreshedAt, source: "SWGoH Comlink"}'             > data/refresh.json
+          npm install --no-save playwright@1.58.2
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/dashboard-server.log 2>&1 &
+          node scripts/check-dashboard.mjs
+
+      - name: Save dashboard screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-screenshots
+          path: dashboard-*.png
+          if-no-files-found: ignore
 
       - name: Commit changed data
         shell: bash
@@ -70,7 +82,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/player.json data/refresh.json
+          git add data/player.json data/refresh.json data/dashboard.json data/unit-catalog.json
           if git diff --cached --quiet; then
             echo "Roster data is unchanged."
             exit 0

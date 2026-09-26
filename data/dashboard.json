@@ -1,0 +1,2063 @@
+{
+  "name": "Faberzen",
+  "allyCode": "843153117",
+  "guild": "The Secondhand Scoundrels",
+  "refreshedAt": "2026-09-26T04:22:30Z",
+  "source": "SWGoH Comlink",
+  "arena": {
+    "1": 424,
+    "2": 36
+  },
+  "units": [
+    {
+      "id": "MAGMATROOPER",
+      "name": "Magmatrooper",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "GREEFKARGA",
+      "name": "Greef Karga",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 6
+    },
+    {
+      "id": "ZEBS3",
+      "name": "Garazeb \"Zeb\" Orrelios",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "BARRISSOFFEE",
+      "name": "Barriss Offee",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "LUKESTARKILLER",
+      "name": "Starkiller (Luke Concept)",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 10,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CT210408",
+      "name": "CT-21-0408 \"Echo\"",
+      "type": "Character",
+      "stars": 6,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "COLONELSTARCK",
+      "name": "Colonel Starck",
+      "type": "Character",
+      "stars": 5,
+      "level": 1,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TIEFIGHTERFOSF",
+      "name": "First Order SF TIE Fighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "BB8",
+      "name": "BB-8",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "POGGLETHELESSER",
+      "name": "Poggle the Lesser",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "FIRSTORDERSPECIALFORCESPILOT",
+      "name": "First Order SF TIE Pilot",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "JAWASCAVENGER",
+      "name": "Jawa Scavenger",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "L3_37",
+      "name": "L3-37",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "EWOKSCOUT",
+      "name": "Ewok Scout",
+      "type": "Character",
+      "stars": 5,
+      "level": 30,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "K2SO",
+      "name": "K-2SO",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SITHTROOPER",
+      "name": "Sith Empire Trooper",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "IG86SENTINELDROID",
+      "name": "IG-86 Sentinel Droid",
+      "type": "Character",
+      "stars": 5,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "C3POCHEWBACCA",
+      "name": "Threepio & Chewie",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "KYLOREN",
+      "name": "Kylo Ren",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 1
+    },
+    {
+      "id": "DENGAR",
+      "name": "Dengar",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "TIEFIGHTERFIRSTORDER",
+      "name": "First Order TIE Fighter",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "MAGNAGUARD",
+      "name": "IG-100 MagnaGuard",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "MILLENNIUMFALCONEP7",
+      "name": "Rey's Millennium Falcon",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "FIFTHBROTHER",
+      "name": "Fifth Brother",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 2,
+      "mods": 6
+    },
+    {
+      "id": "QUIGONJINN",
+      "name": "Qui-Gon Jinn",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 0
+    },
+    {
+      "id": "ROYALGUARD",
+      "name": "Royal Guard",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "BASTILASHAN",
+      "name": "Bastila Shan",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "GEONOSIANSPY",
+      "name": "Geonosian Spy",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "JAWA",
+      "name": "Jawa",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "XWINGRESISTANCE",
+      "name": "Resistance X-wing",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "POE",
+      "name": "Poe Dameron",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "EIGHTHBROTHER",
+      "name": "Eighth Brother",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "TALIA",
+      "name": "Talia",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "NIGHTSISTERZOMBIE",
+      "name": "Nightsister Zombie",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "JEDISTARFIGHTERANAKIN",
+      "name": "Anakin's Eta-2 Starfighter",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "GRANDADMIRALTHRAWN",
+      "name": "Grand Admiral Thrawn",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SCARIFREBEL",
+      "name": "Scarif Rebel Pathfinder",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SABINEWRENS3",
+      "name": "Sabine Wren",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 6
+    },
+    {
+      "id": "PAPLOO",
+      "name": "Paploo",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "EWOKELDER",
+      "name": "Ewok Elder",
+      "type": "Character",
+      "stars": 5,
+      "level": 30,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CHIEFCHIRPA",
+      "name": "Chief Chirpa",
+      "type": "Character",
+      "stars": 2,
+      "level": 30,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "GENERALHUX",
+      "name": "General Hux",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "CT5555",
+      "name": "CT-5555 \"Fives\"",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 6
+    },
+    {
+      "id": "LUKESKYWALKER",
+      "name": "Luke Skywalker (Farmboy)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 1
+    },
+    {
+      "id": "CAPITALRADDUS",
+      "name": "Raddus",
+      "type": "Ship",
+      "stars": 4,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "GOPHERANTS",
+      "name": "Grogu & Anzellans",
+      "type": "Character",
+      "stars": 3,
+      "level": 85,
+      "gear": 12,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "YODADSV",
+      "name": "Yoda (Dark Side Vision)",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 9,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "KITFISTO",
+      "name": "Kit Fisto",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "HOUNDSTOOTH",
+      "name": "Hound's Tooth",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "ANAKINKNIGHT",
+      "name": "Jedi Knight Anakin",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "ADMINISTRATORLANDO",
+      "name": "Lando Calrissian",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "ADMIRALPIETT",
+      "name": "Admiral Piett",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "IG2000",
+      "name": "IG-2000",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "NIGHTSISTERSPIRIT",
+      "name": "Nightsister Spirit",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "XANADUBLOOD",
+      "name": "Xanadu Blood",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "CLONESERGEANTPHASEI",
+      "name": "Clone Sergeant - Phase I",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "ADMIRALACKBAR",
+      "name": "Admiral Ackbar",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "FULCRUMAHSOKA",
+      "name": "Ahsoka Tano (Fulcrum)",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "STORMTROOPER",
+      "name": "Stormtrooper",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SCORCH",
+      "name": "RC-1262 \"Scorch\"",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "LUMINARAUNDULI",
+      "name": "Luminara Unduli",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "HOTHREBELSCOUT",
+      "name": "Hoth Rebel Scout",
+      "type": "Character",
+      "stars": 6,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "GHOST",
+      "name": "Ghost",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "TIEBOMBERIMPERIAL",
+      "name": "Imperial TIE Bomber",
+      "type": "Ship",
+      "stars": 6,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "NUTEGUNRAY",
+      "name": "Nute Gunray",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "DISGUISEDCLONETROOPER",
+      "name": "Disguised Clone Trooper",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SLAVE1",
+      "name": "Slave I",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "VEERS",
+      "name": "General Veers",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 1
+    },
+    {
+      "id": "TIEADVANCED",
+      "name": "TIE Advanced x1",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "IG88",
+      "name": "IG-88",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "MILLENNIUMFALCONPRISTINE",
+      "name": "Lando's Millennium Falcon",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "EBONHAWK",
+      "name": "Ebon Hawk",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "REY",
+      "name": "Rey (Scavenger)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "BLADEOFDORIN",
+      "name": "Plo Koon's Jedi Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "DARTHNIHILUS",
+      "name": "Darth Nihilus",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "EMPERORPALPATINE",
+      "name": "Emperor Palpatine",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 6,
+      "mods": 6
+    },
+    {
+      "id": "MONMOTHMA",
+      "name": "Mon Mothma",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 0
+    },
+    {
+      "id": "PLOKOON",
+      "name": "Plo Koon",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "DAKA",
+      "name": "Old Daka",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 9,
+      "relic": null,
+      "mods": 5
+    },
+    {
+      "id": "GRANDMOFFTARKIN",
+      "name": "Grand Moff Tarkin",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 12,
+      "relic": null,
+      "mods": 2
+    },
+    {
+      "id": "LOGRAY",
+      "name": "Logray",
+      "type": "Character",
+      "stars": 2,
+      "level": 30,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "KELLERANBEQ",
+      "name": "Kelleran Beq",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "GEONOSIANSOLDIER",
+      "name": "Geonosian Soldier",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CARADUNE",
+      "name": "Cara Dune",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "CAPTAINREX",
+      "name": "Captain Rex",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "JAXXON",
+      "name": "Jaxxon",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 10,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "VULTUREDROID",
+      "name": "Vulture Droid",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "RESISTANCETROOPER",
+      "name": "Resistance Trooper",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "HK47",
+      "name": "HK-47",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TUSKENRAIDER",
+      "name": "Tusken Raider",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CASSIANANDOR",
+      "name": "Cassian Andor",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "BAZEMALBUS",
+      "name": "Baze Malbus",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CLONEWARSCHEWBACCA",
+      "name": "Clone Wars Chewbacca",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "COMMANDERLUKESKYWALKER",
+      "name": "Commander Luke Skywalker",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 6
+    },
+    {
+      "id": "B2SUPERBATTLEDROID",
+      "name": "B2 Super Battle Droid",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "DARTHSIDIOUS",
+      "name": "Darth Sidious",
+      "type": "Character",
+      "stars": 6,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "OLDBENKENOBI",
+      "name": "Obi-Wan Kenobi (Old Ben)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 6
+    },
+    {
+      "id": "KYLORENUNMASKED",
+      "name": "Kylo Ren (Unmasked)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 2
+    },
+    {
+      "id": "PAZVIZSLA",
+      "name": "Paz Vizsla",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "YOUNGLANDO",
+      "name": "Young Lando Calrissian",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "SMUGGLERHAN",
+      "name": "Veteran Smuggler Han Solo",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "THEMANDALORIAN",
+      "name": "The Mandalorian",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 2,
+      "mods": 6
+    },
+    {
+      "id": "FOSITHTROOPER",
+      "name": "Sith Trooper",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "UGNAUGHT",
+      "name": "Ugnaught",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "RANGERZEB",
+      "name": "Zeb Orrelios (New Republic Pilot)",
+      "type": "Character",
+      "stars": 3,
+      "level": 11,
+      "gear": 3,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "UMBARANSTARFIGHTER",
+      "name": "Umbaran Starfighter",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "SMUGGLERCHEWBACCA",
+      "name": "Veteran Smuggler Chewbacca",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 0
+    },
+    {
+      "id": "OPERATIVE",
+      "name": "CX-2",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "DARKTROOPER",
+      "name": "Dark Trooper",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 1
+    },
+    {
+      "id": "R2D2_LEGENDARY",
+      "name": "R2-D2",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "THEMANDALORIANBESKARARMOR",
+      "name": "The Mandalorian (Beskar Armor)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "BISHOP",
+      "name": "Colonel Ward",
+      "type": "Character",
+      "stars": 3,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CORUSCANTUNDERWORLDPOLICE",
+      "name": "Coruscant Underworld Police",
+      "type": "Character",
+      "stars": 1,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "MOTHERTALZIN",
+      "name": "Mother Talzin",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 1
+    },
+    {
+      "id": "BIGGSDARKLIGHTER",
+      "name": "Biggs Darklighter",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "CC2224",
+      "name": "CC-2224 \"Cody\"",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "NIGHTSISTERINITIATE",
+      "name": "Nightsister Initiate",
+      "type": "Character",
+      "stars": 1,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CT7567",
+      "name": "CT-7567 \"Rex\"",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 6
+    },
+    {
+      "id": "MOFFGIDEONS1",
+      "name": "Moff Gideon",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 10,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "MARAJADESKYWALKER",
+      "name": "Mara Jade Skywalker",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 9,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "ZAMWESELL",
+      "name": "Zam Wesell",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "BOUSHH",
+      "name": "Boushh (Leia Organa)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 0
+    },
+    {
+      "id": "CAPITALMONCALAMARICRUISER",
+      "name": "Home One",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "SUNFAC",
+      "name": "Sun Fac",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "LOBOT",
+      "name": "Lobot",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "REMNANTSNOWCOMMANDER",
+      "name": "Snowtrooper Commander",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 12,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TIESILENCER",
+      "name": "TIE Silencer",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "XWINGRED3",
+      "name": "Biggs Darklighter's X-wing",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "PADAWANOBIWAN",
+      "name": "Padawan Obi-Wan",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 6,
+      "mods": 0
+    },
+    {
+      "id": "FENNECSHAND",
+      "name": "Fennec Shand",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "CAPITALSTARDESTROYER",
+      "name": "Executrix",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "T3_M4",
+      "name": "T3-M4",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "XWINGRED2",
+      "name": "Wedge Antilles's X-wing",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "NINTHSISTER",
+      "name": "Ninth Sister",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "JEDISTARFIGHTERAHSOKATANO",
+      "name": "Ahsoka Tano's Jedi Starfighter",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "HOTHREBELSOLDIER",
+      "name": "Hoth Rebel Soldier",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "ASAJVENTRESS",
+      "name": "Asajj Ventress",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 10,
+      "relic": null,
+      "mods": 1
+    },
+    {
+      "id": "CHIRRUTIMWE",
+      "name": "Chirrut Îmwe",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "KANANJARRUSS3",
+      "name": "Kanan Jarrus",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "AHSOKATANO",
+      "name": "Ahsoka Tano (Snips)",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "JEDIKNIGHTCONSULAR",
+      "name": "Jedi Consular",
+      "type": "Character",
+      "stars": 5,
+      "level": 40,
+      "gear": 5,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "DIRECTORKRENNIC",
+      "name": "Director Krennic",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TIEFIGHTERIMPERIAL",
+      "name": "Imperial TIE Fighter",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "STORMTROOPERCONCEPT",
+      "name": "Stormtrooper (Concept)",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 9,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "STORMTROOPERHAN",
+      "name": "Stormtrooper Han",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 1
+    },
+    {
+      "id": "HERASYNDULLAS3",
+      "name": "Hera Syndulla",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 7,
+      "mods": 6
+    },
+    {
+      "id": "BOSSK",
+      "name": "Bossk",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "FIRSTORDEREXECUTIONER",
+      "name": "First Order Executioner",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 1
+    },
+    {
+      "id": "VADER",
+      "name": "Darth Vader",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "COUNTDOOKU",
+      "name": "Count Dooku",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "ARC170CLONESERGEANT",
+      "name": "Clone Sergeant's ARC-170",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "MAUL",
+      "name": "Darth Maul",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CHIEFNEBIT",
+      "name": "Chief Nebit",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "PUNISHINGONE",
+      "name": "Punishing One",
+      "type": "Ship",
+      "stars": 4,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "FIRSTORDERTIEPILOT",
+      "name": "First Order TIE Pilot",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "CAPITALJEDICRUISER",
+      "name": "Endurance",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "CAPITALCHIMAERA",
+      "name": "Chimaera",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "COMMANDSHUTTLE",
+      "name": "Kylo Ren's Command Shuttle",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "FIRSTORDERTROOPER",
+      "name": "First Order Stormtrooper",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "PHANTOM2",
+      "name": "Phantom II",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "GREEDO",
+      "name": "Greedo",
+      "type": "Character",
+      "stars": 5,
+      "level": 80,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CHEWBACCALEGENDARY",
+      "name": "Chewbacca",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "CHOPPERS3",
+      "name": "Chopper",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 6
+    },
+    {
+      "id": "BOBAFETT",
+      "name": "Boba Fett",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "WEDGEANTILLES",
+      "name": "Wedge Antilles",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "DEATHTROOPER",
+      "name": "Death Trooper",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 9,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CARTHONASI",
+      "name": "Carth Onasi",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "WICKET",
+      "name": "Wicket",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "GEONOSIANSTARFIGHTER2",
+      "name": "Geonosian Soldier's Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "GEONOSIANSTARFIGHTER1",
+      "name": "Sun Fac's Geonosian Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "SECONDSISTER",
+      "name": "Second Sister",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "GEONOSIANSTARFIGHTER3",
+      "name": "Geonosian Spy's Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "MACEWINDU",
+      "name": "Mace Windu",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "DATHCHA",
+      "name": "Dathcha",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "MASTERQUIGON",
+      "name": "Master Qui-Gon",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 6,
+      "mods": 0
+    },
+    {
+      "id": "JYNERSO",
+      "name": "Jyn Erso",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TEEBO",
+      "name": "Teebo",
+      "type": "Character",
+      "stars": 5,
+      "level": 30,
+      "gear": 7,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CARSONTEVA",
+      "name": "Captain Carson Teva",
+      "type": "Character",
+      "stars": 3,
+      "level": 5,
+      "gear": 2,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "XWINGBLACKONE",
+      "name": "Poe Dameron's X-wing",
+      "type": "Ship",
+      "stars": 7,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "AMILYNHOLDO",
+      "name": "Amilyn Holdo",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SITHASSASSIN",
+      "name": "Sith Assassin",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SNOWTROOPER",
+      "name": "Snowtrooper",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SHORETROOPER",
+      "name": "Shoretrooper",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "PRINCESSLEIA",
+      "name": "Princess Leia",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "FINN",
+      "name": "Finn",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "PHASMA",
+      "name": "Captain Phasma",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "CAPITALFINALIZER",
+      "name": "Finalizer",
+      "type": "Ship",
+      "stars": 4,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "EZRABRIDGERS3",
+      "name": "Ezra Bridger",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
+      "id": "R5D4",
+      "name": "R5-D4",
+      "type": "Character",
+      "stars": 3,
+      "level": 85,
+      "gear": 5,
+      "relic": null,
+      "mods": 1
+    },
+    {
+      "id": "JEDISTARFIGHTERCONSULAR",
+      "name": "Jedi Consular's Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "FIRSTORDEROFFICERMALE",
+      "name": "First Order Officer",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "DARTHJARJAR",
+      "name": "Darth Jar Jar",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 12,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "AAYLASECURA",
+      "name": "Aayla Secura",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "YWINGREBEL",
+      "name": "Rebel Y-wing",
+      "type": "Ship",
+      "stars": 5,
+      "level": 85,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
+      "id": "SEVENTHSISTER",
+      "name": "Seventh Sister",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 6
+    },
+    {
+      "id": "RESISTANCEPILOT",
+      "name": "Resistance Pilot",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "KUIIL",
+      "name": "Kuiil",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "JEDIKNIGHTGUARDIAN",
+      "name": "Jedi Knight Guardian",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "CADBANE",
+      "name": "Cad Bane",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
+      "id": "TIEFIGHTERPILOT",
+      "name": "TIE Fighter Pilot",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 6
+    },
+    {
+      "id": "GRANDMASTERYODA",
+      "name": "Grand Master Yoda",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 6
+    },
+    {
+      "id": "IG12",
+      "name": "IG-12 & Grogu",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SHAAKTI",
+      "name": "Shaak Ti",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "IG11",
+      "name": "IG-11",
+      "type": "Character",
+      "stars": 7,
+      "level": 85,
+      "gear": 13,
+      "relic": 0,
+      "mods": 6
+    },
+    {
+      "id": "BISTAN",
+      "name": "Bistan",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    }
+  ]
+}

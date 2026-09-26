@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Faberzen · SWGOH roster</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#101722;color:#edf2f8}
+*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:8px 0}h2{font-size:1.05rem;margin:0}
+a{color:#87caff}a.button{display:inline-block;border:1px solid #5692bd;border-radius:9px;padding:10px 14px;text-decoration:none}
+.muted{color:#a8b8ca}.eyebrow{color:#7ed6c2;letter-spacing:.1em;text-transform:uppercase;font-size:.72rem;font-weight:700}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin:24px 0}
+.card,.panel{background:#1b2735;border:1px solid #304055;border-radius:12px;padding:18px}
+.value{font-size:1.6rem;font-weight:750;margin:5px 0}.warning{color:#ffd28b}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}button{font:inherit;background:#76d4bc;color:#11251f;border:0;border-radius:9px;padding:11px 14px;cursor:pointer}button:disabled{opacity:.5}input,select{background:#111d2a;color:#fff;border:1px solid #4a5d72;border-radius:8px;padding:11px;font:inherit}input{flex:1;min-width:220px}
+table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #304055}th{color:#a8b8ca;font-size:.8rem}tbody tr:hover{background:#243449}
+.tablewrap{overflow:auto}footer{margin:24px 0;color:#a8b8ca;font-size:.85rem}
+@media(max-width:600px){main{padding:15px}th,td{padding:10px 5px;font-size:.88rem}}
+#ally{font-size:1.15rem;letter-spacing:.02em}header>div:last-child{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:600px){th:nth-child(2),td:nth-child(2),th:nth-child(6),td:nth-child(6){display:none}th:first-child{width:44%}}
+</style>
+</head>
+<body><main>
+<header><div><div class="eyebrow">SWGOH command centre</div><h1 id="name">Faberzen</h1><div class="muted" id="guild"></div><div class="muted" id="freshness">Loading roster…</div></div>
+<div><button id="reload" type="button">Reload saved roster</button> <a class="button" href="https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml">Run roster refresh ↗</a></div></header><p id="status" class="warning" role="status"></p>
+<section class="cards" aria-label="Roster summary">
+<div class="card"><div class="muted">Ally code</div><div class="value" id="ally">—</div></div>
+<div class="card"><div class="muted">Roster units</div><div class="value" id="total">—</div></div>
+<div class="card"><div class="muted">Seven star units</div><div class="value" id="seven">—</div></div>
+<div class="card"><div class="muted">Gear 13 units</div><div class="value" id="g13">—</div></div>
+<div class="card"><div class="muted">Fleet arena</div><div class="value" id="fleet">—</div></div>
+</section>
+<section class="panel"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
+<div class="controls"><input id="search" type="search" placeholder="Search characters or ships…" aria-label="Search roster"><select id="filter" aria-label="Filter roster"><option value="all">All units</option><option value="characters">Characters</option><option value="ships">Ships</option><option value="seven">Seven stars</option><option value="relic">Relic characters</option></select><select id="sort" aria-label="Sort roster"><option value="progress">Upgrade level</option><option value="name">Name</option><option value="stars">Stars</option></select></div>
+<div class="muted" id="count"></div><div class="tablewrap"><table><thead><tr><th>Unit</th><th>Type</th><th>Stars</th><th>Level</th><th>Gear / relic</th><th>Equipped mods</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p id="empty" hidden>No units match these filters.</p>
+</section><footer>Public roster snapshot · Updated daily. To fetch from the game now, open “Run roster refresh”, choose “Run workflow” in GitHub, then reload here after it finishes.</footer>
+</main>
+<script src="app.js" defer></script></body></html>
