@@ -17,23 +17,23 @@ def post(path, body):
         return json.load(response)
 
 
-def string_values(value):
-    """Flatten the requested English bundle's string leaves, across wrappers."""
-    result = {}
-    if isinstance(value, dict):
-        for key, item in value.items():
-            if isinstance(item, str):
-                result[key] = item
-            elif isinstance(item, (dict, list)):
-                result.update(string_values(item))
-    elif isinstance(value, list):
-        for item in value:
-            result.update(string_values(item))
-    return result
+def english_names(localization):
+    """Comlink unzip=True returns {filename: pipe-delimited text}."""
+    bundle = localization.get("Loc_ENG_US.txt")
+    if not isinstance(bundle, str):
+        raise ValueError("Missing English localization text bundle")
+    names = {}
+    for line in bundle.splitlines():
+        if line.startswith("#"):
+            continue
+        key, separator, value = line.partition("|")
+        if separator:
+            names[key.strip()] = value.strip()
+    return names
 
 
 def catalog_from(game, localization):
-    names = string_values(localization)
+    names = english_names(localization)
     catalog = {}
     for unit in game["units"]:
         base_id = unit.get("baseId") or unit["id"].split(":")[0]
@@ -43,8 +43,6 @@ def catalog_from(game, localization):
         if name:
             catalog[base_id] = {"name": name, "combatType": unit["combatType"]}
     if not catalog:
-        print("Localization shape:", str(localization)[:1400])
-        print("Unit sample:", [{k: u.get(k) for k in ("id", "nameKey", "combatType")} for u in game["units"][:2]])
         raise ValueError("No localized units found; keeping previous data")
     return catalog
 
