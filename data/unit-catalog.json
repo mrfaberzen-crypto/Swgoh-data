@@ -1,0 +1,2096 @@
+{
+  "versions": {
+    "latestGamedataVersion": "0.40.5:lVXov90TSkStiap2_qnJUA",
+    "latestLocalizationBundleVersion": "E3aqI4ZeRTKSnb13r4UYzg"
+  },
+  "units": {
+    "BADBATCHECHO": {
+      "name": "Echo",
+      "combatType": 1
+    },
+    "GREEDO": {
+      "name": "Greedo",
+      "combatType": 1
+    },
+    "GRANDINQUISITOR": {
+      "name": "Grand Inquisitor",
+      "combatType": 1
+    },
+    "BB8": {
+      "name": "BB-8",
+      "combatType": 1
+    },
+    "GEONOSIANSTARFIGHTER2": {
+      "name": "Geonosian Soldier's Starfighter",
+      "combatType": 2
+    },
+    "YWINGREBEL": {
+      "name": "Rebel Y-wing",
+      "combatType": 2
+    },
+    "BRUTUS": {
+      "name": "Brutus",
+      "combatType": 1
+    },
+    "FIRSTORDERTIEPILOT": {
+      "name": "First Order TIE Pilot",
+      "combatType": 1
+    },
+    "UGNAUGHT": {
+      "name": "Ugnaught",
+      "combatType": 1
+    },
+    "HOTHREBELSOLDIER": {
+      "name": "Hoth Rebel Soldier",
+      "combatType": 1
+    },
+    "EMPERORSSHUTTLE": {
+      "name": "Emperor's Shuttle",
+      "combatType": 2
+    },
+    "EZRABRIDGERS3_GLE_INHERIT": {
+      "name": "[c][/c]\"Jabba the Hutt\"",
+      "combatType": 1
+    },
+    "QUIGONJINN": {
+      "name": "Qui-Gon Jinn",
+      "combatType": 1
+    },
+    "GEONOSIANSTARFIGHTER3": {
+      "name": "Geonosian Spy's Starfighter",
+      "combatType": 2
+    },
+    "JYNERSO": {
+      "name": "Jyn Erso",
+      "combatType": 1
+    },
+    "BARRISSOFFEE": {
+      "name": "Barriss Offee",
+      "combatType": 1
+    },
+    "BWINGREBEL": {
+      "name": "Rebel B-wing",
+      "combatType": 2
+    },
+    "ADMIRALACKBAR": {
+      "name": "Admiral Ackbar",
+      "combatType": 1
+    },
+    "CHEWBACCALEGENDARY": {
+      "name": "Chewbacca",
+      "combatType": 1
+    },
+    "HONDO": {
+      "name": "Hondo Ohnaka",
+      "combatType": 1
+    },
+    "DIRECTORKRENNIC": {
+      "name": "Director Krennic",
+      "combatType": 1
+    },
+    "CAPITALEXECUTOR": {
+      "name": "Executor",
+      "combatType": 2
+    },
+    "JEDIKNIGHTLUKE_GLE_INHERIT": {
+      "name": "Jedi Knight Luke Skywalker",
+      "combatType": 1
+    },
+    "EPIXPOE": {
+      "name": "Resistance Hero Poe",
+      "combatType": 1
+    },
+    "MACEWINDU": {
+      "name": "Mace Windu",
+      "combatType": 1
+    },
+    "ROSETICO": {
+      "name": "Rose Tico",
+      "combatType": 1
+    },
+    "DARTHJARJAR": {
+      "name": "Darth Jar Jar",
+      "combatType": 1
+    },
+    "EWOKELDER": {
+      "name": "Ewok Elder",
+      "combatType": 1
+    },
+    "GEONOSIANSTARFIGHTER1": {
+      "name": "Sun Fac's Geonosian Starfighter",
+      "combatType": 2
+    },
+    "DEPABILLABA": {
+      "name": "Depa Billaba",
+      "combatType": 1
+    },
+    "AMILYNHOLDO": {
+      "name": "Amilyn Holdo",
+      "combatType": 1
+    },
+    "CAPITALCHIMAERA": {
+      "name": "Chimaera",
+      "combatType": 2
+    },
+    "QUEENAMIDALA": {
+      "name": "Queen Amidala",
+      "combatType": 1
+    },
+    "CARSONTEVA": {
+      "name": "Captain Carson Teva",
+      "combatType": 1
+    },
+    "PADAWANSABINE": {
+      "name": "Padawan Sabine Wren",
+      "combatType": 1
+    },
+    "JABBATHEHUTT": {
+      "name": "Jabba the Hutt",
+      "combatType": 1
+    },
+    "ARCTROOPER501ST": {
+      "name": "ARC Trooper",
+      "combatType": 1
+    },
+    "OUTRIDER": {
+      "name": "Outrider",
+      "combatType": 2
+    },
+    "AMILYNHOLDO_RADDUS": {
+      "name": "Amilyn Holdo",
+      "combatType": 1
+    },
+    "EBONHAWK": {
+      "name": "Ebon Hawk",
+      "combatType": 2
+    },
+    "CORUSCANTUNDERWORLDPOLICE": {
+      "name": "Coruscant Underworld Police",
+      "combatType": 1
+    },
+    "CLONEVETERAN212_GLE": {
+      "name": "212th Veteran",
+      "combatType": 1
+    },
+    "BIGGSDARKLIGHTER": {
+      "name": "Biggs Darklighter",
+      "combatType": 1
+    },
+    "PRINCESSKNEESAA_SPEEDERBIKERAID": {
+      "name": "Princess Kneesaa",
+      "combatType": 1
+    },
+    "CAPTAINREX_SPEEDERBIKERAID": {
+      "name": "Captain Rex",
+      "combatType": 1
+    },
+    "CLONETROOPERP2FORESTSCOUT_V2": {
+      "name": "Clone Scout Trooper",
+      "combatType": 1
+    },
+    "MERRIN": {
+      "name": "Merrin",
+      "combatType": 1
+    },
+    "IG90": {
+      "name": "IG-90",
+      "combatType": 1
+    },
+    "EPIXFINN": {
+      "name": "Resistance Hero Finn",
+      "combatType": 1
+    },
+    "GEONOSIANSPY": {
+      "name": "Geonosian Spy",
+      "combatType": 1
+    },
+    "LUMINARAUNDULI": {
+      "name": "Luminara Unduli",
+      "combatType": 1
+    },
+    "UNDERCOVERLANDO": {
+      "name": "Skiff Guard (Lando Calrissian)",
+      "combatType": 1
+    },
+    "OMEGAS3": {
+      "name": "Omega (Fugitive)",
+      "combatType": 1
+    },
+    "GRIEVOUS_MARQUEE": {
+      "name": "General Grievous",
+      "combatType": 1
+    },
+    "LOBOT": {
+      "name": "Lobot",
+      "combatType": 1
+    },
+    "STARKILLER": {
+      "name": "Starkiller",
+      "combatType": 1
+    },
+    "SNOWTROOPER_JGEVENT": {
+      "name": "Snowtrooper",
+      "combatType": 1
+    },
+    "XWINGRESISTANCE": {
+      "name": "Resistance X-wing",
+      "combatType": 2
+    },
+    "MAJORPARTAGAZ": {
+      "name": "Major Partagaz",
+      "combatType": 1
+    },
+    "BLADEOFDORIN": {
+      "name": "Plo Koon's Jedi Starfighter",
+      "combatType": 2
+    },
+    "GRIEVOUS": {
+      "name": "General Grievous",
+      "combatType": 1
+    },
+    "BAYLANSKOLL": {
+      "name": "Baylan Skoll",
+      "combatType": 1
+    },
+    "INQUISITORBARRISS": {
+      "name": "Inquisitor Barriss",
+      "combatType": 1
+    },
+    "EMBO": {
+      "name": "Embo",
+      "combatType": 1
+    },
+    "CAPITALNEGOTIATOR": {
+      "name": "Negotiator",
+      "combatType": 2
+    },
+    "BADBATCHWRECKER": {
+      "name": "Wrecker",
+      "combatType": 1
+    },
+    "GLLEIA": {
+      "name": "Leia Organa",
+      "combatType": 1
+    },
+    "GRANDMASTERYODA": {
+      "name": "Grand Master Yoda",
+      "combatType": 1
+    },
+    "GLHONDO_GLE_INHERIT": {
+      "name": "Pirate King Hondo Ohnaka",
+      "combatType": 1
+    },
+    "CAPITALRADDUS_EVENT": {
+      "name": "Raddus",
+      "combatType": 2
+    },
+    "DEATHTROOPERPERIDEA": {
+      "name": "Death Trooper (Peridea)",
+      "combatType": 1
+    },
+    "PLOKOON": {
+      "name": "Plo Koon",
+      "combatType": 1
+    },
+    "FIRSTORDERSPECIALFORCESPILOT": {
+      "name": "First Order SF TIE Pilot",
+      "combatType": 1
+    },
+    "LOGRAY_SPEEDERBIKERAID": {
+      "name": "Logray",
+      "combatType": 1
+    },
+    "COLONELSTARCK": {
+      "name": "Colonel Starck",
+      "combatType": 1
+    },
+    "MILLENNIUMFALCONPRISTINE": {
+      "name": "Lando's Millennium Falcon",
+      "combatType": 2
+    },
+    "DARKREY": {
+      "name": "Rey (Dark Side Vision)",
+      "combatType": 1
+    },
+    "JOLEEBINDO": {
+      "name": "Jolee Bindo",
+      "combatType": 1
+    },
+    "RAVENSCLAW": {
+      "name": "Raven's Claw",
+      "combatType": 2
+    },
+    "FIRSTORDERTIEECHELON": {
+      "name": "TIE Echelon",
+      "combatType": 2
+    },
+    "JEDIMASTERKENOBI_GLE_INHERIT": {
+      "name": "Jedi Master Kenobi",
+      "combatType": 1
+    },
+    "NIGHTSISTERSPIRIT": {
+      "name": "Nightsister Spirit",
+      "combatType": 1
+    },
+    "JAWA": {
+      "name": "Jawa",
+      "combatType": 1
+    },
+    "PRINCESSLEIA_GLE_INHERIT": {
+      "name": "Huttslayer Leia",
+      "combatType": 1
+    },
+    "SCARIFREBEL": {
+      "name": "Scarif Rebel Pathfinder",
+      "combatType": 1
+    },
+    "WEDGEANTILLES_SPEEDERBIKERAID": {
+      "name": "Wedge Antilles",
+      "combatType": 1
+    },
+    "MORGANELSBETH": {
+      "name": "Morgan Elsbeth",
+      "combatType": 1
+    },
+    "CT7567_GLE_INHERIT": {
+      "name": "501st Captain",
+      "combatType": 1
+    },
+    "KELLERANBEQ": {
+      "name": "Kelleran Beq",
+      "combatType": 1
+    },
+    "ZAALBAR": {
+      "name": "Zaalbar",
+      "combatType": 1
+    },
+    "SCYTHE": {
+      "name": "Scythe",
+      "combatType": 2
+    },
+    "COMMANDERLUKESKYWALKER_JKL_EVENT": {
+      "name": "Commander Luke Skywalker",
+      "combatType": 1
+    },
+    "COMMANDERLUKESKYWALKER": {
+      "name": "Commander Luke Skywalker",
+      "combatType": 1
+    },
+    "PUNISHINGONE": {
+      "name": "Punishing One",
+      "combatType": 2
+    },
+    "NIGHTSISTERINITIATE": {
+      "name": "Nightsister Initiate",
+      "combatType": 1
+    },
+    "KYLOREN_DUEL": {
+      "name": "Supreme Leader Kylo Ren",
+      "combatType": 1
+    },
+    "HANSOLO": {
+      "name": "Han Solo",
+      "combatType": 1
+    },
+    "TIEFIGHTERFIRSTORDER": {
+      "name": "First Order TIE Fighter",
+      "combatType": 2
+    },
+    "YWINGCLONEWARS": {
+      "name": "BTL-B Y-wing Starfighter",
+      "combatType": 2
+    },
+    "HK47": {
+      "name": "HK-47",
+      "combatType": 1
+    },
+    "CT7567": {
+      "name": "CT-7567 \"Rex\"",
+      "combatType": 1
+    },
+    "DARKTROOPER": {
+      "name": "Dark Trooper",
+      "combatType": 1
+    },
+    "ARC170REX": {
+      "name": "Rex's ARC-170",
+      "combatType": 2
+    },
+    "DOCTORAPHRA": {
+      "name": "Doctor Aphra",
+      "combatType": 1
+    },
+    "VEERS_SPEEDERBIKERAID": {
+      "name": "General Veers",
+      "combatType": 1
+    },
+    "TRIPLEZERO": {
+      "name": "0-0-0",
+      "combatType": 1
+    },
+    "OPERATIVE": {
+      "name": "CX-2",
+      "combatType": 1
+    },
+    "GLREY": {
+      "name": "Rey",
+      "combatType": 1
+    },
+    "MISSIONVAO": {
+      "name": "Mission Vao",
+      "combatType": 1
+    },
+    "CHEWBACCALEGENDARY_JKL_EVENT": {
+      "name": "Chewbacca",
+      "combatType": 1
+    },
+    "COMMANDERAHSOKA": {
+      "name": "Commander Ahsoka Tano",
+      "combatType": 1
+    },
+    "JEDISTARFIGHTERCONSULAR": {
+      "name": "Jedi Consular's Starfighter",
+      "combatType": 2
+    },
+    "BADBATCHHUNTER": {
+      "name": "Hunter",
+      "combatType": 1
+    },
+    "AHSOKATANO": {
+      "name": "Ahsoka Tano (Snips)",
+      "combatType": 1
+    },
+    "TEEBO_SPEEDERBIKERAID": {
+      "name": "Teebo",
+      "combatType": 1
+    },
+    "DARTHMALGUS": {
+      "name": "Darth Malgus",
+      "combatType": 1
+    },
+    "50RT": {
+      "name": "50R-T",
+      "combatType": 1
+    },
+    "WATTAMBOR": {
+      "name": "Wat Tambor",
+      "combatType": 1
+    },
+    "AWAKENEDREY": {
+      "name": "Rey",
+      "combatType": 1
+    },
+    "CARADUNE": {
+      "name": "Cara Dune",
+      "combatType": 1
+    },
+    "4LOM": {
+      "name": "4-LOM",
+      "combatType": 1
+    },
+    "C3POLEGENDARY_SPEEDERBIKERAID": {
+      "name": "C-3PO",
+      "combatType": 1
+    },
+    "BADBATCHHUNTER_GLE": {
+      "name": "Hunter",
+      "combatType": 1
+    },
+    "JAXXON": {
+      "name": "Jaxxon",
+      "combatType": 1
+    },
+    "JAWAENGINEER": {
+      "name": "Jawa Engineer",
+      "combatType": 1
+    },
+    "ARMORER": {
+      "name": "The Armorer",
+      "combatType": 1
+    },
+    "LOGRAY": {
+      "name": "Logray",
+      "combatType": 1
+    },
+    "ZAMWESELL": {
+      "name": "Zam Wesell",
+      "combatType": 1
+    },
+    "SMUGGLERHAN": {
+      "name": "Veteran Smuggler Han Solo",
+      "combatType": 1
+    },
+    "MAZKANATA": {
+      "name": "Maz Kanata",
+      "combatType": 1
+    },
+    "URORRURRR": {
+      "name": "URoRRuR'R'R",
+      "combatType": 1
+    },
+    "DISGUISEDCLONETROOPER": {
+      "name": "Disguised Clone Trooper",
+      "combatType": 1
+    },
+    "BOBAFETTSCION": {
+      "name": "Boba Fett, Scion of Jango",
+      "combatType": 1
+    },
+    "JARJARBINKS_EVENT": {
+      "name": "Jar Jar Binks",
+      "combatType": 1
+    },
+    "REYJEDITRAINING_GLEVENT": {
+      "name": "Rey",
+      "combatType": 1
+    },
+    "ZUCKUSS": {
+      "name": "Zuckuss",
+      "combatType": 1
+    },
+    "NIKTOTHUG_GLE_INHERIT": {
+      "name": "Nikto Thug",
+      "combatType": 1
+    },
+    "EZRAEXILE": {
+      "name": "Ezra Bridger (Exile)",
+      "combatType": 1
+    },
+    "SCOUTTROOPER_V3_SPEEDERBIKERAID": {
+      "name": "Scout Trooper",
+      "combatType": 1
+    },
+    "DARTHMALAK": {
+      "name": "Darth Malak",
+      "combatType": 1
+    },
+    "ANAKINKNIGHT": {
+      "name": "Jedi Knight Anakin",
+      "combatType": 1
+    },
+    "DARTHNIHILUS": {
+      "name": "Darth Nihilus",
+      "combatType": 1
+    },
+    "MARAJADESKYWALKER": {
+      "name": "Mara Jade Skywalker",
+      "combatType": 1
+    },
+    "GAUNTLETSTARFIGHTER": {
+      "name": "Gauntlet Starfighter",
+      "combatType": 2
+    },
+    "CHEWBACCALEGENDARY_SPEEDERBIKERAID": {
+      "name": "Chewbacca",
+      "combatType": 1
+    },
+    "L3_37": {
+      "name": "L3-37",
+      "combatType": 1
+    },
+    "BOOMADIER": {
+      "name": "Gungan Boomadier",
+      "combatType": 1
+    },
+    "SCORCH": {
+      "name": "RC-1262 \"Scorch\"",
+      "combatType": 1
+    },
+    "ZORIIBLISS_V2": {
+      "name": "Zorii Bliss",
+      "combatType": 1
+    },
+    "YOUNGLANDO": {
+      "name": "Young Lando Calrissian",
+      "combatType": 1
+    },
+    "CLONETROOPERP2FORESTSCOUT": {
+      "name": "Clone Scout Trooper",
+      "combatType": 1
+    },
+    "GREEFKARGA": {
+      "name": "Greef Karga",
+      "combatType": 1
+    },
+    "DEATHTROOPER": {
+      "name": "Death Trooper",
+      "combatType": 1
+    },
+    "MOTHERTALZIN": {
+      "name": "Mother Talzin",
+      "combatType": 1
+    },
+    "HOUNDSTOOTH": {
+      "name": "Hound's Tooth",
+      "combatType": 2
+    },
+    "UWINGROGUEONE": {
+      "name": "Cassian's U-wing",
+      "combatType": 2
+    },
+    "MONMOTHMA": {
+      "name": "Mon Mothma",
+      "combatType": 1
+    },
+    "MILLENNIUMFALCONEP7": {
+      "name": "Rey's Millennium Falcon",
+      "combatType": 2
+    },
+    "POE": {
+      "name": "Poe Dameron",
+      "combatType": 1
+    },
+    "GLE_AWAKENEDREY": {
+      "name": "Rey",
+      "combatType": 1
+    },
+    "GRANDADMIRALTHRAWN": {
+      "name": "Grand Admiral Thrawn",
+      "combatType": 1
+    },
+    "STORMTROOPER": {
+      "name": "Stormtrooper",
+      "combatType": 1
+    },
+    "WICKET_SPEEDERBIKERAID": {
+      "name": "Wicket",
+      "combatType": 1
+    },
+    "MAGMATROOPER_SPEEDERBIKERAID": {
+      "name": "Magmatrooper",
+      "combatType": 1
+    },
+    "MG100STARFORTRESSSF17": {
+      "name": "MG-100 StarFortress SF-17",
+      "combatType": 2
+    },
+    "CLONEWARSCHEWBACCA": {
+      "name": "Clone Wars Chewbacca",
+      "combatType": 1
+    },
+    "ARC170CLONESERGEANT": {
+      "name": "Clone Sergeant's ARC-170",
+      "combatType": 2
+    },
+    "ITHANO": {
+      "name": "Captain Ithano",
+      "combatType": 1
+    },
+    "GENERALKENOBI_GLE_INHERIT": {
+      "name": "General Kenobi",
+      "combatType": 1
+    },
+    "GENERALSKYWALKER_GLE_INHERIT": {
+      "name": "General Skywalker",
+      "combatType": 1
+    },
+    "CC2224_GLE_INHERIT": {
+      "name": "CC-2224 \"Cody\"",
+      "combatType": 1
+    },
+    "SITHPALPATINE": {
+      "name": "Sith Eternal Emperor",
+      "combatType": 1
+    },
+    "OLDBENKENOBI": {
+      "name": "Obi-Wan Kenobi (Old Ben)",
+      "combatType": 1
+    },
+    "WICKET": {
+      "name": "Wicket",
+      "combatType": 1
+    },
+    "GLAHSOKATANO": {
+      "name": "Ahsoka Tano",
+      "combatType": 1
+    },
+    "HERASYNDULLAS3": {
+      "name": "Hera Syndulla",
+      "combatType": 1
+    },
+    "BT1": {
+      "name": "BT-1",
+      "combatType": 1
+    },
+    "TUSKENCHIEFTAIN": {
+      "name": "Tusken Chieftain",
+      "combatType": 1
+    },
+    "HOTHLEIA_JKL_EVENT": {
+      "name": "Rebel Officer Leia Organa (Bespin)",
+      "combatType": 1
+    },
+    "TIEBOMBERIMPERIAL": {
+      "name": "Imperial TIE Bomber",
+      "combatType": 2
+    },
+    "BOBAFETT": {
+      "name": "Boba Fett",
+      "combatType": 1
+    },
+    "PADAWANOBIWAN": {
+      "name": "Padawan Obi-Wan",
+      "combatType": 1
+    },
+    "YODADSV": {
+      "name": "Yoda (Dark Side Vision)",
+      "combatType": 1
+    },
+    "HERASYNDULLAS3_SPEEDERBIKERAID": {
+      "name": "Hera Syndulla",
+      "combatType": 1
+    },
+    "BOBAFETT_GLE_INHERIT": {
+      "name": "Boba Fett",
+      "combatType": 1
+    },
+    "R5D4": {
+      "name": "R5-D4",
+      "combatType": 1
+    },
+    "TUSKENSHAMAN": {
+      "name": "Tusken Shaman",
+      "combatType": 1
+    },
+    "LORDVADER_GLE": {
+      "name": "Lord Vader",
+      "combatType": 1
+    },
+    "MOFFGIDEONS1": {
+      "name": "Moff Gideon",
+      "combatType": 1
+    },
+    "SUPREMELEADERKYLOREN": {
+      "name": "Supreme Leader Kylo Ren",
+      "combatType": 1
+    },
+    "COMEUPPANCE": {
+      "name": "Comeuppance",
+      "combatType": 2
+    },
+    "CANDEROUSORDO": {
+      "name": "Canderous Ordo",
+      "combatType": 1
+    },
+    "CALKESTIS": {
+      "name": "Cal Kestis",
+      "combatType": 1
+    },
+    "KLEYA": {
+      "name": "Kleya Marki",
+      "combatType": 1
+    },
+    "FIRSTORDEROFFICERMALE": {
+      "name": "First Order Officer",
+      "combatType": 1
+    },
+    "HANSOLO_GL_EVENT": {
+      "name": "Han Solo",
+      "combatType": 1
+    },
+    "SNOWTROOPER": {
+      "name": "Snowtrooper",
+      "combatType": 1
+    },
+    "MOFFGIDEONS3": {
+      "name": "Dark Trooper Moff Gideon",
+      "combatType": 1
+    },
+    "SM33": {
+      "name": "SM-33",
+      "combatType": 1
+    },
+    "CC2224": {
+      "name": "CC-2224 \"Cody\"",
+      "combatType": 1
+    },
+    "ZEBS3": {
+      "name": "Garazeb \"Zeb\" Orrelios",
+      "combatType": 1
+    },
+    "MAGNAGUARD": {
+      "name": "IG-100 MagnaGuard",
+      "combatType": 1
+    },
+    "CAPITALMALEVOLENCE": {
+      "name": "Malevolence",
+      "combatType": 2
+    },
+    "YOUNGHAN": {
+      "name": "Young Han Solo",
+      "combatType": 1
+    },
+    "JUHANI": {
+      "name": "Juhani",
+      "combatType": 1
+    },
+    "CARTHONASI": {
+      "name": "Carth Onasi",
+      "combatType": 1
+    },
+    "KYLEKATARN": {
+      "name": "Kyle Katarn",
+      "combatType": 1
+    },
+    "SITHFIGHTER": {
+      "name": "Sith Fighter",
+      "combatType": 2
+    },
+    "KXSECURITYDROID": {
+      "name": "KX Security Droid",
+      "combatType": 1
+    },
+    "COBBVANTH": {
+      "name": "Cobb Vanth",
+      "combatType": 1
+    },
+    "BOSSK": {
+      "name": "Bossk",
+      "combatType": 1
+    },
+    "GENERALHUX": {
+      "name": "General Hux",
+      "combatType": 1
+    },
+    "ADMIRALACKBAR_SPEEDERBIKERAID": {
+      "name": "Admiral Ackbar",
+      "combatType": 1
+    },
+    "CARADUNE_MANDALORIAN_EVENT": {
+      "name": "Cara Dune",
+      "combatType": 1
+    },
+    "DASHRENDAR": {
+      "name": "Dash Rendar",
+      "combatType": 1
+    },
+    "VEERS": {
+      "name": "General Veers",
+      "combatType": 1
+    },
+    "THEMANDALORIAN": {
+      "name": "The Mandalorian",
+      "combatType": 1
+    },
+    "UMBARANSTARFIGHTER": {
+      "name": "Umbaran Starfighter",
+      "combatType": 2
+    },
+    "TRENCH": {
+      "name": "Admiral Trench",
+      "combatType": 1
+    },
+    "DEATHTROOPER_SPEEDERBIKERAID": {
+      "name": "Death Trooper",
+      "combatType": 1
+    },
+    "FIRSTORDERTROOPER": {
+      "name": "First Order Stormtrooper",
+      "combatType": 1
+    },
+    "C3POLEGENDARY_JKL_EVENT": {
+      "name": "C-3PO",
+      "combatType": 1
+    },
+    "CT5555_GLE_INHERIT": {
+      "name": "501st Veteran",
+      "combatType": 1
+    },
+    "JEDIKNIGHTLUKE": {
+      "name": "Jedi Knight Luke Skywalker",
+      "combatType": 1
+    },
+    "CAPTAINENOCH": {
+      "name": "Captain Enoch",
+      "combatType": 1
+    },
+    "TUSKENHUNTRESS": {
+      "name": "Tusken Warrior",
+      "combatType": 1
+    },
+    "SEVENTHSISTER": {
+      "name": "Seventh Sister",
+      "combatType": 1
+    },
+    "DARTHTALON": {
+      "name": "Darth Talon",
+      "combatType": 1
+    },
+    "KRRSANTAN": {
+      "name": "Krrsantan",
+      "combatType": 1
+    },
+    "MARAJADE": {
+      "name": "Mara Jade, The Emperor's Hand",
+      "combatType": 1
+    },
+    "ASAJVENTRESS_BOUNTYHUNTER": {
+      "name": "Asajj Ventress",
+      "combatType": 1
+    },
+    "NIGHTSISTERZOMBIE": {
+      "name": "Nightsister Zombie",
+      "combatType": 1
+    },
+    "BAZEMALBUS": {
+      "name": "Baze Malbus",
+      "combatType": 1
+    },
+    "MILLENNIUMFALCON": {
+      "name": "Han's Millennium Falcon",
+      "combatType": 2
+    },
+    "EMBOANDKEIBU": {
+      "name": "Embo & Keibu",
+      "combatType": 1
+    },
+    "GLAHSOKATANO_GLE_INHERIT": {
+      "name": "Ahsoka Tano",
+      "combatType": 1
+    },
+    "GENERALKENOBI": {
+      "name": "General Kenobi",
+      "combatType": 1
+    },
+    "KXSECURITYDROID_JGEVENT_2": {
+      "name": "KX Security Droid",
+      "combatType": 1
+    },
+    "CT210408_GLE_INHERIT": {
+      "name": "501st Clone Trooper",
+      "combatType": 1
+    },
+    "QIRA": {
+      "name": "Qi'ra",
+      "combatType": 1
+    },
+    "TIEFIGHTERPILOT": {
+      "name": "TIE Fighter Pilot",
+      "combatType": 1
+    },
+    "KXSECURITYDROID_JGEVENT_1": {
+      "name": "KX Security Droid",
+      "combatType": 1
+    },
+    "GLHONDO_GLE_INHERIT_NOULT": {
+      "name": "Pirate King Hondo Ohnaka",
+      "combatType": 1
+    },
+    "COMMANDERLUKESKYWALKER_HOTH_JKL_EVENT": {
+      "name": "Commander Luke Skywalker (Hoth)",
+      "combatType": 1
+    },
+    "BOUSHH": {
+      "name": "Boushh (Leia Organa)",
+      "combatType": 1
+    },
+    "CAPITALPROFUNDITY": {
+      "name": "Profundity",
+      "combatType": 2
+    },
+    "IDENVERSIOEMPIRE": {
+      "name": "Iden Versio",
+      "combatType": 1
+    },
+    "LORDVADER": {
+      "name": "Lord Vader",
+      "combatType": 1
+    },
+    "JAWASCAVENGER": {
+      "name": "Jawa Scavenger",
+      "combatType": 1
+    },
+    "LORDVADER_GLE_INHERIT": {
+      "name": "Lord Vader",
+      "combatType": 1
+    },
+    "AAYLASECURA": {
+      "name": "Aayla Secura",
+      "combatType": 1
+    },
+    "XANADUBLOOD": {
+      "name": "Xanadu Blood",
+      "combatType": 2
+    },
+    "DATHCHA": {
+      "name": "Dathcha",
+      "combatType": 1
+    },
+    "FURYCLASSINTERCEPTOR": {
+      "name": "Fury-class Interceptor",
+      "combatType": 2
+    },
+    "SECONDSISTER": {
+      "name": "Second Sister",
+      "combatType": 1
+    },
+    "QUIGGOLD": {
+      "name": "Quiggold",
+      "combatType": 1
+    },
+    "BADBATCHTECH": {
+      "name": "Tech",
+      "combatType": 1
+    },
+    "JEDIMASTERKENOBI": {
+      "name": "Jedi Master Kenobi",
+      "combatType": 1
+    },
+    "TARONMALICOS": {
+      "name": "Taron Malicos",
+      "combatType": 1
+    },
+    "IMPERIALSUPERCOMMANDO": {
+      "name": "Imperial Super Commando",
+      "combatType": 1
+    },
+    "BENSOLO": {
+      "name": "Ben Solo",
+      "combatType": 1
+    },
+    "SLAVE1": {
+      "name": "Slave I",
+      "combatType": 2
+    },
+    "STRANGER": {
+      "name": "The Stranger",
+      "combatType": 1
+    },
+    "EWOKSCOUT": {
+      "name": "Ewok Scout",
+      "combatType": 1
+    },
+    "ADMINISTRATORLANDO_GL_EVENT": {
+      "name": "Lando Calrissian",
+      "combatType": 1
+    },
+    "TIEDEFENDER": {
+      "name": "TIE Defender",
+      "combatType": 2
+    },
+    "THEMANDALORIAN_JOURNEY_EVENT": {
+      "name": "The Mandalorian",
+      "combatType": 1
+    },
+    "GUNGANPHALANX": {
+      "name": "Gungan Phalanx",
+      "combatType": 1
+    },
+    "SITHPALPATINE_GL_EVENT": {
+      "name": "Sith Eternal Emperor",
+      "combatType": 1
+    },
+    "ARCTROOPER501ST_GLE_INHERIT": {
+      "name": "501st ARC Trooper",
+      "combatType": 1
+    },
+    "MAGMATROOPER": {
+      "name": "Magmatrooper",
+      "combatType": 1
+    },
+    "CAPITALFINALIZER_EVENT": {
+      "name": "Finalizer",
+      "combatType": 2
+    },
+    "MAUL": {
+      "name": "Darth Maul",
+      "combatType": 1
+    },
+    "HUYANG": {
+      "name": "Huyang",
+      "combatType": 1
+    },
+    "MASTERQUIGON": {
+      "name": "Master Qui-Gon",
+      "combatType": 1
+    },
+    "CAPTAINTARPALS": {
+      "name": "Captain Tarpals",
+      "combatType": 1
+    },
+    "PAPLOO_SPEEDERBIKERAID": {
+      "name": "Paploo",
+      "combatType": 1
+    },
+    "CAPTAINSILVO": {
+      "name": "Captain Silvo",
+      "combatType": 1
+    },
+    "POGGLETHELESSER": {
+      "name": "Poggle the Lesser",
+      "combatType": 1
+    },
+    "CAPTAINDROGAN_SPEEDERBIKERAID": {
+      "name": "Captain Drogan",
+      "combatType": 1
+    },
+    "TIEDAGGER": {
+      "name": "TIE Dagger",
+      "combatType": 2
+    },
+    "C3POCHEWBACCA": {
+      "name": "Threepio & Chewie",
+      "combatType": 1
+    },
+    "BISTAN": {
+      "name": "Bistan",
+      "combatType": 1
+    },
+    "XWINGRED3": {
+      "name": "Biggs Darklighter's X-wing",
+      "combatType": 2
+    },
+    "CARTELBRUISER_GLE_INHERIT": {
+      "name": "Cartel Bruiser",
+      "combatType": 1
+    },
+    "RANGETROOPER_SPEEDERBIKERAID": {
+      "name": "Range Trooper",
+      "combatType": 1
+    },
+    "XWINGRED2": {
+      "name": "Wedge Antilles's X-wing",
+      "combatType": 2
+    },
+    "GEONOSIANBROODALPHA": {
+      "name": "Geonosian Brood Alpha",
+      "combatType": 1
+    },
+    "LEIAJEDITRAINING": {
+      "name": "Leia (Jedi Training)",
+      "combatType": 1
+    },
+    "CLONESERGEANTPHASEI": {
+      "name": "Clone Sergeant - Phase I",
+      "combatType": 1
+    },
+    "RESISTANCEPILOT": {
+      "name": "Resistance Pilot",
+      "combatType": 1
+    },
+    "HUNTERS3": {
+      "name": "Hunter (Mercenary)",
+      "combatType": 1
+    },
+    "RAZORCREST": {
+      "name": "Razor Crest",
+      "combatType": 2
+    },
+    "NIGHTSISTERACOLYTE": {
+      "name": "Nightsister Acolyte",
+      "combatType": 1
+    },
+    "VISASMARR": {
+      "name": "Visas Marr",
+      "combatType": 1
+    },
+    "TKTROOPER_EVENT": {
+      "name": "TK Stormtrooper",
+      "combatType": 1
+    },
+    "TEEBO": {
+      "name": "Teebo",
+      "combatType": 1
+    },
+    "VULTUREDROID_tb": {
+      "name": "Vulture Droid",
+      "combatType": 2
+    },
+    "JKL_GR75": {
+      "name": "GR-75",
+      "combatType": 2
+    },
+    "YODACHEWBACCA": {
+      "name": "Yoda & Chewie",
+      "combatType": 1
+    },
+    "DARTHREVAN": {
+      "name": "Darth Revan",
+      "combatType": 1
+    },
+    "SITHSUPREMACYCLASS": {
+      "name": "Mark VI Interceptor",
+      "combatType": 2
+    },
+    "IG12": {
+      "name": "IG-12 & Grogu",
+      "combatType": 1
+    },
+    "VEL": {
+      "name": "Vel Sartha",
+      "combatType": 1
+    },
+    "BADBATCHTECH_GLE": {
+      "name": "Tech",
+      "combatType": 1
+    },
+    "CHIEFCHIRPA": {
+      "name": "Chief Chirpa",
+      "combatType": 1
+    },
+    "VANGUARDTEMPLEGUARD": {
+      "name": "Temple Guard",
+      "combatType": 1
+    },
+    "DARTHSIDIOUS": {
+      "name": "Darth Sidious",
+      "combatType": 1
+    },
+    "MARROK": {
+      "name": "Marrok",
+      "combatType": 1
+    },
+    "IG11": {
+      "name": "IG-11",
+      "combatType": 1
+    },
+    "DROIDEKA": {
+      "name": "Droideka",
+      "combatType": 1
+    },
+    "ROYALGUARD": {
+      "name": "Royal Guard",
+      "combatType": 1
+    },
+    "PADMEAMIDALA": {
+      "name": "Padmé Amidala",
+      "combatType": 1
+    },
+    "ADMINISTRATORLANDO_SPEEDERBIKERAID": {
+      "name": "Lando Calrissian",
+      "combatType": 1
+    },
+    "SITHBOMBER": {
+      "name": "B-28 Extinction-class Bomber",
+      "combatType": 2
+    },
+    "DEDRAMEERO": {
+      "name": "Dedra Meero",
+      "combatType": 1
+    },
+    "CHOPPERS3": {
+      "name": "Chopper",
+      "combatType": 1
+    },
+    "K2SO": {
+      "name": "K-2SO",
+      "combatType": 1
+    },
+    "SITHTROOPER": {
+      "name": "Sith Empire Trooper",
+      "combatType": 1
+    },
+    "MAULHATEFUELED": {
+      "name": "Maul (Hate-Fueled)",
+      "combatType": 1
+    },
+    "EWOKELDER_SPEEDERBIKERAID": {
+      "name": "Ewok Elder",
+      "combatType": 1
+    },
+    "THEMANDALORIANBESKARARMOR_JOURNEY_EVENT_TIER4": {
+      "name": "The Mandalorian (Beskar Armor)",
+      "combatType": 1
+    },
+    "DENGAR": {
+      "name": "Dengar",
+      "combatType": 1
+    },
+    "FULCRUMAHSOKA": {
+      "name": "Ahsoka Tano (Fulcrum)",
+      "combatType": 1
+    },
+    "UWINGSCARIF": {
+      "name": "Bistan's U-wing",
+      "combatType": 2
+    },
+    "FOSITHTROOPER": {
+      "name": "Sith Trooper",
+      "combatType": 1
+    },
+    "KIX": {
+      "name": "Kix",
+      "combatType": 1
+    },
+    "SHINHATI": {
+      "name": "Shin Hati",
+      "combatType": 1
+    },
+    "DARTHTRAYA": {
+      "name": "Darth Traya",
+      "combatType": 1
+    },
+    "CADBANE": {
+      "name": "Cad Bane",
+      "combatType": 1
+    },
+    "JKL_PILOT": {
+      "name": "Hoth Rebel Soldier",
+      "combatType": 1
+    },
+    "RESISTANCETROOPER": {
+      "name": "Resistance Trooper",
+      "combatType": 1
+    },
+    "BISHOP": {
+      "name": "Colonel Ward",
+      "combatType": 1
+    },
+    "CAPITALLEVIATHAN": {
+      "name": "Leviathan",
+      "combatType": 2
+    },
+    "PHASMA": {
+      "name": "Captain Phasma",
+      "combatType": 1
+    },
+    "LUTHENRAEL": {
+      "name": "Luthen Rael",
+      "combatType": 1
+    },
+    "CROSSHAIRS3": {
+      "name": "Crosshair (Scarred)",
+      "combatType": 1
+    },
+    "TIEFIGHTERIMPERIAL": {
+      "name": "Imperial TIE Fighter",
+      "combatType": 2
+    },
+    "HOTHREBELSCOUT": {
+      "name": "Hoth Rebel Scout",
+      "combatType": 1
+    },
+    "GREATMOTHERS": {
+      "name": "Great Mothers",
+      "combatType": 1
+    },
+    "STORMTROOPERCONCEPT": {
+      "name": "Stormtrooper (Concept)",
+      "combatType": 1
+    },
+    "ASAJVENTRESS": {
+      "name": "Asajj Ventress",
+      "combatType": 1
+    },
+    "AURRA_SING": {
+      "name": "Aurra Sing",
+      "combatType": 1
+    },
+    "TIESILENCER": {
+      "name": "TIE Silencer",
+      "combatType": 2
+    },
+    "STARKILLER_LEGACYEVENT": {
+      "name": "Starkiller",
+      "combatType": 1
+    },
+    "FIFTHBROTHER": {
+      "name": "Fifth Brother",
+      "combatType": 1
+    },
+    "CASSIANUNDERCOVER": {
+      "name": "Cassian Andor (Undercover)",
+      "combatType": 1
+    },
+    "VANE": {
+      "name": "Vane",
+      "combatType": 1
+    },
+    "GENERALSYNDULLA": {
+      "name": "General Syndulla",
+      "combatType": 1
+    },
+    "KYLORENUNMASKED_GLEVENT": {
+      "name": "Supreme Leader Kylo Ren",
+      "combatType": 1
+    },
+    "CHIEFCHIRPA_SPEEDERBIKERAID": {
+      "name": "Chief Chirpa",
+      "combatType": 1
+    },
+    "SAWGERRERA": {
+      "name": "Saw Gerrera",
+      "combatType": 1
+    },
+    "IMPERIALPROBEDROID": {
+      "name": "Imperial Probe Droid",
+      "combatType": 1
+    },
+    "FINN": {
+      "name": "Finn",
+      "combatType": 1
+    },
+    "JABBATHEHUTT_GLE_INHERIT": {
+      "name": "Jabba the Hutt",
+      "combatType": 1
+    },
+    "TARFFUL": {
+      "name": "Tarfful",
+      "combatType": 1
+    },
+    "BADBATCHWRECKER_GLE": {
+      "name": "Wrecker",
+      "combatType": 1
+    },
+    "GAMORREANGUARD_GLE_INHERIT": {
+      "name": "Gamorrean Guard",
+      "combatType": 1
+    },
+    "GREEFKARGA_MANDALORIAN_EVENT": {
+      "name": "Greef Karga",
+      "combatType": 1
+    },
+    "HOTHLEIA": {
+      "name": "Rebel Officer Leia Organa",
+      "combatType": 1
+    },
+    "VADER": {
+      "name": "Darth Vader",
+      "combatType": 1
+    },
+    "GENERALKENOBI_GLE_INHERIT_VADER": {
+      "name": "General Kenobi",
+      "combatType": 1
+    },
+    "THEMANDALORIANBESKARARMOR_JOURNEY_EVENT": {
+      "name": "The Mandalorian (Beskar Armor)",
+      "combatType": 1
+    },
+    "RACCOON": {
+      "name": "Rotta the Hutt",
+      "combatType": 1
+    },
+    "STORMTROOPERLUKE": {
+      "name": "Stormtrooper Luke",
+      "combatType": 1
+    },
+    "NUTEGUNRAY": {
+      "name": "Nute Gunray",
+      "combatType": 1
+    },
+    "IG11_MANDALORIAN_EVENT": {
+      "name": "IG-11 (Bounty Hunter)",
+      "combatType": 1
+    },
+    "TIEREAPER": {
+      "name": "TIE Reaper",
+      "combatType": 2
+    },
+    "COMMANDSHUTTLE": {
+      "name": "Kylo Ren's Command Shuttle",
+      "combatType": 2
+    },
+    "EIGHTHBROTHER": {
+      "name": "Eighth Brother",
+      "combatType": 1
+    },
+    "GENERALHUX_EVENT": {
+      "name": "General Hux",
+      "combatType": 1
+    },
+    "APPO": {
+      "name": "CC-1119 \"Appo\"",
+      "combatType": 1
+    },
+    "DARTHBANE": {
+      "name": "Darth Bane",
+      "combatType": 1
+    },
+    "GLAHSOKA_GLAHSOKAEVENT": {
+      "name": "Ahsoka Tano",
+      "combatType": 1
+    },
+    "COUNTDOOKU": {
+      "name": "Count Dooku",
+      "combatType": 1
+    },
+    "HANSOLO_SPEEDERBIKERAID": {
+      "name": "Han Solo",
+      "combatType": 1
+    },
+    "FOTF_VADER": {
+      "name": "Darth Vader",
+      "combatType": 1
+    },
+    "BODHIROOK": {
+      "name": "Bodhi Rook",
+      "combatType": 1
+    },
+    "GRANDMASTERLUKE_GL_EVENT": {
+      "name": "Jedi Master Luke Skywalker",
+      "combatType": 1
+    },
+    "STORMTROOPER_SPEEDERBIKERAID": {
+      "name": "Stormtrooper",
+      "combatType": 1
+    },
+    "TUSKENRAIDER": {
+      "name": "Tusken Raider",
+      "combatType": 1
+    },
+    "PHANTOM2": {
+      "name": "Phantom II",
+      "combatType": 2
+    },
+    "ASAJJDARKDISCIPLE": {
+      "name": "Asajj Ventress (Dark Disciple)",
+      "combatType": 1
+    },
+    "JEDIKNIGHTGUARDIAN": {
+      "name": "Jedi Knight Guardian",
+      "combatType": 1
+    },
+    "VADERDUELSEND": {
+      "name": "Darth Vader (Duel's End)",
+      "combatType": 1
+    },
+    "PAZVIZSLA": {
+      "name": "Paz Vizsla",
+      "combatType": 1
+    },
+    "KYLORENUNMASKED": {
+      "name": "Kylo Ren (Unmasked)",
+      "combatType": 1
+    },
+    "KYLOREN": {
+      "name": "Kylo Ren",
+      "combatType": 1
+    },
+    "JEDISTARFIGHTERAHSOKATANO": {
+      "name": "Ahsoka Tano's Jedi Starfighter",
+      "combatType": 2
+    },
+    "ADMIRALPIETT": {
+      "name": "Admiral Piett",
+      "combatType": 1
+    },
+    "NINTHSISTER": {
+      "name": "Ninth Sister",
+      "combatType": 1
+    },
+    "MOFFGIDEONS1_SPEEDERBIKERAID": {
+      "name": "Moff Gideon",
+      "combatType": 1
+    },
+    "HUMANTHUG": {
+      "name": "Mob Enforcer",
+      "combatType": 1
+    },
+    "STORMTROOPERHAN": {
+      "name": "Stormtrooper Han",
+      "combatType": 1
+    },
+    "WRECKERS3": {
+      "name": "Wrecker (Mercenary)",
+      "combatType": 1
+    },
+    "YOUNGCHEWBACCA": {
+      "name": "Vandor Chewbacca",
+      "combatType": 1
+    },
+    "CAPITALMONCALAMARICRUISER": {
+      "name": "Home One",
+      "combatType": 2
+    },
+    "STAP": {
+      "name": "STAP",
+      "combatType": 1
+    },
+    "EWOKSCOUT_SPEEDERBIKERAID": {
+      "name": "Ewok Scout",
+      "combatType": 1
+    },
+    "GLHONDO": {
+      "name": "Pirate King Hondo Ohnaka",
+      "combatType": 1
+    },
+    "REY_DUEL": {
+      "name": "Rey",
+      "combatType": 1
+    },
+    "TIEFIGHTERFOSF": {
+      "name": "First Order SF TIE Fighter",
+      "combatType": 2
+    },
+    "RANGERZEB": {
+      "name": "Zeb Orrelios (New Republic Pilot)",
+      "combatType": 1
+    },
+    "KANANJARRUSS3": {
+      "name": "Kanan Jarrus",
+      "combatType": 1
+    },
+    "GLLEIA_GLE_INHERIT": {
+      "name": "Leia Organa",
+      "combatType": 1
+    },
+    "PRINCESSLEIA_GL_EVENT": {
+      "name": "Princess Leia",
+      "combatType": 1
+    },
+    "SITHASSASSIN": {
+      "name": "Sith Assassin",
+      "combatType": 1
+    },
+    "JEDIKNIGHTLUKE_SPEEDERBIKERAID": {
+      "name": "Jedi Knight Luke Skywalker",
+      "combatType": 1
+    },
+    "GLLEIA_GLE_INHERIT_STANDARD": {
+      "name": "Leia Organa",
+      "combatType": 1
+    },
+    "JANGOFETT": {
+      "name": "Jango Fett",
+      "combatType": 1
+    },
+    "IMAGUNDI": {
+      "name": "Ima-Gun Di",
+      "combatType": 1
+    },
+    "KITFISTO": {
+      "name": "Kit Fisto",
+      "combatType": 1
+    },
+    "TALIA": {
+      "name": "Talia",
+      "combatType": 1
+    },
+    "BATCHERS3": {
+      "name": "Batcher",
+      "combatType": 1
+    },
+    "GRANDMASTERLUKE": {
+      "name": "Jedi Master Luke Skywalker",
+      "combatType": 1
+    },
+    "THIRDSISTER": {
+      "name": "Third Sister",
+      "combatType": 1
+    },
+    "BOSSNASS": {
+      "name": "Boss Nass",
+      "combatType": 1
+    },
+    "HUMANTHUG_GLE_INHERIT": {
+      "name": "Mob Enforcer",
+      "combatType": 1
+    },
+    "MAULS7": {
+      "name": "Maul",
+      "combatType": 1
+    },
+    "KUIIL": {
+      "name": "Kuiil",
+      "combatType": 1
+    },
+    "JEDIMASTERMACEWINDU": {
+      "name": "Jedi Master Mace Windu",
+      "combatType": 1
+    },
+    "EMPERORPALPATINE": {
+      "name": "Emperor Palpatine",
+      "combatType": 1
+    },
+    "VULTUREDROID": {
+      "name": "Vulture Droid",
+      "combatType": 2
+    },
+    "EETHKOTH": {
+      "name": "Eeth Koth",
+      "combatType": 1
+    },
+    "THERONIN": {
+      "name": "The Ronin",
+      "combatType": 1
+    },
+    "JEDIKNIGHTLUKE_ENDOR_GLE_INHERIT": {
+      "name": "Jedi Knight Luke Skywalker",
+      "combatType": 1
+    },
+    "NIGHTTROOPER": {
+      "name": "Night Trooper",
+      "combatType": 1
+    },
+    "KIADIMUNDI": {
+      "name": "Ki-Adi-Mundi",
+      "combatType": 1
+    },
+    "CASSIANANDOR": {
+      "name": "Cassian Andor",
+      "combatType": 1
+    },
+    "SATELESHAN": {
+      "name": "Satele Shan",
+      "combatType": 1
+    },
+    "T3_M4": {
+      "name": "T3-M4",
+      "combatType": 1
+    },
+    "WEDGEANTILLES": {
+      "name": "Wedge Antilles",
+      "combatType": 1
+    },
+    "JEDIKNIGHTREVAN": {
+      "name": "Jedi Knight Revan",
+      "combatType": 1
+    },
+    "SHORETROOPER": {
+      "name": "Shoretrooper",
+      "combatType": 1
+    },
+    "PRINCESSKNEESAA": {
+      "name": "Princess Kneesaa",
+      "combatType": 1
+    },
+    "CAPTAINDROGAN": {
+      "name": "Captain Drogan",
+      "combatType": 1
+    },
+    "DARTHSION": {
+      "name": "Darth Sion",
+      "combatType": 1
+    },
+    "ADMIRALRADDUS": {
+      "name": "Admiral Raddus",
+      "combatType": 1
+    },
+    "MARAUDER": {
+      "name": "Marauder",
+      "combatType": 2
+    },
+    "SITHINFILTRATOR": {
+      "name": "Scimitar",
+      "combatType": 2
+    },
+    "EZRABRIDGERS3": {
+      "name": "Ezra Bridger",
+      "combatType": 1
+    },
+    "SANASTARROS": {
+      "name": "Sana Starros",
+      "combatType": 1
+    },
+    "REYJEDITRAINING": {
+      "name": "Rey (Jedi Training)",
+      "combatType": 1
+    },
+    "LUKESTARKILLER": {
+      "name": "Starkiller (Luke Concept)",
+      "combatType": 1
+    },
+    "XWINGBLACKONE": {
+      "name": "Poe Dameron's X-wing",
+      "combatType": 2
+    },
+    "COLONELSTARCK_SPEEDERBIKERAID": {
+      "name": "Colonel Starck",
+      "combatType": 1
+    },
+    "HERMITYODA": {
+      "name": "Hermit Yoda",
+      "combatType": 1
+    },
+    "CHIEFNEBIT": {
+      "name": "Chief Nebit",
+      "combatType": 1
+    },
+    "C3POLEGENDARY": {
+      "name": "C-3PO",
+      "combatType": 1
+    },
+    "PRINCESSLEIA": {
+      "name": "Princess Leia",
+      "combatType": 1
+    },
+    "BASTILASHAN": {
+      "name": "Bastila Shan",
+      "combatType": 1
+    },
+    "WAMPA": {
+      "name": "Wampa",
+      "combatType": 1
+    },
+    "SHAAKTI": {
+      "name": "Shaak Ti",
+      "combatType": 1
+    },
+    "HOTHHAN": {
+      "name": "Captain Han Solo",
+      "combatType": 1
+    },
+    "CT5555": {
+      "name": "CT-5555 \"Fives\"",
+      "combatType": 1
+    },
+    "ADMIRALPIETT_SPEEDERBIKERAID": {
+      "name": "Admiral Piett",
+      "combatType": 1
+    },
+    "FIRSTORDEREXECUTIONER": {
+      "name": "First Order Executioner",
+      "combatType": 1
+    },
+    "CAPITALJEDICRUISER": {
+      "name": "Endurance",
+      "combatType": 2
+    },
+    "LUKESKYWALKER": {
+      "name": "Luke Skywalker (Farmboy)",
+      "combatType": 1
+    },
+    "IDENVERSIOEMPIRE_SPEEDERBIKERAID": {
+      "name": "Iden Versio",
+      "combatType": 1
+    },
+    "SCOUTTROOPER_V3": {
+      "name": "Scout Trooper",
+      "combatType": 1
+    },
+    "GOPHERANTS": {
+      "name": "Grogu & Anzellans",
+      "combatType": 1
+    },
+    "CT210408": {
+      "name": "CT-21-0408 \"Echo\"",
+      "combatType": 1
+    },
+    "BADBATCHOMEGA": {
+      "name": "Omega",
+      "combatType": 1
+    },
+    "IG88": {
+      "name": "IG-88",
+      "combatType": 1
+    },
+    "BASTILASHANDARK": {
+      "name": "Bastila Shan (Fallen)",
+      "combatType": 1
+    },
+    "RANGETROOPER": {
+      "name": "Range Trooper",
+      "combatType": 1
+    },
+    "CHIRRUTIMWE": {
+      "name": "Chirrut Îmwe",
+      "combatType": 1
+    },
+    "ENFYSNEST": {
+      "name": "Enfys Nest",
+      "combatType": 1
+    },
+    "CEREJUNDA": {
+      "name": "Cere Junda",
+      "combatType": 1
+    },
+    "GHOST": {
+      "name": "Ghost",
+      "combatType": 2
+    },
+    "IG86SENTINELDROID": {
+      "name": "IG-86 Sentinel Droid",
+      "combatType": 1
+    },
+    "SUNFAC": {
+      "name": "Sun Fac",
+      "combatType": 1
+    },
+    "CAPITALRADDUS": {
+      "name": "Raddus",
+      "combatType": 2
+    },
+    "SAVAGEOPRESS": {
+      "name": "Savage Opress",
+      "combatType": 1
+    },
+    "CARTELSABOTEUR_GLE_INHERIT": {
+      "name": "Cartel Saboteur",
+      "combatType": 1
+    },
+    "GARSAXON": {
+      "name": "Gar Saxon",
+      "combatType": 1
+    },
+    "JEDISTARFIGHTERANAKIN": {
+      "name": "Anakin's Eta-2 Starfighter",
+      "combatType": 2
+    },
+    "MANDALORBOKATAN": {
+      "name": "Bo-Katan (Mand'alor)",
+      "combatType": 1
+    },
+    "THEMANDALORIAN_MUDDY": {
+      "name": "The Mandalorian",
+      "combatType": 1
+    },
+    "GRANDMOFFTARKIN": {
+      "name": "Grand Moff Tarkin",
+      "combatType": 1
+    },
+    "REMNANTSNOWCOMMANDER": {
+      "name": "Snowtrooper Commander",
+      "combatType": 1
+    },
+    "REY": {
+      "name": "Rey (Scavenger)",
+      "combatType": 1
+    },
+    "CINTA": {
+      "name": "Cinta Kaz",
+      "combatType": 1
+    },
+    "SMUGGLERCHEWBACCA": {
+      "name": "Veteran Smuggler Chewbacca",
+      "combatType": 1
+    },
+    "GENERALSKYWALKER_GLE_INHERIT_T3": {
+      "name": "General Skywalker",
+      "combatType": 1
+    },
+    "IG2000": {
+      "name": "IG-2000",
+      "combatType": 2
+    },
+    "IMPERIALSUPERCOMMANDO_PROVING_GROUNDS": {
+      "name": "Imperial Super Commando",
+      "combatType": 1
+    },
+    "TIEADVANCED": {
+      "name": "TIE Advanced x1",
+      "combatType": 2
+    },
+    "FENNECSHAND": {
+      "name": "Fennec Shand",
+      "combatType": 1
+    },
+    "HYENABOMBER": {
+      "name": "Hyena Bomber",
+      "combatType": 2
+    },
+    "CAPITALSTARDESTROYER": {
+      "name": "Executrix",
+      "combatType": 2
+    },
+    "GEONOSIANSOLDIER": {
+      "name": "Geonosian Soldier",
+      "combatType": 1
+    },
+    "VADER_JKL_EVENT": {
+      "name": "Darth Vader",
+      "combatType": 1
+    },
+    "DAKA": {
+      "name": "Old Daka",
+      "combatType": 1
+    },
+    "PAO": {
+      "name": "Pao",
+      "combatType": 1
+    },
+    "GLLEIA_SPEEDERBIKERAID": {
+      "name": "Leia Organa",
+      "combatType": 1
+    },
+    "B1BATTLEDROIDV2": {
+      "name": "B1 Battle Droid",
+      "combatType": 1
+    },
+    "ADMINISTRATORLANDO_JKL_EVENT": {
+      "name": "Lando Calrissian",
+      "combatType": 1
+    },
+    "JOCASTANU": {
+      "name": "Jocasta Nu",
+      "combatType": 1
+    },
+    "JEDIMASTERKENOBI_GLE_INHERIT_T6": {
+      "name": "Jedi Master Kenobi",
+      "combatType": 1
+    },
+    "ADMINISTRATORLANDO": {
+      "name": "Lando Calrissian",
+      "combatType": 1
+    },
+    "JARJARBINKS": {
+      "name": "Jar Jar Binks",
+      "combatType": 1
+    },
+    "ROGUEONESHIP": {
+      "name": "Rogue One",
+      "combatType": 2
+    },
+    "PAPLOO": {
+      "name": "Paploo",
+      "combatType": 1
+    },
+    "JEDIKNIGHTCAL": {
+      "name": "Jedi Knight Cal Kestis",
+      "combatType": 1
+    },
+    "SITHMARAUDER": {
+      "name": "Sith Marauder",
+      "combatType": 1
+    },
+    "B2SUPERBATTLEDROID": {
+      "name": "B2 Super Battle Droid",
+      "combatType": 1
+    },
+    "SABINEWRENS3": {
+      "name": "Sabine Wren",
+      "combatType": 1
+    },
+    "JEDIKNIGHTCONSULAR": {
+      "name": "Jedi Consular",
+      "combatType": 1
+    },
+    "THEMANDALORIANBESKARARMOR": {
+      "name": "The Mandalorian (Beskar Armor)",
+      "combatType": 1
+    },
+    "TIEINTERCEPTOR": {
+      "name": "TIE/IN Interceptor Prototype",
+      "combatType": 2
+    },
+    "GAMORREANGUARD": {
+      "name": "Gamorrean Guard",
+      "combatType": 1
+    },
+    "CAPTAINREX": {
+      "name": "Captain Rex",
+      "combatType": 1
+    },
+    "GENERALSKYWALKER": {
+      "name": "General Skywalker",
+      "combatType": 1
+    },
+    "FOTF_DEVASTATOR": {
+      "name": "Devastator",
+      "combatType": 2
+    },
+    "CLONETROOPER212_GLE": {
+      "name": "212th Clone Trooper",
+      "combatType": 1
+    },
+    "SHORETROOPER_SPEEDERBIKERAID": {
+      "name": "Shoretrooper",
+      "combatType": 1
+    },
+    "BOKATAN": {
+      "name": "Bo-Katan Kryze",
+      "combatType": 1
+    },
+    "CAPITALFINALIZER": {
+      "name": "Finalizer",
+      "combatType": 2
+    },
+    "R2D2_LEGENDARY": {
+      "name": "R2-D2",
+      "combatType": 1
+    },
+    "GENERALKENOBI_GLE": {
+      "name": "General Kenobi",
+      "combatType": 1
+    }
+  }
+}
