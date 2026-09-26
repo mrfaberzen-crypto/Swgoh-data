@@ -18,6 +18,10 @@ a{color:#87caff}a.button{display:inline-block;border:1px solid #5692bd;border-ra
 table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #304055}th{color:#a8b8ca;font-size:.8rem}tbody tr:hover{background:#243449}
 .tablewrap{overflow:auto}footer{margin:24px 0;color:#a8b8ca;font-size:.85rem}
 @media(max-width:600px){main{padding:15px}th,td{padding:10px 5px;font-size:.88rem}}
+
+#farm-plan{margin-bottom:24px}.plan-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}.plan-heading h2{margin:.15rem 0 .35rem}.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,265px),1fr));gap:12px;margin-top:18px}.plan-card{min-width:0;background:#131d29;border:1px solid #304055;border-radius:10px;padding:16px}.plan-card h3{font-size:1rem;margin:4px 0 8px}.plan-card p{line-height:1.45}.target-list{display:grid;gap:9px;margin:14px 0}.farm-target{padding:9px 10px;border:1px solid #304055;border-radius:8px;background:#182331}.farm-target-line,.farm-target-current{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.farm-target-name{font-weight:650}.farm-target-goal,.farm-target-current{font-size:.82rem;color:#a8b8ca}.farm-target-goal{white-space:nowrap}.farm-target-current{margin-top:5px}.farm-target-current.done{color:#7ed6c2}.farm-target progress{display:block;width:100%;height:7px;margin-top:7px;accent-color:#76d4bc}.advice-list{list-style:none;padding:0;margin:12px 0;display:grid;gap:12px}.advice-list li{padding-left:12px;border-left:2px solid #76d4bc;line-height:1.45}.advice-list strong{display:block}.plan-divider{border:0;border-top:1px solid #304055;margin:16px 0}.plan-note{font-size:.86rem}
+@media(max-width:600px){.plan-heading{display:block}.plan-card{padding:14px}}
+
 #ally{font-size:1.15rem;letter-spacing:.02em}header>div:last-child{display:flex;gap:8px;flex-wrap:wrap}
 @media(max-width:600px){th:nth-child(2),td:nth-child(2),th:nth-child(6),td:nth-child(6){display:none}th:first-child{width:44%}}
 </style>
@@ -32,7 +36,20 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 <div class="card"><div class="muted">Gear 13 units</div><div class="value" id="g13">—</div></div>
 <div class="card"><div class="muted">Fleet arena</div><div class="value" id="fleet">—</div></div>
 </section>
-<section class="panel"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
+
+<section class="panel" id="farm-plan" aria-labelledby="farm-title">
+<div class="plan-heading"><div><div class="eyebrow">Your current plan</div><h2 id="farm-title">Farm advice</h2><div class="muted">Executor first · SLKR is your first Galactic Legend after Executor.</div></div><a href="#roster">Check the roster ↓</a></div>
+<div class="plan-grid">
+<article class="plan-card"><div class="eyebrow">Main project</div><h3>Executor path</h3><p class="muted">Razor Crest is the key ship blocker. Buy it from the Fleet Store whenever it appears.</p><div id="executor-targets" class="target-list" aria-label="Executor target progress"></div></article>
+<article class="plan-card"><div class="eyebrow">Daily farms</div><h3>Energy plan</h3><ul class="advice-list">
+<li><strong>Fleet energy</strong>Punishing One, 5 attempts daily, then TIE Echelon, 5 attempts daily. After both, use leftover Fleet energy on Fleet 2-E Normal for Mk 12 Fusion Furnaces.</li>
+<li><strong>Separate ship farm</strong>Imperial TIE Bomber on its Light Side hard node, 5 attempts daily.</li>
+<li><strong>Cantina</strong>Signal Data only.</li>
+</ul><div id="fleet-targets" class="target-list" aria-label="Fleet farm progress"></div><p class="muted plan-note">Keep to the two planned Fleet hard-node farms; no third hard-node farm.</p></article>
+<article class="plan-card"><div class="eyebrow">Next project</div><h3>SLKR · first Galactic Legend</h3><p class="muted">After Executor, continue the relic queue: Palpatine R7 → Kylo Ren (Unmasked) R7 → Kylo Ren R7.</p><div id="slkr-targets" class="target-list" aria-label="SLKR relic target progress"></div><hr class="plan-divider"><h3>Era goals</h3><p class="muted">Farm Darth Jar Jar and Starkiller (Luke Concept) shards to 5★; then take Starkiller to Episode Level 95.</p><div id="era-targets" class="target-list" aria-label="Era character shard progress"></div><p class="muted plan-note">When Darth Jar Jar reaches 5★, the planned three R6 Kyber upgrades are Captain Enoch, Night Trooper, and Death Trooper (Peridea).</p></article>
+</div><p id="farm-freshness" class="muted plan-note"></p>
+</section>
+<section class="panel" id="roster"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
 <div class="controls"><input id="search" type="search" placeholder="Search characters or ships…" aria-label="Search roster"><select id="filter" aria-label="Filter roster"><option value="all">All units</option><option value="characters">Characters</option><option value="ships">Ships</option><option value="seven">Seven stars</option><option value="relic">Relic characters</option></select><select id="sort" aria-label="Sort roster"><option value="progress">Upgrade level</option><option value="name">Name</option><option value="stars">Stars</option></select></div>
 <div class="muted" id="count"></div><div class="tablewrap"><table><thead><tr><th>Unit</th><th>Type</th><th>Stars</th><th>Level</th><th>Gear / relic</th><th>Equipped mods</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p id="empty" hidden>No units match these filters.</p>

@@ -13,6 +13,15 @@ try {
   await page.goto('http://127.0.0.1:8000');
   await page.waitForFunction(() => document.querySelector('#total').textContent !== '—');
   assert.equal(await page.locator('#rows tr').count(), data.units.length);
+  assert.ok(await page.locator('#farm-plan').isVisible(), 'Farm advice section is visible');
+  const executorPlan = await page.locator('#executor-targets').innerText();
+  assert.ok(executorPlan.includes('Dengar') && executorPlan.includes('R5'));
+  assert.ok(executorPlan.includes('Razor Crest') && executorPlan.includes('Fleet Store'));
+  assert.ok((await page.locator('#fleet-targets').innerText()).includes('Punishing One'));
+  assert.ok((await page.locator('#slkr-targets').innerText()).includes('Emperor Palpatine'));
+  assert.ok((await page.locator('#era-targets').innerText()).includes('Darth Jar Jar'));
+  assert.ok((await page.locator('#farm-plan').innerText()).includes('Fleet 2-E Normal'));
+  assert.ok((await page.locator('#farm-plan').innerText()).includes('Light Side hard node'));
   await page.locator('#search').fill('Captain Rex');
   assert.equal(await page.locator('#rows tr').count(), 1);
   const rex = data.units.find(u => u.id === 'CAPTAINREX');
