@@ -1,4 +1,8 @@
 const $ = id => document.getElementById(id);
+// Pages builds are not triggered by GITHUB_TOKEN data commits; read main directly there.
+const snapshotUrl = location.hostname === 'mrfaberzen-crypto.github.io'
+  ? 'https://raw.githubusercontent.com/mrfaberzen-crypto/Swgoh-data/main/data/dashboard.json'
+  : 'data/dashboard.json';
 let snapshot;
 function render() {
   const query = $('search').value.trim().toLocaleLowerCase().replace(/[^a-z0-9]/g, '');
@@ -29,7 +33,7 @@ function render() {
 async function load() {
   $('reload').disabled = true;
   try {
-    const response = await fetch('data/dashboard.json', {cache: 'no-store'});
+    const response = await fetch(snapshotUrl, {cache: 'no-store'});
     if (!response.ok) throw Error('Roster unavailable (HTTP ' + response.status + ')');
     const data = await response.json();
     if (data.allyCode !== '843153117' || !Array.isArray(data.units) || !data.units.length)
