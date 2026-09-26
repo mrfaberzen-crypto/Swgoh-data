@@ -16,7 +16,8 @@ try {
   assert.ok(await page.locator('#farm-plan').isVisible(), 'Farm advice section is visible');
   const executorPlan = await page.locator('#executor-targets').innerText();
   assert.ok(executorPlan.includes('Dengar') && executorPlan.includes('R5'));
-  assert.ok(executorPlan.includes('Razor Crest') && executorPlan.includes('Fleet Store'));
+  assert.ok(executorPlan.includes('Razor Crest'));
+  assert.ok((await page.locator('#farm-plan').innerText()).includes('Fleet Store'));
   assert.ok((await page.locator('#fleet-targets').innerText()).includes('Punishing One'));
   assert.ok((await page.locator('#slkr-targets').innerText()).includes('Emperor Palpatine'));
   assert.ok((await page.locator('#era-targets').innerText()).includes('Darth Jar Jar'));
