@@ -37742,22 +37742,10 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
       "versionKey": "NULL",
-      "value": "2098168",
-      "index": 2
-    },
-    {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "5",
-      "index": 17
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1653598",
-      "index": 3
+      "value": "0",
+      "index": 4
     },
     {
       "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
@@ -37766,28 +37754,46 @@
       "index": 20
     },
     {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "39",
-      "index": 19
-    },
-    {
       "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
       "value": "3751766",
       "index": 1
     },
     {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "9149",
-      "index": 16
-    },
-    {
       "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
       "versionKey": "NULL",
       "value": "6",
       "index": 10
+    },
+    {
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
+      "versionKey": "NULL",
+      "value": "39",
+      "index": 19
+    },
+    {
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "76",
+      "index": 6
+    },
+    {
+      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "3494",
+      "index": 8
+    },
+    {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "39",
+      "index": 14
+    },
+    {
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "1653598",
+      "index": 3
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
@@ -37802,10 +37808,10 @@
       "index": 7
     },
     {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
-      "value": "39",
-      "index": 14
+      "value": "44",
+      "index": 5
     },
     {
       "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
@@ -37820,34 +37826,22 @@
       "index": 21
     },
     {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "3494",
-      "index": 8
-    },
-    {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
       "value": "23192",
       "index": 11
     },
     {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 18
+      "value": "9149",
+      "index": 16
     },
     {
-      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
       "versionKey": "NULL",
-      "value": "44",
-      "index": 5
+      "value": "5",
+      "index": 17
     },
     {
       "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
@@ -37856,16 +37850,22 @@
       "index": 13
     },
     {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "2098168",
+      "index": 2
+    },
+    {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
       "versionKey": "NULL",
       "value": "15",
       "index": 15
-    },
-    {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "76",
-      "index": 6
     }
   ],
   "pvpProfile": [
@@ -38305,7 +38305,7 @@
       "joinTime": "1788908536000",
       "endTime": "1791234000000",
       "remove": false,
-      "rank": 7704
+      "rank": 7701
     }
   ],
   "datacron": [
