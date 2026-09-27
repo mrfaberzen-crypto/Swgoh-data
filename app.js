@@ -164,7 +164,7 @@ async function loadPrivateData(resource, button) {
     const data = await response.json();
     if (!response.ok) throw Error(data.error || 'Request failed (HTTP ' + response.status + ')');
     output.textContent = JSON.stringify(data, null, 2);
-    status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() + '. Kept in this tab only.';
+    status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() + (response.headers.get('X-Snapshot-Saved') === 'true' ? ' and saved to your private GitHub repository.' : '.');
   } catch (error) {
     status.textContent = 'Could not load ' + resource.toUpperCase() + ': ' + error.message;
   } finally {
