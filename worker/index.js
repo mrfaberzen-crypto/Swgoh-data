@@ -92,7 +92,9 @@ export default {
         body,
         redirect: "error"
       });
-    } catch {
+    } catch (error) {
+      // Log only safe transport diagnostics; never include request headers or secrets.
+      console.error("Mhanndalorian upstream fetch failed", error?.name || "Error", error?.message || "No details");
       return json({ error: "Could not reach the Mhanndalorian API" }, 502, origin);
     }
 
