@@ -11223,7 +11223,7 @@
       "unitStat": null,
       "currentTier": 13,
       "relic": {
-        "currentTier": 8
+        "currentTier": 9
       }
     },
     {
@@ -26742,90 +26742,94 @@
                 "0.16309"
               ],
               "unscaledRollValue": [
-                "67731277"
+                "75021400"
               ],
               "stat": {
                 "unitStatId": 28,
-                "statValueDecimal": "6770000",
-                "unscaledDecimalValue": "67700000000",
+                "statValueDecimal": "7500000",
+                "unscaledDecimalValue": "75000000000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
               "statRolls": 1,
-              "statRollerBoundsMin": "41530000",
-              "statRollerBoundsMax": "83060000"
+              "statRollerBoundsMin": "46000000",
+              "statRollerBoundsMax": "92000000"
             },
             {
               "roll": [
                 "0.17147",
                 "0.10452",
-                "0.17931"
+                "0.17931",
+                "0.18788"
               ],
               "unscaledRollValue": [
                 "514410",
                 "313560",
-                "537930"
+                "537930",
+                "563640"
               ],
               "stat": {
                 "unitStatId": 5,
-                "statValueDecimal": "130000",
-                "unscaledDecimalValue": "1300000000",
+                "statValueDecimal": "200000",
+                "unscaledDecimalValue": "2000000000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
-              "statRolls": 3,
+              "statRolls": 4,
               "statRollerBoundsMin": "300000",
               "statRollerBoundsMax": "600000"
             },
             {
               "roll": [
-                "0.17723"
+                "0.17723",
+                "0.13544"
               ],
               "unscaledRollValue": [
-                "1994"
+                "2658",
+                "2032"
               ],
               "stat": {
                 "unitStatId": 56,
-                "statValueDecimal": "199",
-                "unscaledDecimalValue": "1994000",
+                "statValueDecimal": "469",
+                "unscaledDecimalValue": "4690000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
-              "statRolls": 1,
-              "statRollerBoundsMin": "1125",
-              "statRollerBoundsMax": "2250"
+              "statRolls": 2,
+              "statRollerBoundsMin": "1500",
+              "statRollerBoundsMax": "3000"
             },
             {
               "roll": [
                 "0.15689"
               ],
               "unscaledRollValue": [
-                "1765"
+                "2353"
               ],
               "stat": {
                 "unitStatId": 17,
-                "statValueDecimal": "176",
-                "unscaledDecimalValue": "1765000",
+                "statValueDecimal": "235",
+                "unscaledDecimalValue": "2353000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
               "statRolls": 1,
-              "statRollerBoundsMin": "1125",
-              "statRollerBoundsMax": "2250"
+              "statRollerBoundsMin": "1500",
+              "statRollerBoundsMax": "3000"
             }
           ],
           "id": "rrdLmqrEQQGPt3VtKcM1uA",
-          "definitionId": "753",
+          "definitionId": "763",
           "level": 15,
-          "tier": 3,
+          "tier": 1,
           "sellValue": {
             "currency": 1,
-            "quantity": "97200",
+            "quantity": "221000",
             "bonusQuantity": 0
           },
           "removeCost": {
             "currency": 1,
-            "quantity": "4750",
+            "quantity": "8000",
             "bonusQuantity": 0
           },
           "locked": false,
@@ -26834,8 +26838,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 49,
-              "statValueDecimal": "1175",
-              "unscaledDecimalValue": "11750000",
+              "statValueDecimal": "2000",
+              "unscaledDecimalValue": "20000000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -26843,7 +26847,7 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 486000,
+          "xp": 1105000,
           "levelCost": {
             "currency": 1,
             "quantity": "0",
@@ -26857,89 +26861,97 @@
           "secondaryStat": [
             {
               "roll": [
-                "0.19549"
+                "0.19549",
+                "0.10571"
               ],
               "unscaledRollValue": [
-                "586470"
+                "586470",
+                "317130"
               ],
               "stat": {
                 "unitStatId": 5,
-                "statValueDecimal": "50000",
-                "unscaledDecimalValue": "500000000",
+                "statValueDecimal": "100000",
+                "unscaledDecimalValue": "1000000000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
-              "statRolls": 1,
+              "statRolls": 2,
               "statRollerBoundsMin": "300000",
               "statRollerBoundsMax": "600000"
             },
             {
               "roll": [
-                "0.12062"
+                "0.12062",
+                "0.16383"
               ],
               "unscaledRollValue": [
-                "1357"
+                "1809",
+                "2457"
               ],
               "stat": {
                 "unitStatId": 56,
-                "statValueDecimal": "135",
-                "unscaledDecimalValue": "1357000",
+                "statValueDecimal": "426",
+                "unscaledDecimalValue": "4267000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
-              "statRolls": 1,
-              "statRollerBoundsMin": "1125",
-              "statRollerBoundsMax": "2250"
+              "statRolls": 2,
+              "statRollerBoundsMin": "1500",
+              "statRollerBoundsMax": "3000"
             },
             {
               "roll": [
                 "0.19324"
               ],
               "unscaledRollValue": [
-                "2174"
+                "2271"
               ],
               "stat": {
                 "unitStatId": 53,
-                "statValueDecimal": "217",
-                "unscaledDecimalValue": "2174000",
+                "statValueDecimal": "227",
+                "unscaledDecimalValue": "2271000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
               "statRolls": 1,
-              "statRollerBoundsMin": "1125",
-              "statRollerBoundsMax": "2250"
+              "statRollerBoundsMin": "1175",
+              "statRollerBoundsMax": "2350"
             },
             {
               "roll": [
-                "0.18645"
+                "0.18645",
+                "0.19344",
+                "0.19426"
               ],
               "unscaledRollValue": [
-                "913605"
+                "1491600",
+                "1547520",
+                "1554080"
               ],
               "stat": {
                 "unitStatId": 42,
-                "statValueDecimal": "90000",
-                "unscaledDecimalValue": "900000000",
+                "statValueDecimal": "450000",
+                "unscaledDecimalValue": "4500000000",
                 "uiDisplayOverrideValue": "-1",
                 "scalar": "0"
               },
-              "statRolls": 1,
-              "statRollerBoundsMin": "490000",
-              "statRollerBoundsMax": "980000"
+              "statRolls": 3,
+              "statRollerBoundsMin": "800000",
+              "statRollerBoundsMax": "1600000"
             }
           ],
           "id": "9ENCsC7ERRyoziV-ww55VQ",
-          "definitionId": "454",
+          "definitionId": "464",
           "level": 15,
           "tier": 1,
           "sellValue": {
             "currency": 1,
-            "quantity": "97200",
+            "quantity": "221000",
             "bonusQuantity": 0
           },
           "removeCost": {
             "currency": 1,
-            "quantity": "4750",
+            "quantity": "8000",
             "bonusQuantity": 0
           },
           "locked": false,
@@ -26948,8 +26960,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 55,
-              "statValueDecimal": "588",
-              "unscaledDecimalValue": "5880000",
+              "statValueDecimal": "1600",
+              "unscaledDecimalValue": "16000000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -26957,7 +26969,7 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 486000,
+          "xp": 1105000,
           "levelCost": {
             "currency": 1,
             "quantity": "0",
@@ -39207,22 +39219,52 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 4
+      "value": "7261",
+      "index": 7
     },
     {
-      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "3572",
-      "index": 8
+      "value": "2108586",
+      "index": 2
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
       "value": "23251",
       "index": 11
+    },
+    {
+      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 13
+    },
+    {
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "7",
+      "index": 10
+    },
+    {
+      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
+      "versionKey": "NULL",
+      "value": "22033182231977",
+      "index": 21
+    },
+    {
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 20
+    },
+    {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
     },
     {
       "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
@@ -39237,16 +39279,10 @@
       "index": 14
     },
     {
-      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "45",
-      "index": 5
-    },
-    {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
+      "value": "1661984",
+      "index": 3
     },
     {
       "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
@@ -39255,34 +39291,10 @@
       "index": 17
     },
     {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
       "versionKey": "NULL",
-      "value": "7244",
-      "index": 7
-    },
-    {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "3768239",
-      "index": 1
-    },
-    {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "9996",
-      "index": 16
-    },
-    {
-      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
-      "versionKey": "NULL",
-      "value": "22033182231977",
-      "index": 21
+      "value": "43",
+      "index": 19
     },
     {
       "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
@@ -39291,46 +39303,46 @@
       "index": 6
     },
     {
-      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 13
+      "value": "9996",
+      "index": 16
     },
     {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
       "versionKey": "NULL",
-      "value": "15",
+      "value": "16",
       "index": 15
-    },
-    {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "43",
-      "index": 19
-    },
-    {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "2106460",
-      "index": 2
-    },
-    {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "6",
-      "index": 10
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1661779",
-      "index": 3
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
       "versionKey": "NULL",
       "value": "1",
       "index": 12
+    },
+    {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "3770570",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "3586",
+      "index": 8
+    },
+    {
+      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
+      "versionKey": "NULL",
+      "value": "45",
+      "index": 5
     }
   ],
   "pvpProfile": [
@@ -39776,7 +39788,7 @@
       "joinTime": "1788908536000",
       "endTime": "1791234000000",
       "remove": false,
-      "rank": 7815
+      "rank": 1858
     }
   ],
   "datacron": [
@@ -39951,14 +39963,14 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1790514779000",
+  "lastActivityTime": "1790547751000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
   "lifetimeSeasonScore": "0",
   "playerRating": {
     "playerSkillRating": {
-      "skillRating": 1695
+      "skillRating": 1730
     },
     "playerRankStatus": {
       "leagueId": "CARBONITE",
