@@ -24,6 +24,8 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 
 #ally{font-size:1.15rem;letter-spacing:.02em}header>div:last-child{display:flex;gap:8px;flex-wrap:wrap}
 @media(max-width:600px){th:nth-child(2),td:nth-child(2),th:nth-child(6),td:nth-child(6){display:none}th:first-child{width:44%}}
+
+#private-data{margin-bottom:24px}.private-output{max-height:520px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#111d2a;border:1px solid #304055;border-radius:8px;padding:14px;font-size:.82rem;line-height:1.45}.private-controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.private-controls input{flex:1;min-width:240px}
 </style>
 </head>
 <body><main>
@@ -48,6 +50,18 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 </ul><div id="fleet-targets" class="target-list" aria-label="Fleet farm progress"></div><p class="muted plan-note">Keep to the two planned Fleet hard-node farms; no third hard-node farm.</p></article>
 <article class="plan-card"><div class="eyebrow">Next project</div><h3>SLKR · first Galactic Legend</h3><p class="muted">After Executor, continue the relic queue: Palpatine R7 → Kylo Ren (Unmasked) R7 → Kylo Ren R7.</p><div id="slkr-targets" class="target-list" aria-label="SLKR relic target progress"></div><hr class="plan-divider"><h3>Era goals</h3><p class="muted">Farm Darth Jar Jar and Starkiller (Luke Concept) shards to 5★; then take Starkiller to Episode Level 95.</p><div id="era-targets" class="target-list" aria-label="Era character shard progress"></div><p class="muted plan-note">When Darth Jar Jar reaches 5★, the planned three R6 Kyber upgrades are Captain Enoch, Night Trooper, and Death Trooper (Peridea).</p></article>
 </div><p id="farm-freshness" class="muted plan-note"></p>
+</section>
+<section class="panel" id="private-data" aria-labelledby="private-title">
+<h2 id="private-title">Private game data</h2>
+<p class="muted">Fetch live inventory, GAC, or TW data through your protected Worker. The access token stays in this tab; responses are displayed here and are not saved to the public roster files.</p>
+<div class="private-controls">
+<input id="access-token" type="password" autocomplete="off" placeholder="Cloudflare dashboard access token" aria-label="Cloudflare dashboard access token">
+<button type="button" data-private="inventory">Load inventory</button>
+<button type="button" data-private="gac">Load GAC</button>
+<button type="button" data-private="tw">Load TW</button>
+</div>
+<p id="private-status" class="muted" role="status">Enter your access token, then choose which data to fetch.</p>
+<pre id="private-output" class="private-output" aria-label="Private API response">No private data loaded.</pre>
 </section>
 <section class="panel" id="roster"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
 <div class="controls"><input id="search" type="search" placeholder="Search characters or ships…" aria-label="Search roster"><select id="filter" aria-label="Filter roster"><option value="all">All units</option><option value="characters">Characters</option><option value="ships">Ships</option><option value="seven">Seven stars</option><option value="relic">Relic characters</option></select><select id="sort" aria-label="Sort roster"><option value="progress">Upgrade level</option><option value="name">Name</option><option value="stars">Stars</option></select></div>
