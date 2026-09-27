@@ -3,6 +3,16 @@
   "name": "swgoh-data",
   "main": "worker/index.js",
   "compatibility_date": "2026-09-27",
-  "compatibility_flags": ["nodejs_compat"],
-  "workers_dev": true
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    }
+  }
 }
