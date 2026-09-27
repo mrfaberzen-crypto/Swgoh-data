@@ -40,7 +40,7 @@ export default {
       return json({ ok: true, service: "swgoh-private-api" }, 200, origin);
     }
 
-    const match = url.pathname.match(/^\\/api\\/private\\/(inventory|gac|tw)$/);
+    const match = url.pathname.match(new RegExp("^/api/private/(inventory|gac|tw)$"));
     if (!match) return json({ error: "Not found" }, 404, origin);
     if (origin !== ALLOWED_ORIGIN) return json({ error: "Origin not allowed" }, 403);
     if (request.method === "OPTIONS") {
