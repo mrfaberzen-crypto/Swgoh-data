@@ -4,8 +4,6 @@ const snapshotUrl = location.hostname === 'mrfaberzen-crypto.github.io'
   ? 'https://raw.githubusercontent.com/mrfaberzen-crypto/Swgoh-data/main/data/dashboard.json'
   : 'data/dashboard.json';
 let snapshot;
-// Private responses stay in memory only until the page is closed or refreshed.
-const privateResponses = {};
 
 const farmGoals = {
   executor: [
@@ -165,8 +163,6 @@ async function loadPrivateData(resource, button) {
     });
     const data = await response.json();
     if (!response.ok) throw Error(data.error || 'Request failed (HTTP ' + response.status + ')');
-    privateResponses[resource] = { loadedAt: new Date().toISOString(), data };
-    $('advice-export').disabled = false;
     output.textContent = JSON.stringify(data, null, 2);
     status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() + '. Kept in this tab only.';
   } catch (error) {
@@ -177,25 +173,6 @@ async function loadPrivateData(resource, button) {
 }
 document.querySelectorAll('[data-private]').forEach(button => {
   button.addEventListener('click', () => loadPrivateData(button.dataset.private, button));
-});
-$('advice-export').addEventListener('click', () => {
-  if (!Object.keys(privateResponses).length) return;
-  const packet = {
-    format: 'swgoh-command-centre-advice-packet',
-    version: 1,
-    exportedAt: new Date().toISOString(),
-    allyCode: snapshot?.allyCode || '843153117',
-    roster: snapshot || null,
-    privateData: privateResponses
-  };
-  const blob = new Blob([JSON.stringify(packet, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = 'swgoh-advice-' + new Date().toISOString().slice(0, 10) + '.json';
-  link.click();
-  URL.revokeObjectURL(url);
-  $('private-status').textContent = 'Advice packet downloaded. Upload it here when you want GAC or TW advice.';
 });
 
 load();
