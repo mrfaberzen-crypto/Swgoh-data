@@ -138,4 +138,41 @@ $('search').addEventListener('input', () => snapshot && render());
 $('filter').addEventListener('change', () => snapshot && render());
 $('sort').addEventListener('change', () => snapshot && render());
 $('reload').addEventListener('click', load);
+
+const privateApiBase = 'https://swgoh-data.mrfaberzen.workers.dev';
+async function loadPrivateData(resource, button) {
+  const token = $('access-token').value;
+  const status = $('private-status');
+  const output = $('private-output');
+  if (!token) {
+    status.textContent = 'Enter the Cloudflare dashboard access token first.';
+    $('access-token').focus();
+    return;
+  }
+  button.disabled = true;
+  status.textContent = 'Requesting ' + resource.toUpperCase() + ' data…';
+  try {
+    const response = await fetch(privateApiBase + '/api/private/' + encodeURIComponent(resource), {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json'
+      },
+      body: '{}',
+      cache: 'no-store'
+    });
+    const data = await response.json();
+    if (!response.ok) throw Error(data.error || 'Request failed (HTTP ' + response.status + ')');
+    output.textContent = JSON.stringify(data, null, 2);
+    status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() + '. It is not saved.';
+  } catch (error) {
+    status.textContent = 'Could not load ' + resource.toUpperCase() + ': ' + error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+document.querySelectorAll('[data-private]').forEach(button => {
+  button.addEventListener('click', () => loadPrivateData(button.dataset.private, button));
+});
+
 load();
