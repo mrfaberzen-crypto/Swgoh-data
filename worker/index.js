@@ -18,6 +18,7 @@ function json(body, status, origin) {
     headers.set("Vary", "Origin");
     headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
     headers.set("Access-Control-Allow-Headers", "Authorization, Content-Type");
+    headers.set("Access-Control-Expose-Headers", "X-Snapshot-Saved");
   }
   return new Response(JSON.stringify(body), { status, headers });
 }
@@ -29,6 +30,55 @@ function matchesToken(provided, expected) {
     difference |= provided.charCodeAt(i) ^ expected.charCodeAt(i);
   }
   return difference === 0;
+}
+
+function toBase64Utf8(value) {
+  const bytes = new TextEncoder().encode(value);
+  let binary = "";
+  for (let i = 0; i < bytes.length; i += 0x8000) {
+    binary += String.fromCharCode(...bytes.subarray(i, i + 0x8000));
+  }
+  return btoa(binary);
+}
+
+async function savePrivateSnapshot(resource, data, token) {
+  const path = "data/" + resource + ".json";
+  const url = "https://api.github.com/repos/mrfaberzen-crypto/swgoh-private-data/contents/" + path;
+  const headers = {
+    "Authorization": "Bearer " + token,
+    "Accept": "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "swgoh-command-centre"
+  };
+  const existing = await fetch(url, { headers });
+  let sha;
+  if (existing.ok) {
+    const file = await existing.json();
+    sha = file.sha;
+  } else if (existing.status !== 404) {
+    throw new Error("GitHub snapshot lookup failed (HTTP " + existing.status + ")");
+  }
+
+  const snapshot = {
+    allyCode: ALLY_CODE,
+    resource,
+    fetchedAt: new Date().toISOString(),
+    data
+  };
+  const content = JSON.stringify(snapshot, null, 2) + "\n";
+  const writeResponse = await fetch(url, {
+    method: "PUT",
+    headers: { ...headers, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      message: "Refresh SWGOH " + resource.toUpperCase() + " snapshot",
+      content: toBase64Utf8(content),
+      branch: "main",
+      ...(sha ? { sha } : {})
+    })
+  });
+  if (!writeResponse.ok) {
+    throw new Error("GitHub snapshot save failed (HTTP " + writeResponse.status + ")");
+  }
 }
 
 export default {
@@ -57,7 +107,7 @@ export default {
     }
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405, origin);
 
-    if (!env.MHANNDALORIAN_API_KEY || !env.DASHBOARD_ACCESS_TOKEN) {
+    if (!env.MHANNDALORIAN_API_KEY || !env.DASHBOARD_ACCESS_TOKEN || !env.PRIVATE_DATA_GITHUB_TOKEN) {
       return json({ error: "Worker secrets are not configured" }, 503, origin);
     }
 
@@ -103,15 +153,28 @@ export default {
       return json({ error: "Mhanndalorian API request failed", status: upstream.status }, 502, origin);
     }
 
-    const data = await upstream.text();
-    return new Response(data, {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json; charset=utf-8",
-        "Cache-Control": "no-store, private",
-        "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
-        "Vary": "Origin"
-      }
+    let data;
+    try {
+      data = await upstream.json();
+    } catch {
+      return json({ error: "Mhanndalorian API returned invalid JSON" }, 502, origin);
+    }
+
+    try {
+      await savePrivateSnapshot(match[1], data, env.PRIVATE_DATA_GITHUB_TOKEN);
+    } catch (error) {
+      console.error("Private GitHub snapshot save failed", match[1], error?.name || "Error", error?.message || "No details");
+      return json({ error: "Live data loaded but private GitHub snapshot could not be saved" }, 502, origin);
+    }
+
+    const headers = new Headers({
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "no-store, private",
+      "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+      "Access-Control-Expose-Headers": "X-Snapshot-Saved",
+      "Vary": "Origin",
+      "X-Snapshot-Saved": "true"
     });
+    return new Response(JSON.stringify(data), { status: 200, headers });
   }
 };
