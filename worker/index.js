@@ -90,7 +90,8 @@ export default {
           "Authorization": signature
         },
         body,
-        redirect: "error"
+        // Do not follow redirects with a signed request; Cloudflare supports "manual".
+        redirect: "manual"
       });
     } catch (error) {
       // Log only safe transport diagnostics; never include request headers or secrets.
