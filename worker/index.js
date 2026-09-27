@@ -40,10 +40,21 @@ export default {
       return json({ ok: true, service: "swgoh-private-api" }, 200, origin);
     }
 
-    const match = url.pathname.match(/^\/api\/private\/(inventory|gac|tw)$/);
+    const match = url.pathname.match(/^\\/api\\/private\\/(inventory|gac|tw)$/);
     if (!match) return json({ error: "Not found" }, 404, origin);
     if (origin !== ALLOWED_ORIGIN) return json({ error: "Origin not allowed" }, 403);
-    if (request.method === "OPTIONS") return json({}, 204, origin);
+    if (request.method === "OPTIONS") {
+      return new Response(null, {
+        status: 204,
+        headers: {
+          "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+          "Access-Control-Allow-Methods": "POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Authorization, Content-Type",
+          "Access-Control-Max-Age": "600",
+          "Vary": "Origin"
+        }
+      });
+    }
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405, origin);
 
     if (!env.MHANNDALORIAN_API_KEY || !env.DASHBOARD_ACCESS_TOKEN) {
