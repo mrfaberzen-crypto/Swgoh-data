@@ -916,19 +916,15 @@
       "skill": [],
       "equipment": [
         {
-          "equipmentId": "113",
-          "slot": 0
-        },
-        {
-          "equipmentId": "103",
+          "equipmentId": "112",
           "slot": 2
         },
         {
-          "equipmentId": "096",
+          "equipmentId": "107",
           "slot": 3
         },
         {
-          "equipmentId": "104",
+          "equipmentId": "092",
           "slot": 5
         }
       ],
@@ -942,7 +938,7 @@
       "currentXp": 0,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 7,
+      "currentTier": 9,
       "relic": {
         "currentTier": 1
       }
@@ -995,8 +991,46 @@
       }
     },
     {
-      "skill": [],
-      "equipment": [],
+      "skill": [
+        {
+          "id": "basicskill_POGGLETHELESSER",
+          "tier": 5
+        },
+        {
+          "id": "specialskill_POGGLETHELESSER01",
+          "tier": 5
+        },
+        {
+          "id": "leaderskill_POGGLETHELESSER",
+          "tier": 5
+        },
+        {
+          "id": "uniqueskill_POGGLETHELESSER01",
+          "tier": 5
+        }
+      ],
+      "equipment": [
+        {
+          "equipmentId": "041",
+          "slot": 0
+        },
+        {
+          "equipmentId": "073",
+          "slot": 1
+        },
+        {
+          "equipmentId": "083",
+          "slot": 2
+        },
+        {
+          "equipmentId": "088",
+          "slot": 3
+        },
+        {
+          "equipmentId": "090",
+          "slot": 5
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -1007,7 +1041,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 1,
+      "currentTier": 6,
       "relic": {
         "currentTier": 1
       }
@@ -3746,7 +3780,7 @@
       "skill": [
         {
           "id": "uniqueskill_BASTILASHAN01",
-          "tier": 5
+          "tier": 6
         },
         {
           "id": "uniqueskill_BASTILASHAN02",
@@ -3754,19 +3788,19 @@
         },
         {
           "id": "basicskill_BASTILASHAN",
-          "tier": 4
+          "tier": 6
         },
         {
           "id": "leaderskill_BASTILASHAN",
-          "tier": 5
+          "tier": 6
         },
         {
           "id": "specialskill_BASTILASHAN02",
-          "tier": 4
+          "tier": 6
         },
         {
           "id": "specialskill_BASTILASHAN01",
-          "tier": 4
+          "tier": 6
         }
       ],
       "equipment": [],
@@ -4493,19 +4527,53 @@
       }
     },
     {
-      "skill": [],
-      "equipment": [],
+      "skill": [
+        {
+          "id": "basicskill_GEONOSIANSPY",
+          "tier": 5
+        },
+        {
+          "id": "specialskill_GEONOSIANSPY01",
+          "tier": 5
+        },
+        {
+          "id": "specialskill_GEONOSIANSPY02",
+          "tier": 5
+        },
+        {
+          "id": "uniqueskill_GEONOSIANSPY01",
+          "tier": 5
+        }
+      ],
+      "equipment": [
+        {
+          "equipmentId": "079",
+          "slot": 0
+        },
+        {
+          "equipmentId": "092",
+          "slot": 1
+        },
+        {
+          "equipmentId": "092",
+          "slot": 2
+        },
+        {
+          "equipmentId": "110",
+          "slot": 3
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "EmDOSJowQg2G2Zp3rw5aCw",
-      "definitionId": "GEONOSIANSPY:THREE_STAR",
-      "currentRarity": 3,
-      "currentLevel": 1,
-      "currentXp": 0,
+      "definitionId": "GEONOSIANSPY:FOUR_STAR",
+      "currentRarity": 4,
+      "currentLevel": 50,
+      "currentXp": 63540,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 1,
+      "currentTier": 7,
       "relic": {
         "currentTier": 1
       }
@@ -5473,23 +5541,11 @@
       ],
       "equipment": [
         {
-          "equipmentId": "117",
-          "slot": 0
-        },
-        {
-          "equipmentId": "102",
-          "slot": 2
-        },
-        {
-          "equipmentId": "108",
-          "slot": 3
-        },
-        {
-          "equipmentId": "100",
+          "equipmentId": "109",
           "slot": 4
         },
         {
-          "equipmentId": "095",
+          "equipmentId": "098",
           "slot": 5
         }
       ],
@@ -5503,7 +5559,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 8,
+      "currentTier": 9,
       "relic": {
         "currentTier": 1
       }
@@ -6269,8 +6325,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "rnjpnnfGQFu4iopAYxZJeA",
-      "definitionId": "PAPLOO:THREE_STAR",
-      "currentRarity": 3,
+      "definitionId": "PAPLOO:FOUR_STAR",
+      "currentRarity": 4,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -7351,24 +7407,16 @@
       ],
       "equipment": [
         {
-          "equipmentId": "114",
+          "equipmentId": "122",
           "slot": 0
         },
         {
-          "equipmentId": "120",
+          "equipmentId": "131",
           "slot": 1
         },
         {
-          "equipmentId": "117",
+          "equipmentId": "131",
           "slot": 2
-        },
-        {
-          "equipmentId": "122",
-          "slot": 3
-        },
-        {
-          "equipmentId": "173",
-          "slot": 4
         }
       ],
       "equippedStatModOld": [],
@@ -7381,7 +7429,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 9,
+      "currentTier": 10,
       "relic": {
         "currentTier": 1
       }
@@ -10829,11 +10877,11 @@
           ],
           "id": "LmjEaIq7SKaANP4Jk0O9oA",
           "definitionId": "253",
-          "level": 12,
+          "level": 15,
           "tier": 1,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -10847,8 +10895,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 49,
-              "statValueDecimal": "950",
-              "unscaledDecimalValue": "9500000",
+              "statValueDecimal": "1175",
+              "unscaledDecimalValue": "11750000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -10856,10 +10904,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -11059,11 +11107,11 @@
           ],
           "id": "c2b3O_hSRLWXUh26Yv4sww",
           "definitionId": "255",
-          "level": 12,
+          "level": 15,
           "tier": 2,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -11077,8 +11125,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 56,
-              "statValueDecimal": "1900",
-              "unscaledDecimalValue": "19000000",
+              "statValueDecimal": "2350",
+              "unscaledDecimalValue": "23500000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -11086,10 +11134,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -11175,11 +11223,11 @@
           ],
           "id": "D_S5Ffx_Twm-45wliNbvIw",
           "definitionId": "256",
-          "level": 12,
+          "level": 15,
           "tier": 2,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -11193,8 +11241,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 17,
-              "statValueDecimal": "1950",
-              "unscaledDecimalValue": "19500000",
+              "statValueDecimal": "2400",
+              "unscaledDecimalValue": "24000000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -11202,10 +11250,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -12020,7 +12068,16 @@
           "tier": 4
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "089",
+          "slot": 0
+        },
+        {
+          "equipmentId": "094",
+          "slot": 2
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [
         {
@@ -13660,37 +13717,33 @@
       "skill": [],
       "equipment": [
         {
-          "equipmentId": "048",
+          "equipmentId": "069",
           "slot": 0
         },
         {
-          "equipmentId": "065",
+          "equipmentId": "024",
           "slot": 1
         },
         {
-          "equipmentId": "071",
+          "equipmentId": "103",
           "slot": 2
         },
         {
-          "equipmentId": "097",
+          "equipmentId": "107",
           "slot": 3
-        },
-        {
-          "equipmentId": "103",
-          "slot": 4
         }
       ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "KfsbXQT3TkChB0LviQ2Jkw",
-      "definitionId": "GEONOSIANSOLDIER:FOUR_STAR",
-      "currentRarity": 4,
+      "definitionId": "GEONOSIANSOLDIER:FIVE_STAR",
+      "currentRarity": 5,
       "currentLevel": 85,
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 8,
+      "currentTier": 9,
       "relic": {
         "currentTier": 1
       }
@@ -15348,8 +15401,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "nPDFuJ0_RLOu62WAOrlm4w",
-      "definitionId": "CASSIANANDOR:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "CASSIANANDOR:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 85,
       "currentXp": 883025,
       "promotionRecipeReference": "",
@@ -18924,19 +18977,19 @@
       "skill": [
         {
           "id": "uniqueskill_SMUGGLERCHEWBACCA01",
-          "tier": 3
+          "tier": 5
         },
         {
           "id": "specialskill_SMUGGLERCHEWBACCA01",
-          "tier": 3
+          "tier": 5
         },
         {
           "id": "basicskill_SMUGGLERCHEWBACCA",
-          "tier": 3
+          "tier": 5
         },
         {
           "id": "uniqueskill_SMUGGLERCHEWBACCA02",
-          "tier": 3
+          "tier": 5
         }
       ],
       "equipment": [],
@@ -21747,24 +21800,16 @@
       ],
       "equipment": [
         {
-          "equipmentId": "135",
+          "equipmentId": "100",
           "slot": 0
         },
         {
-          "equipmentId": "117",
+          "equipmentId": "116",
           "slot": 1
         },
         {
-          "equipmentId": "172",
+          "equipmentId": "119",
           "slot": 2
-        },
-        {
-          "equipmentId": "103",
-          "slot": 3
-        },
-        {
-          "equipmentId": "079",
-          "slot": 4
         }
       ],
       "equippedStatModOld": [],
@@ -21777,7 +21822,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 9,
+      "currentTier": 10,
       "relic": {
         "currentTier": 1
       }
@@ -21882,7 +21927,28 @@
     },
     {
       "skill": [],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "024",
+          "slot": 0
+        },
+        {
+          "equipmentId": "024",
+          "slot": 1
+        },
+        {
+          "equipmentId": "067",
+          "slot": 2
+        },
+        {
+          "equipmentId": "093",
+          "slot": 3
+        },
+        {
+          "equipmentId": "075",
+          "slot": 4
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -21893,7 +21959,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 1,
+      "currentTier": 5,
       "relic": {
         "currentTier": 1
       }
@@ -21972,7 +22038,7 @@
       "skill": [
         {
           "id": "specialskill_TIESILENCER01",
-          "tier": 5
+          "tier": 6
         },
         {
           "id": "basicskill_TIESILENCER",
@@ -21980,7 +22046,7 @@
         },
         {
           "id": "uniqueskill_TIESILENCER01",
-          "tier": 5
+          "tier": 6
         },
         {
           "id": "hardwareskill_TIESILENCER01",
@@ -22050,7 +22116,7 @@
         },
         {
           "id": "specialskill_PADAWANOBIWAN02",
-          "tier": 5
+          "tier": 6
         }
       ],
       "equipment": [],
@@ -26242,7 +26308,7 @@
         },
         {
           "id": "hardwareskill_TIEFIGHTERIMPERIAL01",
-          "tier": 0
+          "tier": 1
         }
       ],
       "equipment": [],
@@ -26274,28 +26340,7 @@
           "tier": 5
         }
       ],
-      "equipment": [
-        {
-          "equipmentId": "117",
-          "slot": 0
-        },
-        {
-          "equipmentId": "109",
-          "slot": 1
-        },
-        {
-          "equipmentId": "063",
-          "slot": 2
-        },
-        {
-          "equipmentId": "125",
-          "slot": 3
-        },
-        {
-          "equipmentId": "111",
-          "slot": 4
-        }
-      ],
+      "equipment": [],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -26306,7 +26351,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 9,
+      "currentTier": 10,
       "relic": {
         "currentTier": 1
       }
@@ -28989,8 +29034,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "3dquHz5HSRic9i4-MHJcvw",
-      "definitionId": "CHIEFNEBIT:THREE_STAR",
-      "currentRarity": 3,
+      "definitionId": "CHIEFNEBIT:FOUR_STAR",
+      "currentRarity": 4,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -31560,7 +31605,16 @@
           "tier": 5
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "101",
+          "slot": 4
+        },
+        {
+          "equipmentId": "091",
+          "slot": 5
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -31641,8 +31695,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "_5mMBDUyTzeM9vNaCMl1og",
-      "definitionId": "GEONOSIANSTARFIGHTER2:TWO_STAR",
-      "currentRarity": 2,
+      "definitionId": "GEONOSIANSTARFIGHTER2:THREE_STAR",
+      "currentRarity": 3,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -31657,8 +31711,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "1sZFb-ouTw6U24UNvbIE9w",
-      "definitionId": "GEONOSIANSTARFIGHTER1:TWO_STAR",
-      "currentRarity": 2,
+      "definitionId": "GEONOSIANSTARFIGHTER1:THREE_STAR",
+      "currentRarity": 3,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -34006,8 +34060,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "1Amap1QXT4yThfeuRk4jlA",
-      "definitionId": "TEEBO:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "TEEBO:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 30,
       "currentXp": 6750,
       "promotionRecipeReference": "",
@@ -36431,11 +36485,11 @@
           ],
           "id": "1OsF5z-DQ7uK3tYT4dc79g",
           "definitionId": "552",
-          "level": 12,
+          "level": 15,
           "tier": 1,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -36449,8 +36503,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 48,
-              "statValueDecimal": "475",
-              "unscaledDecimalValue": "4750000",
+              "statValueDecimal": "588",
+              "unscaledDecimalValue": "5880000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -36458,10 +36512,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -36777,11 +36831,11 @@
           ],
           "id": "cJTGL5xjRcOSMK3xvy_7hg",
           "definitionId": "755",
-          "level": 12,
+          "level": 15,
           "tier": 2,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -36795,8 +36849,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 56,
-              "statValueDecimal": "1900",
-              "unscaledDecimalValue": "19000000",
+              "statValueDecimal": "2350",
+              "unscaledDecimalValue": "23500000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -36804,10 +36858,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -36893,11 +36947,11 @@
           ],
           "id": "lU558RLTSD2IS1L7cjHVxQ",
           "definitionId": "556",
-          "level": 12,
+          "level": 15,
           "tier": 2,
           "sellValue": {
             "currency": 1,
-            "quantity": "33800",
+            "quantity": "97200",
             "bonusQuantity": 0
           },
           "removeCost": {
@@ -36911,8 +36965,8 @@
             "unscaledRollValue": [],
             "stat": {
               "unitStatId": 17,
-              "statValueDecimal": "1950",
-              "unscaledDecimalValue": "19500000",
+              "statValueDecimal": "2400",
+              "unscaledDecimalValue": "24000000",
               "uiDisplayOverrideValue": "-1",
               "scalar": "0"
             },
@@ -36920,10 +36974,10 @@
             "statRollerBoundsMin": "0",
             "statRollerBoundsMax": "0"
           },
-          "xp": 168750,
+          "xp": 486000,
           "levelCost": {
             "currency": 1,
-            "quantity": "1150",
+            "quantity": "0",
             "bonusQuantity": 0
           },
           "bonusQuantity": 0,
@@ -39219,21 +39273,69 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "7261",
-      "index": 7
+      "value": "3809963",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "6",
+      "index": 17
+    },
+    {
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
+      "versionKey": "NULL",
+      "value": "9996",
+      "index": 16
     },
     {
       "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "2108586",
+      "value": "2130970",
       "index": 2
+    },
+    {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "1678993",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
+      "versionKey": "NULL",
+      "value": "16",
+      "index": 15
+    },
+    {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "43",
+      "index": 14
+    },
+    {
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "versionKey": "NULL",
+      "value": "7363",
+      "index": 7
+    },
+    {
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "7",
+      "index": 10
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "23251",
+      "value": "24718",
       "index": 11
     },
     {
@@ -39243,10 +39345,10 @@
       "index": 13
     },
     {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
+      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
       "versionKey": "NULL",
-      "value": "7",
-      "index": 10
+      "value": "3",
+      "index": 12
     },
     {
       "nameKey": "STAT_SEASON_BEST_RANK_NAME",
@@ -39255,40 +39357,10 @@
       "index": 21
     },
     {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
       "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
       "versionKey": "NULL",
       "value": "0",
       "index": 4
-    },
-    {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "776",
-      "index": 9
-    },
-    {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
-      "versionKey": "NULL",
-      "value": "43",
-      "index": 14
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1661984",
-      "index": 3
-    },
-    {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "6",
-      "index": 17
     },
     {
       "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
@@ -39297,52 +39369,34 @@
       "index": 19
     },
     {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "76",
-      "index": 6
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "9996",
-      "index": 16
-    },
-    {
-      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
-      "versionKey": "NULL",
-      "value": "16",
-      "index": 15
-    },
-    {
-      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
-      "versionKey": "NULL",
-      "value": "1",
-      "index": 12
-    },
-    {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
-    },
-    {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "3770570",
-      "index": 1
-    },
-    {
       "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "3586",
+      "value": "3640",
       "index": 8
+    },
+    {
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "788",
+      "index": 9
     },
     {
       "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
       "value": "45",
       "index": 5
+    },
+    {
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "76",
+      "index": 6
+    },
+    {
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 20
     }
   ],
   "pvpProfile": [
@@ -39431,7 +39485,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1790431458000",
+        "lastSaveTime": "1790549073000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -39788,7 +39842,7 @@
       "joinTime": "1788908536000",
       "endTime": "1791234000000",
       "remove": false,
-      "rank": 1858
+      "rank": 1878
     }
   ],
   "datacron": [
@@ -39926,15 +39980,15 @@
   "eraUnitStatus": [
     {
       "unitBaseId": "STORMTROOPERCONCEPT",
-      "eraLevel": 91
+      "eraLevel": 92
     },
     {
       "unitBaseId": "YODADSV",
-      "eraLevel": 91
+      "eraLevel": 95
     },
     {
       "unitBaseId": "MARAJADESKYWALKER",
-      "eraLevel": 91
+      "eraLevel": 95
     },
     {
       "unitBaseId": "JAXXON",
@@ -39963,7 +40017,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1790547751000",
+  "lastActivityTime": "1790604099000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
