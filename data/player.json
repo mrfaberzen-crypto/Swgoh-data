@@ -39273,40 +39273,10 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "3809963",
-      "index": 1
-    },
-    {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "6",
-      "index": 17
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "9996",
-      "index": 16
-    },
-    {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "2130970",
-      "index": 2
-    },
-    {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1678993",
-      "index": 3
+      "value": "788",
+      "index": 9
     },
     {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
@@ -39315,10 +39285,46 @@
       "index": 15
     },
     {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "43",
-      "index": 14
+      "value": "1678993",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "24718",
+      "index": 11
+    },
+    {
+      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
+      "versionKey": "NULL",
+      "value": "3",
+      "index": 12
+    },
+    {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
+      "versionKey": "NULL",
+      "value": "22033182231977",
+      "index": 21
+    },
+    {
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "3809963",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
     },
     {
       "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
@@ -39333,34 +39339,16 @@
       "index": 10
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "24718",
-      "index": 11
+      "value": "9996",
+      "index": 16
     },
     {
-      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 13
-    },
-    {
-      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
-      "versionKey": "NULL",
-      "value": "3",
-      "index": 12
-    },
-    {
-      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
-      "versionKey": "NULL",
-      "value": "22033182231977",
-      "index": 21
-    },
-    {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 4
+      "value": "43",
+      "index": 14
     },
     {
       "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
@@ -39369,16 +39357,28 @@
       "index": 19
     },
     {
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "2130970",
+      "index": 2
+    },
+    {
       "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
       "value": "3640",
       "index": 8
     },
     {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "788",
-      "index": 9
+      "value": "76",
+      "index": 6
+    },
+    {
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "6",
+      "index": 17
     },
     {
       "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
@@ -39387,10 +39387,10 @@
       "index": 5
     },
     {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
+      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "76",
-      "index": 6
+      "value": "0",
+      "index": 13
     },
     {
       "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
@@ -39485,7 +39485,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1790549073000",
+        "lastSaveTime": "1790634231000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -39842,7 +39842,7 @@
       "joinTime": "1788908536000",
       "endTime": "1791234000000",
       "remove": false,
-      "rank": 1878
+      "rank": 1883
     }
   ],
   "datacron": [
@@ -40017,7 +40017,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1790604099000",
+  "lastActivityTime": "1790636742000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -40032,5 +40032,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 92
+  "loanedUnitEraLevel": 93
 }
