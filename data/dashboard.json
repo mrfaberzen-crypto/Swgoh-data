@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-09-28T23:07:25Z",
+  "refreshedAt": "2026-09-29T18:35:49Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 424,
@@ -1523,7 +1523,7 @@
       "id": "ARC170CLONESERGEANT",
       "name": "Clone Sergeant's ARC-170",
       "type": "Ship",
-      "stars": 5,
+      "stars": 6,
       "level": 85,
       "gear": null,
       "relic": null,
