@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-09-30T18:34:19Z",
+  "refreshedAt": "2026-10-01T12:00:41Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 424,
@@ -55,7 +55,7 @@
       "type": "Character",
       "stars": 5,
       "level": 85,
-      "gear": 11,
+      "gear": 12,
       "relic": null,
       "mods": 0
     },
@@ -158,6 +158,16 @@
       "gear": 8,
       "relic": null,
       "mods": 0
+    },
+    {
+      "id": "SITHINFILTRATOR",
+      "name": "Scimitar",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
     },
     {
       "id": "SITHTROOPER",
@@ -485,7 +495,7 @@
       "type": "Character",
       "stars": 5,
       "level": 85,
-      "gear": 11,
+      "gear": 12,
       "relic": null,
       "mods": 0
     },
