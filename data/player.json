@@ -908,6 +908,10 @@
       "skill": [],
       "equipment": [
         {
+          "equipmentId": "120",
+          "slot": 1
+        },
+        {
           "equipmentId": "112",
           "slot": 2
         },
@@ -1001,39 +1005,18 @@
           "tier": 5
         }
       ],
-      "equipment": [
-        {
-          "equipmentId": "041",
-          "slot": 0
-        },
-        {
-          "equipmentId": "073",
-          "slot": 1
-        },
-        {
-          "equipmentId": "083",
-          "slot": 2
-        },
-        {
-          "equipmentId": "088",
-          "slot": 3
-        },
-        {
-          "equipmentId": "090",
-          "slot": 5
-        }
-      ],
+      "equipment": [],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "UU1ZNNvbQ6GWyhULya3vRA",
-      "definitionId": "POGGLETHELESSER:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "POGGLETHELESSER:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 85,
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 6,
+      "currentTier": 7,
       "relic": {
         "currentTier": 1
       }
@@ -9049,7 +9032,7 @@
         },
         {
           "id": "uniqueskill_IG20001",
-          "tier": 4
+          "tier": 5
         },
         {
           "id": "basicskill_IG2000",
@@ -9057,7 +9040,7 @@
         },
         {
           "id": "hardwareskill_IG20001",
-          "tier": 0
+          "tier": 1
         }
       ],
       "equipment": [],
@@ -10445,7 +10428,7 @@
       "unitStat": null,
       "currentTier": 13,
       "relic": {
-        "currentTier": 2
+        "currentTier": 7
       }
     },
     {
@@ -21909,15 +21892,15 @@
       ],
       "equipment": [
         {
-          "equipmentId": "100",
+          "equipmentId": "117",
           "slot": 0
         },
         {
-          "equipmentId": "116",
+          "equipmentId": "121",
           "slot": 1
         },
         {
-          "equipmentId": "119",
+          "equipmentId": "146",
           "slot": 2
         }
       ],
@@ -21931,7 +21914,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 10,
+      "currentTier": 11,
       "relic": {
         "currentTier": 1
       }
@@ -24655,28 +24638,7 @@
           "tier": 5
         }
       ],
-      "equipment": [
-        {
-          "equipmentId": "071",
-          "slot": 0
-        },
-        {
-          "equipmentId": "113",
-          "slot": 1
-        },
-        {
-          "equipmentId": "129",
-          "slot": 2
-        },
-        {
-          "equipmentId": "090",
-          "slot": 3
-        },
-        {
-          "equipmentId": "103",
-          "slot": 4
-        }
-      ],
+      "equipment": [],
       "equippedStatModOld": [],
       "equippedStatMod": [
         {
@@ -24798,13 +24760,13 @@
       ],
       "purchasedAbilityId": [],
       "id": "CMttExmTST2o66i6BvaVlw",
-      "definitionId": "ASAJVENTRESS:SIX_STAR",
-      "currentRarity": 6,
+      "definitionId": "ASAJVENTRESS:SEVEN_STAR",
+      "currentRarity": 7,
       "currentLevel": 85,
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 10,
+      "currentTier": 12,
       "relic": {
         "currentTier": 1
       }
@@ -34756,7 +34718,12 @@
           "tier": 4
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "158",
+          "slot": 0
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -39386,28 +39353,10 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1690858",
-      "index": 3
-    },
-    {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
-      "versionKey": "NULL",
-      "value": "47",
-      "index": 14
+      "value": "5",
+      "index": 12
     },
     {
       "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
@@ -39416,34 +39365,22 @@
       "index": 5
     },
     {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "47",
+      "index": 14
+    },
+    {
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
+      "versionKey": "NULL",
+      "value": "47",
+      "index": 19
+    },
+    {
       "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
       "value": "76",
       "index": 6
-    },
-    {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "7",
-      "index": 10
-    },
-    {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
-    },
-    {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
-      "versionKey": "NULL",
-      "value": "7617",
-      "index": 7
-    },
-    {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "2201972",
-      "index": 2
     },
     {
       "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
@@ -39452,40 +39389,16 @@
       "index": 17
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
-      "versionKey": "NULL",
-      "value": "3",
-      "index": 12
-    },
-    {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "3892830",
-      "index": 1
-    },
-    {
       "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "824",
+      "value": "836",
       "index": 9
     },
     {
-      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
       "versionKey": "NULL",
-      "value": "18",
-      "index": 15
-    },
-    {
-      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "3801",
-      "index": 8
-    },
-    {
-      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "25338",
-      "index": 11
+      "value": "0",
+      "index": 18
     },
     {
       "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
@@ -39494,28 +39407,82 @@
       "index": 13
     },
     {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
+    },
+    {
       "nameKey": "STAT_SEASON_BEST_RANK_NAME",
       "versionKey": "NULL",
       "value": "22054657066851",
       "index": 21
     },
     {
+      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "25338",
+      "index": 11
+    },
+    {
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "1701660",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "3863",
+      "index": 8
+    },
+    {
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "3912913",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "7",
+      "index": 10
+    },
+    {
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "2211253",
+      "index": 2
+    },
+    {
+      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
+      "versionKey": "NULL",
+      "value": "18",
+      "index": 15
+    },
+    {
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "versionKey": "NULL",
+      "value": "7701",
+      "index": 7
+    },
+    {
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 20
+    },
+    {
       "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
       "value": "10831",
       "index": 16
-    },
-    {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "47",
-      "index": 19
     }
   ],
   "pvpProfile": [
     {
       "tab": 1,
-      "rank": 424,
+      "rank": 473,
       "squad": {
         "cell": [
           {
@@ -39598,7 +39565,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1790831788000",
+        "lastSaveTime": "1790890549000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -40116,7 +40083,7 @@
     },
     {
       "unitBaseId": "MARAJADESKYWALKER",
-      "eraLevel": 95
+      "eraLevel": 102
     },
     {
       "unitBaseId": "JAXXON",
@@ -40128,7 +40095,7 @@
     },
     {
       "unitBaseId": "DARTHJARJAR",
-      "eraLevel": 105
+      "eraLevel": 107
     }
   ],
   "name": "Faberzen",
@@ -40145,7 +40112,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1790867414000",
+  "lastActivityTime": "1790937831000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -40160,5 +40127,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 94
+  "loanedUnitEraLevel": 95
 }
