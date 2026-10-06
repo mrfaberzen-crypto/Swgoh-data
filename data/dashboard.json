@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-05T18:38:30Z",
+  "refreshedAt": "2026-10-06T18:35:37Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 513,
@@ -66,6 +66,16 @@
       "stars": 6,
       "level": 80,
       "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "THERONIN",
+      "name": "The Ronin",
+      "type": "Character",
+      "stars": 3,
+      "level": 1,
+      "gear": 1,
       "relic": null,
       "mods": 0
     },
@@ -505,8 +515,8 @@
       "type": "Character",
       "stars": 5,
       "level": 85,
-      "gear": 12,
-      "relic": null,
+      "gear": 13,
+      "relic": 2,
       "mods": 0
     },
     {
@@ -1623,7 +1633,7 @@
       "id": "PUNISHINGONE",
       "name": "Punishing One",
       "type": "Ship",
-      "stars": 4,
+      "stars": 5,
       "level": 85,
       "gear": null,
       "relic": null,
