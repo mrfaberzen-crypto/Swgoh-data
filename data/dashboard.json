@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-08T18:37:34Z",
+  "refreshedAt": "2026-10-09T13:09:55Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 513,
-    "2": 51
+    "2": 41
   },
   "units": [
     {
@@ -75,7 +75,7 @@
       "type": "Character",
       "stars": 4,
       "level": 85,
-      "gear": 12,
+      "gear": 13,
       "relic": null,
       "mods": 0
     },
@@ -98,6 +98,16 @@
       "gear": null,
       "relic": null,
       "mods": null
+    },
+    {
+      "id": "VANGUARDTEMPLEGUARD",
+      "name": "Temple Guard",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
     },
     {
       "id": "BB8",
@@ -1036,7 +1046,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 6,
+      "relic": 7,
       "mods": 6
     },
     {
@@ -1750,6 +1760,16 @@
       "mods": 6
     },
     {
+      "id": "MARAJADE",
+      "name": "Mara Jade, The Emperor's Hand",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
       "id": "DEATHTROOPER",
       "name": "Death Trooper",
       "type": "Character",
@@ -2073,7 +2093,7 @@
       "id": "JEDIKNIGHTGUARDIAN",
       "name": "Jedi Knight Guardian",
       "type": "Character",
-      "stars": 3,
+      "stars": 4,
       "level": 1,
       "gear": 1,
       "relic": null,

@@ -1554,24 +1554,7 @@
           "tier": 4
         }
       ],
-      "equipment": [
-        {
-          "equipmentId": "158",
-          "slot": 0
-        },
-        {
-          "equipmentId": "159",
-          "slot": 1
-        },
-        {
-          "equipmentId": "160",
-          "slot": 2
-        },
-        {
-          "equipmentId": "166",
-          "slot": 3
-        }
-      ],
+      "equipment": [],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -1582,7 +1565,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 12,
+      "currentTier": 13,
       "relic": {
         "currentTier": 1
       }
@@ -1663,6 +1646,24 @@
       "unitStat": null,
       "currentTier": 1,
       "relic": null
+    },
+    {
+      "skill": [],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "M5f8N7jnRtmEZsz1c044RA",
+      "definitionId": "VANGUARDTEMPLEGUARD:TWO_STAR",
+      "currentRarity": 2,
+      "currentLevel": 1,
+      "currentXp": 0,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 1,
+      "relic": {
+        "currentTier": 1
+      }
     },
     {
       "skill": [],
@@ -27024,7 +27025,7 @@
       "unitStat": null,
       "currentTier": 13,
       "relic": {
-        "currentTier": 8
+        "currentTier": 9
       }
     },
     {
@@ -51422,6 +51423,41 @@
     {
       "skill": [
         {
+          "id": "specialskill_MARAJADE02",
+          "tier": 5
+        },
+        {
+          "id": "basicskill_MARAJADE",
+          "tier": 6
+        },
+        {
+          "id": "uniqueskill_MARAJADE01",
+          "tier": 5
+        },
+        {
+          "id": "specialskill_MARAJADE01",
+          "tier": 5
+        }
+      ],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "ygQp4v6ETI2BWNJIRgsV8Q",
+      "definitionId": "MARAJADE:SIX_STAR",
+      "currentRarity": 6,
+      "currentLevel": 85,
+      "currentXp": 883025,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 13,
+      "relic": {
+        "currentTier": 7
+      }
+    },
+    {
+      "skill": [
+        {
           "id": "specialskill_DEATHTROOPER01",
           "tier": 5
         },
@@ -60369,8 +60405,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "NGRASOmUSqiqi-GnmKkrfA",
-      "definitionId": "JEDIKNIGHTGUARDIAN:THREE_STAR",
-      "currentRarity": 3,
+      "definitionId": "JEDIKNIGHTGUARDIAN:FOUR_STAR",
+      "currentRarity": 4,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -64041,67 +64077,67 @@
     {
       "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
       "versionKey": "NULL",
-      "value": "47",
+      "value": "51",
       "index": 14
     },
     {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
       "versionKey": "NULL",
-      "value": "18",
+      "value": "21",
       "index": 15
     },
     {
       "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
       "versionKey": "NULL",
-      "value": "47",
+      "value": "51",
       "index": 19
     },
     {
       "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "1811563",
+      "value": "1815831",
       "index": 3
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "28749",
+      "value": "29028",
       "index": 11
     },
     {
       "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "2480707",
+      "value": "2502605",
       "index": 2
     },
     {
       "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "10831",
+      "value": "11704",
       "index": 16
     },
     {
       "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
-      "value": "45",
+      "value": "46",
       "index": 5
     },
     {
       "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "4292270",
+      "value": "4318436",
       "index": 1
     },
     {
       "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
       "versionKey": "NULL",
-      "value": "8312",
+      "value": "8388",
       "index": 7
     },
     {
       "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "4197",
+      "value": "4244",
       "index": 8
     },
     {
@@ -64125,7 +64161,7 @@
     {
       "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "908",
+      "value": "920",
       "index": 9
     },
     {
@@ -64137,7 +64173,7 @@
     {
       "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
       "versionKey": "NULL",
-      "value": "7",
+      "value": "8",
       "index": 17
     },
     {
@@ -64245,7 +64281,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1791405816000",
+        "lastSaveTime": "1791505716000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -64326,7 +64362,7 @@
     },
     {
       "tab": 2,
-      "rank": 51,
+      "rank": 41,
       "squad": {
         "cell": [
           {
@@ -64482,6 +64518,9 @@
     },
     {
       "id": "PLAYERTITLE_GRANDARENA_INTRO"
+    },
+    {
+      "id": "PLAYERTITLE_GLSLKR_QUEST_001"
     },
     {
       "id": "PLAYERTITLE_EPISODEPASS_ERA_09_EPISODE_3"
@@ -64657,12 +64696,12 @@
       "league": "CARBONITE",
       "wins": 0,
       "losses": 0,
-      "seasonPoints": 0,
+      "seasonPoints": 873,
       "division": 15,
       "joinTime": "1791321350000",
       "endTime": "1793653200000",
       "remove": false,
-      "rank": 24975
+      "rank": 25326
     }
   ],
   "datacron": [
@@ -64870,7 +64909,7 @@
     },
     {
       "unitBaseId": "THERONIN",
-      "eraLevel": 113
+      "eraLevel": 115
     }
   ],
   "name": "Faberzen",
@@ -64887,7 +64926,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1791462313000",
+  "lastActivityTime": "1791551006000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -64902,5 +64941,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 100
+  "loanedUnitEraLevel": 101
 }
