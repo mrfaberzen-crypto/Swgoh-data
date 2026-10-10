@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-09T18:35:58Z",
+  "refreshedAt": "2026-10-10T18:34:32Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 513,
-    "2": 41
+    "1": 434,
+    "2": 51
   },
   "units": [
     {
@@ -127,7 +127,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "FIRSTORDERSPECIALFORCESPILOT",
@@ -287,7 +287,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "QUIGONJINN",
@@ -327,7 +327,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "JAWA",
@@ -415,9 +415,9 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 9,
+      "gear": 10,
       "relic": null,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "SCARIFREBEL",
@@ -447,7 +447,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "EWOKELDER",
@@ -457,7 +457,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "CHIEFCHIRPA",
@@ -467,7 +467,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "GENERALHUX",
@@ -517,7 +517,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 4
+      "mods": 1
     },
     {
       "id": "YODADSV",
@@ -670,6 +670,16 @@
       "mods": 0
     },
     {
+      "id": "JANGOFETT",
+      "name": "Jango Fett",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0
+    },
+    {
       "id": "HOTHREBELSCOUT",
       "name": "Hoth Rebel Scout",
       "type": "Character",
@@ -797,7 +807,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "BLADEOFDORIN",
@@ -843,11 +853,11 @@
       "id": "PLOKOON",
       "name": "Plo Koon",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "DAKA",
@@ -867,7 +877,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "LOGRAY",
@@ -877,7 +887,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "KELLERANBEQ",
@@ -897,7 +907,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "CARADUNE",
@@ -925,7 +935,7 @@
       "type": "Character",
       "stars": 5,
       "level": 85,
-      "gear": 10,
+      "gear": 11,
       "relic": null,
       "mods": 0
     },
@@ -1080,6 +1090,16 @@
       "mods": 6
     },
     {
+      "id": "ARMORER",
+      "name": "The Armorer",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 0
+    },
+    {
       "id": "SMUGGLERHAN",
       "name": "Veteran Smuggler Han Solo",
       "type": "Character",
@@ -1147,7 +1167,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "OPERATIVE",
@@ -1285,7 +1305,7 @@
       "type": "Character",
       "stars": 5,
       "level": 85,
-      "gear": 11,
+      "gear": 13,
       "relic": null,
       "mods": 0
     },
@@ -1327,7 +1347,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "LOBOT",
@@ -1347,7 +1367,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 5
+      "mods": 1
     },
     {
       "id": "TIESILENCER",
@@ -1457,7 +1477,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "GRIEVOUS",
@@ -1617,7 +1637,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "MAUL",
@@ -1767,7 +1787,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "DEATHTROOPER",
@@ -1797,7 +1817,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "GEONOSIANSTARFIGHTER2",
@@ -1947,7 +1967,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "PRINCESSLEIA",
