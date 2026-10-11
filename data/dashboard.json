@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-10T18:34:32Z",
+  "refreshedAt": "2026-10-11T18:35:21Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 434,
-    "2": 51
+    "2": 41
   },
   "units": [
     {
@@ -238,6 +238,16 @@
       "gear": 13,
       "relic": 5,
       "mods": 6
+    },
+    {
+      "id": "ARC170REX",
+      "name": "Rex's ARC-170",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
     },
     {
       "id": "TIEFIGHTERFIRSTORDER",
