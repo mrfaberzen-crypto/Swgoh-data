@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-11T18:35:21Z",
+  "refreshedAt": "2026-10-12T18:38:45Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 434,
-    "2": 41
+    "2": 51
   },
   "units": [
     {
@@ -43,7 +43,7 @@
       "id": "BARRISSOFFEE",
       "name": "Barriss Offee",
       "type": "Character",
-      "stars": 4,
+      "stars": 5,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -313,7 +313,7 @@
       "id": "ROYALGUARD",
       "name": "Royal Guard",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 8,
       "relic": null,
@@ -368,6 +368,16 @@
       "gear": 13,
       "relic": 5,
       "mods": 6
+    },
+    {
+      "id": "BADBATCHOMEGA",
+      "name": "Omega",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
     },
     {
       "id": "EIGHTHBROTHER",
@@ -433,7 +443,7 @@
       "id": "SCARIFREBEL",
       "name": "Scarif Rebel Pathfinder",
       "type": "Character",
-      "stars": 3,
+      "stars": 4,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -603,7 +613,7 @@
       "id": "NIGHTSISTERSPIRIT",
       "name": "Nightsister Spirit",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 8,
       "relic": null,
@@ -833,7 +843,7 @@
       "id": "DARTHNIHILUS",
       "name": "Darth Nihilus",
       "type": "Character",
-      "stars": 5,
+      "stars": 6,
       "level": 80,
       "gear": 8,
       "relic": null,
@@ -1013,7 +1023,7 @@
       "id": "CLONEWARSCHEWBACCA",
       "name": "Clone Wars Chewbacca",
       "type": "Character",
-      "stars": 3,
+      "stars": 4,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -1270,12 +1280,22 @@
       "mods": 0
     },
     {
+      "id": "C3POLEGENDARY",
+      "name": "C-3PO",
+      "type": "Character",
+      "stars": 7,
+      "level": 80,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "PADMEAMIDALA",
       "name": "Padmé Amidala",
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 8,
+      "gear": 12,
       "relic": null,
       "mods": 0
     },
@@ -1883,7 +1903,7 @@
       "id": "DATHCHA",
       "name": "Dathcha",
       "type": "Character",
-      "stars": 3,
+      "stars": 4,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -2193,7 +2213,7 @@
       "id": "BISTAN",
       "name": "Bistan",
       "type": "Character",
-      "stars": 2,
+      "stars": 3,
       "level": 1,
       "gear": 1,
       "relic": null,
