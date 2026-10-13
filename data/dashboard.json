@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-13T18:42:45Z",
+  "refreshedAt": "2026-10-13T23:08:58Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 513,
@@ -115,7 +115,7 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 1,
+      "gear": 6,
       "relic": null,
       "mods": 0
     },
@@ -437,7 +437,7 @@
       "level": 85,
       "gear": 10,
       "relic": null,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "SCARIFREBEL",
@@ -625,8 +625,8 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 9,
-      "relic": null,
+      "gear": 13,
+      "relic": 5,
       "mods": 0
     },
     {
@@ -1304,8 +1304,8 @@
       "name": "C-3PO",
       "type": "Character",
       "stars": 7,
-      "level": 80,
-      "gear": 1,
+      "level": 85,
+      "gear": 8,
       "relic": null,
       "mods": 0
     },
