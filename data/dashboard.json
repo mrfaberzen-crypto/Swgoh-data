@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-12T18:38:45Z",
+  "refreshedAt": "2026-10-13T08:12:49Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 434,
+    "1": 513,
     "2": 51
   },
   "units": [
@@ -73,7 +73,7 @@
       "id": "THERONIN",
       "name": "The Ronin",
       "type": "Character",
-      "stars": 4,
+      "stars": 5,
       "level": 85,
       "gear": 13,
       "relic": null,
@@ -560,6 +560,16 @@
       "mods": 0
     },
     {
+      "id": "GREATMOTHERS",
+      "name": "Great Mothers",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
       "id": "HOUNDSTOOTH",
       "name": "Hound's Tooth",
       "type": "Ship",
@@ -877,7 +887,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 4
     },
     {
       "id": "DAKA",
@@ -1137,7 +1147,7 @@
       "level": 85,
       "gear": 13,
       "relic": 2,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "FOSITHTROOPER",
@@ -1260,6 +1270,16 @@
       "mods": 0
     },
     {
+      "id": "MORGANELSBETH",
+      "name": "Morgan Elsbeth",
+      "type": "Character",
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
+      "mods": 0
+    },
+    {
       "id": "BIGGSDARKLIGHTER",
       "name": "Biggs Darklighter",
       "type": "Character",
@@ -1327,7 +1347,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "MARAJADESKYWALKER",
@@ -1617,7 +1637,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "FIRSTORDEREXECUTIONER",
@@ -1817,7 +1837,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "DEATHTROOPER",
