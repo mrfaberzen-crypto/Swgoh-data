@@ -1,7 +1,7 @@
 {
   "versions": {
-    "latestGamedataVersion": "0.40.6:Oq-TxiewST69Ow5E1gLW3g",
-    "latestLocalizationBundleVersion": "LNJFBfJYSzucFO8xXYixIg"
+    "latestGamedataVersion": "0.40.6:i9YYIijBSxuHHNoSmCMBoQ",
+    "latestLocalizationBundleVersion": "3P4tM7xJQIiKyjTJUjE-xg"
   },
   "units": {
     "BADBATCHECHO": {
@@ -138,6 +138,10 @@
     },
     "CARSONTEVA": {
       "name": "Captain Carson Teva",
+      "combatType": 1
+    },
+    "B1MERCDROID": {
+      "name": "Mercenary Guard Droid (B1)",
       "combatType": 1
     },
     "PADAWANSABINE": {
@@ -542,6 +546,10 @@
     },
     "REYJEDITRAINING_GLEVENT": {
       "name": "Rey",
+      "combatType": 1
+    },
+    "CHOPPERS3": {
+      "name": "Chopper",
       "combatType": 1
     },
     "ZUCKUSS": {
@@ -1266,10 +1274,6 @@
     },
     "DEDRAMEERO": {
       "name": "Dedra Meero",
-      "combatType": 1
-    },
-    "CHOPPERS3": {
-      "name": "Chopper",
       "combatType": 1
     },
     "K2SO": {
@@ -1998,6 +2002,10 @@
     },
     "ADMINISTRATORLANDO_JKL_EVENT": {
       "name": "Lando Calrissian",
+      "combatType": 1
+    },
+    "ADELPHIRANGER": {
+      "name": "Adelphi Ranger",
       "combatType": 1
     },
     "JOCASTANU": {

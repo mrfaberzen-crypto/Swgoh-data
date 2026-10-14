@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-13T23:08:58Z",
+  "refreshedAt": "2026-10-14T18:56:33Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 513,
@@ -14,6 +14,16 @@
       "name": "Magmatrooper",
       "type": "Character",
       "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "HERMITYODA",
+      "name": "Hermit Yoda",
+      "type": "Character",
+      "stars": 2,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -227,7 +237,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "DENGAR",
@@ -297,7 +307,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "QUIGONJINN",
@@ -407,7 +417,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "NIGHTSISTERZOMBIE",
@@ -437,7 +447,7 @@
       "level": 85,
       "gear": 10,
       "relic": null,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "SCARIFREBEL",
@@ -467,7 +477,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "EWOKELDER",
@@ -477,7 +487,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "CHIEFCHIRPA",
@@ -567,7 +577,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "HOUNDSTOOTH",
@@ -607,7 +617,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "IG2000",
@@ -627,7 +637,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "XANADUBLOOD",
@@ -917,7 +927,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "KELLERANBEQ",
@@ -1047,7 +1057,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 4
+      "mods": 6
     },
     {
       "id": "B2SUPERBATTLEDROID",
@@ -1117,7 +1127,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 4
+      "mods": 6
     },
     {
       "id": "ARMORER",
@@ -1147,7 +1157,7 @@
       "level": 85,
       "gear": 13,
       "relic": 2,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "FOSITHTROOPER",
@@ -1157,7 +1167,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "UGNAUGHT",
@@ -1190,6 +1200,16 @@
       "mods": null
     },
     {
+      "id": "WAMPA",
+      "name": "Wampa",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "SMUGGLERCHEWBACCA",
       "name": "Veteran Smuggler Chewbacca",
       "type": "Character",
@@ -1217,7 +1237,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "R2D2_LEGENDARY",
@@ -1277,7 +1297,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 4
+      "mods": 6
     },
     {
       "id": "BIGGSDARKLIGHTER",
@@ -1347,7 +1367,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "MARAJADESKYWALKER",
@@ -1637,7 +1657,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "FIRSTORDEREXECUTIONER",
@@ -1647,7 +1667,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "VADER",
@@ -1727,7 +1747,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "CAPITALJEDICRUISER",
@@ -1767,7 +1787,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "PHANTOM2",
@@ -1837,7 +1857,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 1
+      "mods": 6
     },
     {
       "id": "DEATHTROOPER",
@@ -2017,7 +2037,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "PRINCESSLEIA",
@@ -2097,7 +2117,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "DARTHJARJAR",
