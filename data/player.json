@@ -4639,7 +4639,7 @@
       "unitStat": null,
       "currentTier": 13,
       "relic": {
-        "currentTier": 7
+        "currentTier": 8
       }
     },
     {
@@ -15233,8 +15233,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "Zxb4y4OFSHm0iJAj7-dsBQ",
-      "definitionId": "CAPITALRADDUS:FOUR_STAR",
-      "currentRarity": 4,
+      "definitionId": "CAPITALRADDUS:FIVE_STAR",
+      "currentRarity": 5,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -19967,24 +19967,41 @@
       "skill": [
         {
           "id": "specialskill_STORMTROOPER01",
-          "tier": 3
+          "tier": 5
         },
         {
           "id": "basicskill_STORMTROOPER01",
-          "tier": 3
+          "tier": 5
         },
         {
           "id": "uniqueskill_STORMTROOPER01",
-          "tier": 3
+          "tier": 5
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "117",
+          "slot": 0
+        },
+        {
+          "equipmentId": "100",
+          "slot": 3
+        },
+        {
+          "equipmentId": "096",
+          "slot": 4
+        },
+        {
+          "equipmentId": "092",
+          "slot": 5
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "TS1HBgV1Rwy-iEBk2Vof4A",
-      "definitionId": "STORMTROOPER:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "STORMTROOPER:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 80,
       "currentXp": 653025,
       "promotionRecipeReference": "",
@@ -58351,8 +58368,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "3KAm1HYnR8yWsiQuUZ1a9A",
-      "definitionId": "GEONOSIANSTARFIGHTER3:THREE_STAR",
-      "currentRarity": 3,
+      "definitionId": "GEONOSIANSTARFIGHTER3:FOUR_STAR",
+      "currentRarity": 4,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -62667,8 +62684,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "E3NXkQooQ0OTD8QYllSIZg",
-      "definitionId": "CAPITALFINALIZER:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "CAPITALFINALIZER:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 85,
       "currentXp": 1746400,
       "promotionRecipeReference": "",
@@ -69359,40 +69376,52 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
-      "versionKey": "NULL",
-      "value": "47",
-      "index": 5
-    },
-    {
-      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 13
-    },
-    {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "10",
-      "index": 17
-    },
-    {
       "nameKey": "STAT_SEASON_BEST_RANK_NAME",
       "versionKey": "NULL",
       "value": "22054657066851",
       "index": 21
     },
     {
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "1863340",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
+      "versionKey": "NULL",
+      "value": "59",
+      "index": 19
+    },
+    {
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "2628157",
+      "index": 2
+    },
+    {
       "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "4557",
+      "value": "4644",
       "index": 8
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
-      "value": "29778",
-      "index": 11
+      "value": "48",
+      "index": 5
+    },
+    {
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "80",
+      "index": 6
+    },
+    {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "59",
+      "index": 14
     },
     {
       "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
@@ -69401,21 +69430,15 @@
       "index": 16
     },
     {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "8",
-      "index": 10
+      "value": "29910",
+      "index": 11
     },
     {
       "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "4480830",
+      "value": "4491497",
       "index": 1
     },
     {
@@ -69425,40 +69448,10 @@
       "index": 12
     },
     {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "980",
-      "index": 9
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1856713",
-      "index": 3
-    },
-    {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
       "versionKey": "NULL",
       "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "80",
-      "index": 6
-    },
-    {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "59",
-      "index": 19
-    },
-    {
-      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
-      "versionKey": "NULL",
-      "value": "22",
-      "index": 15
+      "index": 20
     },
     {
       "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
@@ -69467,22 +69460,46 @@
       "index": 18
     },
     {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "2624117",
-      "index": 2
+      "value": "8",
+      "index": 10
+    },
+    {
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "10",
+      "index": 17
+    },
+    {
+      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
+      "versionKey": "NULL",
+      "value": "22",
+      "index": 15
     },
     {
       "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
       "versionKey": "NULL",
-      "value": "8871",
+      "value": "8993",
       "index": 7
     },
     {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "59",
-      "index": 14
+      "value": "1004",
+      "index": 9
+    },
+    {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
+    },
+    {
+      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 13
     }
   ],
   "pvpProfile": [
@@ -69571,7 +69588,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1791924812000",
+        "lastSaveTime": "1792098056000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -69652,7 +69669,7 @@
     },
     {
       "tab": 2,
-      "rank": 51,
+      "rank": 41,
       "squad": {
         "cell": [
           {
@@ -70000,7 +70017,7 @@
       "joinTime": "1791321350000",
       "endTime": "1793653200000",
       "remove": false,
-      "rank": 21368
+      "rank": 20846
     }
   ],
   "datacron": [
@@ -70225,7 +70242,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1791977864000",
+  "lastActivityTime": "1792098571000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -70240,5 +70257,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 106
+  "loanedUnitEraLevel": 108
 }

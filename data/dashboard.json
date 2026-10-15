@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-14T18:56:33Z",
+  "refreshedAt": "2026-10-15T21:26:19Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 513,
-    "2": 51
+    "2": 41
   },
   "units": [
     {
@@ -236,7 +236,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 5,
+      "relic": 6,
       "mods": 1
     },
     {
@@ -533,7 +533,7 @@
       "id": "CAPITALRADDUS",
       "name": "Raddus",
       "type": "Ship",
-      "stars": 4,
+      "stars": 5,
       "level": 1,
       "gear": null,
       "relic": null,
@@ -683,7 +683,7 @@
       "id": "STORMTROOPER",
       "name": "Stormtrooper",
       "type": "Character",
-      "stars": 5,
+      "stars": 6,
       "level": 80,
       "gear": 8,
       "relic": null,
@@ -1923,7 +1923,7 @@
       "id": "GEONOSIANSTARFIGHTER3",
       "name": "Geonosian Spy's Starfighter",
       "type": "Ship",
-      "stars": 3,
+      "stars": 4,
       "level": 1,
       "gear": null,
       "relic": null,
@@ -2073,7 +2073,7 @@
       "id": "CAPITALFINALIZER",
       "name": "Finalizer",
       "type": "Ship",
-      "stars": 5,
+      "stars": 6,
       "level": 85,
       "gear": null,
       "relic": null,
