@@ -1571,6 +1571,22 @@
       }
     },
     {
+      "skill": [],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "YXK2Iy3gS8mrEPbcUNQtRg",
+      "definitionId": "FIRSTORDERTIEECHELON:TWO_STAR",
+      "currentRarity": 2,
+      "currentLevel": 1,
+      "currentXp": 0,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 1,
+      "relic": null
+    },
+    {
       "skill": [
         {
           "id": "uniqueskill_ct21040801",
@@ -3797,6 +3813,24 @@
       "unitStat": null,
       "currentTier": 1,
       "relic": null
+    },
+    {
+      "skill": [],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "gW9U3cKwSPmBsW4e8WdUbg",
+      "definitionId": "NIGHTSISTERACOLYTE:TWO_STAR",
+      "currentRarity": 2,
+      "currentLevel": 1,
+      "currentXp": 0,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 1,
+      "relic": {
+        "currentTier": 1
+      }
     },
     {
       "skill": [],
@@ -7769,8 +7803,8 @@
       ],
       "purchasedAbilityId": [],
       "id": "JyJBhxvxT_uic8BiFHApKQ",
-      "definitionId": "BASTILASHAN:SIX_STAR",
-      "currentRarity": 6,
+      "definitionId": "BASTILASHAN:SEVEN_STAR",
+      "currentRarity": 7,
       "currentLevel": 85,
       "currentXp": 883025,
       "promotionRecipeReference": "",
@@ -15363,8 +15397,8 @@
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "Zxb4y4OFSHm0iJAj7-dsBQ",
-      "definitionId": "CAPITALRADDUS:FIVE_STAR",
-      "currentRarity": 5,
+      "definitionId": "CAPITALRADDUS:SIX_STAR",
+      "currentRarity": 6,
       "currentLevel": 1,
       "currentXp": 0,
       "promotionRecipeReference": "",
@@ -15563,6 +15597,24 @@
       "currentTier": 13,
       "relic": {
         "currentTier": 4
+      }
+    },
+    {
+      "skill": [],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "KFkfQGWNR3e2lJM-M2JpdA",
+      "definitionId": "GAMORREANGUARD:TWO_STAR",
+      "currentRarity": 2,
+      "currentLevel": 1,
+      "currentXp": 0,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 1,
+      "relic": {
+        "currentTier": 1
       }
     },
     {
@@ -21187,6 +21239,24 @@
       "unitStat": null,
       "currentTier": 1,
       "relic": null
+    },
+    {
+      "skill": [],
+      "equipment": [],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "RFLIfComS0KViwWxY9Jd4A",
+      "definitionId": "4LOM:TWO_STAR",
+      "currentRarity": 2,
+      "currentLevel": 1,
+      "currentXp": 0,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 1,
+      "relic": {
+        "currentTier": 1
+      }
     },
     {
       "skill": [
@@ -37986,7 +38056,7 @@
         },
         {
           "id": "specialskill_MORGANELSBETH02",
-          "tier": 5
+          "tier": 6
         },
         {
           "id": "basicskill_MORGANELSBETH",
@@ -69658,28 +69728,22 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "9100",
-      "index": 7
+      "value": "13859",
+      "index": 16
     },
     {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "61",
-      "index": 14
+      "value": "4675531",
+      "index": 1
     },
     {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
       "versionKey": "NULL",
-      "value": "1016",
-      "index": 9
-    },
-    {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "81",
-      "index": 6
+      "value": "0",
+      "index": 18
     },
     {
       "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
@@ -69688,22 +69752,16 @@
       "index": 19
     },
     {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "1863340",
-      "index": 3
+      "value": "1016",
+      "index": 9
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "5",
-      "index": 12
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "13859",
-      "index": 16
+      "value": "2779557",
+      "index": 2
     },
     {
       "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
@@ -69712,52 +69770,46 @@
       "index": 13
     },
     {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
-      "versionKey": "NULL",
-      "value": "22",
-      "index": 15
-    },
-    {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "8",
-      "index": 10
-    },
-    {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "2776209",
-      "index": 2
-    },
-    {
-      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
-      "versionKey": "NULL",
-      "value": "48",
-      "index": 5
-    },
-    {
       "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
       "versionKey": "NULL",
       "value": "0",
       "index": 20
     },
     {
+      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "4741",
+      "index": 8
+    },
+    {
+      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
+      "versionKey": "NULL",
+      "value": "5",
+      "index": 12
+    },
+    {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "61",
+      "index": 14
+    },
+    {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "30071",
+      "value": "30133",
       "index": 11
     },
     {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
       "versionKey": "NULL",
-      "value": "10",
-      "index": 17
+      "value": "9139",
+      "index": 7
+    },
+    {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
     },
     {
       "nameKey": "STAT_SEASON_BEST_RANK_NAME",
@@ -69766,28 +69818,46 @@
       "index": 21
     },
     {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "4639549",
-      "index": 1
+      "value": "8",
+      "index": 10
     },
     {
-      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
-      "value": "4720",
-      "index": 8
+      "value": "48",
+      "index": 5
     },
     {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 18
+      "value": "83",
+      "index": 6
+    },
+    {
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "1895974",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
+      "versionKey": "NULL",
+      "value": "22",
+      "index": 15
+    },
+    {
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "10",
+      "index": 17
     }
   ],
   "pvpProfile": [
     {
       "tab": 1,
-      "rank": 434,
+      "rank": 380,
       "squad": {
         "cell": [
           {
@@ -69870,7 +69940,7 @@
         "squadType": 5,
         "targetingSetId": "",
         "expireTime": "0",
-        "lastSaveTime": "1792183904000",
+        "lastSaveTime": "1792188911000",
         "supportInheritFromDefinitionId": "",
         "datacron": {
           "tag": [],
@@ -70255,6 +70325,9 @@
       "id": "PLAYERPORTRAIT_DARKSIDEHISTORIAN"
     },
     {
+      "id": "PLAYERPORTRAIT_GEONOSIANBROODALPHA"
+    },
+    {
       "id": "PLAYERPORTRAIT_NIGHTSISTERS_ZOMBIE"
     },
     {
@@ -70299,7 +70372,7 @@
       "joinTime": "1791321350000",
       "endTime": "1793653200000",
       "remove": false,
-      "rank": 20776
+      "rank": 12924
     }
   ],
   "datacron": [
@@ -70524,14 +70597,14 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1792184587000",
+  "lastActivityTime": "1792239797000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
   "lifetimeSeasonScore": "0",
   "playerRating": {
     "playerSkillRating": {
-      "skillRating": 1953
+      "skillRating": 1992
     },
     "playerRankStatus": {
       "leagueId": "CARBONITE",
