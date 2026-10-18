@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-17T20:39:14Z",
+  "refreshedAt": "2026-10-18T20:47:12Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 380,
+    "1": 364,
     "2": 41
   },
   "units": [
@@ -133,7 +133,7 @@
       "id": "VANGUARDTEMPLEGUARD",
       "name": "Temple Guard",
       "type": "Character",
-      "stars": 2,
+      "stars": 3,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -880,6 +880,16 @@
       "mods": 6
     },
     {
+      "id": "DARTHTALON",
+      "name": "Darth Talon",
+      "type": "Character",
+      "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "IG88",
       "name": "IG-88",
       "type": "Character",
@@ -973,7 +983,7 @@
       "id": "DAKA",
       "name": "Old Daka",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 9,
       "relic": null,
@@ -1084,6 +1094,16 @@
       "name": "Tusken Raider",
       "type": "Character",
       "stars": 3,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "DASHRENDAR",
+      "name": "Dash Rendar",
+      "type": "Character",
+      "stars": 5,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -1800,6 +1820,16 @@
       "mods": 0
     },
     {
+      "id": "IMPERIALSUPERCOMMANDO",
+      "name": "Imperial Super Commando",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "PUNISHINGONE",
       "name": "Punishing One",
       "type": "Ship",
@@ -1923,7 +1953,7 @@
       "id": "MARAJADE",
       "name": "Mara Jade, The Emperor's Hand",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 13,
       "relic": 5,
@@ -2248,6 +2278,16 @@
       "gear": 13,
       "relic": 0,
       "mods": 6
+    },
+    {
+      "id": "KYLEKATARN",
+      "name": "Kyle Katarn",
+      "type": "Character",
+      "stars": 5,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
     },
     {
       "id": "JEDIKNIGHTGUARDIAN",
