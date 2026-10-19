@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-18T20:47:12Z",
+  "refreshedAt": "2026-10-19T22:23:26Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 364,
+    "1": 422,
     "2": 41
   },
   "units": [
@@ -1814,6 +1814,16 @@
       "name": "Chief Nebit",
       "type": "Character",
       "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "TUSKENSHAMAN",
+      "name": "Tusken Shaman",
+      "type": "Character",
+      "stars": 2,
       "level": 1,
       "gear": 1,
       "relic": null,
