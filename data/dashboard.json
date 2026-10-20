@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-19T22:23:26Z",
+  "refreshedAt": "2026-10-20T21:39:43Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 422,
@@ -145,7 +145,7 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 6,
+      "gear": 7,
       "relic": null,
       "mods": 0
     },
@@ -495,7 +495,7 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 10,
+      "gear": 11,
       "relic": null,
       "mods": 1
     },
@@ -745,7 +745,7 @@
       "type": "Character",
       "stars": 6,
       "level": 80,
-      "gear": 8,
+      "gear": 9,
       "relic": null,
       "mods": 0
     },
@@ -2183,7 +2183,7 @@
       "id": "CAPITALFINALIZER",
       "name": "Finalizer",
       "type": "Ship",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": null,
       "relic": null,
