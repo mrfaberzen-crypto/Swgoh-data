@@ -1,6 +1,6 @@
 {
   "versions": {
-    "latestGamedataVersion": "0.40.6:i9YYIijBSxuHHNoSmCMBoQ",
+    "latestGamedataVersion": "0.40.6:tAj6zvcnT7GKXm7VxX_QIQ",
     "latestLocalizationBundleVersion": "3P4tM7xJQIiKyjTJUjE-xg"
   },
   "units": {
@@ -74,10 +74,6 @@
     },
     "ADMIRALACKBAR": {
       "name": "Admiral Ackbar",
-      "combatType": 1
-    },
-    "CHEWBACCALEGENDARY": {
-      "name": "Chewbacca",
       "combatType": 1
     },
     "HONDO": {
@@ -760,6 +756,10 @@
       "name": "Tusken Shaman",
       "combatType": 1
     },
+    "CHEWBACCALEGENDARY": {
+      "name": "Chewbacca",
+      "combatType": 1
+    },
     "LORDVADER_GLE": {
       "name": "Lord Vader",
       "combatType": 1
@@ -866,10 +866,6 @@
     },
     "CARADUNE_MANDALORIAN_EVENT": {
       "name": "Cara Dune",
-      "combatType": 1
-    },
-    "DASHRENDAR": {
-      "name": "Dash Rendar",
       "combatType": 1
     },
     "VEERS": {
@@ -1432,6 +1428,10 @@
       "name": "Tarfful",
       "combatType": 1
     },
+    "DASHRENDAR": {
+      "name": "Dash Rendar",
+      "combatType": 1
+    },
     "BADBATCHWRECKER_GLE": {
       "name": "Wrecker",
       "combatType": 1
@@ -1564,10 +1564,6 @@
       "name": "Ahsoka Tano's Jedi Starfighter",
       "combatType": 2
     },
-    "ADMIRALPIETT": {
-      "name": "Admiral Piett",
-      "combatType": 1
-    },
     "NINTHSISTER": {
       "name": "Ninth Sister",
       "combatType": 1
@@ -1602,6 +1598,10 @@
     },
     "EWOKSCOUT_SPEEDERBIKERAID": {
       "name": "Ewok Scout",
+      "combatType": 1
+    },
+    "ADMIRALPIETT": {
+      "name": "Admiral Piett",
       "combatType": 1
     },
     "GLHONDO": {
