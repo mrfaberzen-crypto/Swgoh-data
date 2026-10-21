@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-20T21:39:43Z",
+  "refreshedAt": "2026-10-21T10:00:00Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 422,
+    "1": 358,
     "2": 41
   },
   "units": [
@@ -187,7 +187,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "DROIDEKA",
@@ -286,8 +286,8 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 6,
-      "mods": 1
+      "relic": 7,
+      "mods": 6
     },
     {
       "id": "DENGAR",
@@ -357,7 +357,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "QUIGONJINN",
@@ -367,7 +367,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "ROYALGUARD",
@@ -387,7 +387,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "GEONOSIANSPY",
@@ -527,7 +527,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "EWOKELDER",
@@ -537,7 +537,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "CHIEFCHIRPA",
@@ -567,7 +567,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 5
+      "mods": 4
     },
     {
       "id": "LUKESKYWALKER",
@@ -577,7 +577,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "CAPITALRADDUS",
@@ -683,7 +683,7 @@
       "id": "IG2000",
       "name": "IG-2000",
       "type": "Ship",
-      "stars": 5,
+      "stars": 6,
       "level": 85,
       "gear": null,
       "relic": null,
@@ -727,7 +727,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "FULCRUMAHSOKA",
@@ -877,13 +877,23 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "DARTHTALON",
       "name": "Darth Talon",
       "type": "Character",
       "stars": 4,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "STORMTROOPERLUKE",
+      "name": "Stormtrooper Luke",
+      "type": "Character",
+      "stars": 2,
       "level": 1,
       "gear": 1,
       "relic": null,
@@ -897,7 +907,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "MILLENNIUMFALCONPRISTINE",
@@ -967,7 +977,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "PLOKOON",
@@ -1007,7 +1017,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "KELLERANBEQ",
@@ -1037,7 +1047,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "CAPTAINREX",
@@ -1160,6 +1170,16 @@
       "mods": 0
     },
     {
+      "id": "UWINGROGUEONE",
+      "name": "Cassian's U-wing",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
       "id": "DARTHSIDIOUS",
       "name": "Darth Sidious",
       "type": "Character",
@@ -1207,7 +1227,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "DEATHTROOPERPERIDEA",
@@ -1257,7 +1277,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 1
+      "mods": 6
     },
     {
       "id": "UGNAUGHT",
@@ -1327,7 +1347,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "R2D2_LEGENDARY",
@@ -1340,6 +1360,16 @@
       "mods": 6
     },
     {
+      "id": "UWINGSCARIF",
+      "name": "Bistan's U-wing",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
       "id": "THEMANDALORIANBESKARARMOR",
       "name": "The Mandalorian (Beskar Armor)",
       "type": "Character",
@@ -1347,7 +1377,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "BISHOP",
@@ -1487,7 +1517,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "CAPITALMONCALAMARICRUISER",
@@ -1567,7 +1597,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "CAPITALSTARDESTROYER",
@@ -1710,6 +1740,16 @@
       "mods": null
     },
     {
+      "id": "ADELPHIRANGER",
+      "name": "Adelphi Ranger",
+      "type": "Character",
+      "stars": 4,
+      "level": 7,
+      "gear": 2,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "STORMTROOPERCONCEPT",
       "name": "Stormtrooper (Concept)",
       "type": "Character",
@@ -1757,7 +1797,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 3
+      "mods": 2
     },
     {
       "id": "VADER",
@@ -1857,7 +1897,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 2
+      "mods": 1
     },
     {
       "id": "CAPITALJEDICRUISER",
@@ -1897,7 +1937,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "PHANTOM2",
@@ -2047,7 +2087,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "DATHCHA",
@@ -2147,7 +2187,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "PRINCESSLEIA",
@@ -2157,7 +2197,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "FINN",
@@ -2167,7 +2207,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "PHASMA",
@@ -2177,7 +2217,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "CAPITALFINALIZER",
@@ -2197,7 +2237,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "R5D4",
@@ -2287,7 +2327,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "KYLEKATARN",
@@ -2317,7 +2357,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "TIEFIGHTERPILOT",
@@ -2337,7 +2377,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "IG12",
@@ -2357,7 +2397,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "IG11",
@@ -2367,7 +2407,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "BISTAN",
