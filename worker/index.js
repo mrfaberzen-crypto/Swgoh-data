@@ -91,8 +91,9 @@ export default {
     }
 
     const match = url.pathname.match(new RegExp("^/api/private/(inventory|gac|tw)$"));
-    if (!match) return json({ error: "Not found" }, 404, origin);
-    if (origin !== ALLOWED_ORIGIN) return json({ error: "Origin not allowed" }, 403);
+    const isRosterRefresh = url.pathname === "/api/roster/refresh";
+    if (!match && !isRosterRefresh) return json({ error: "Not found" }, 404, origin);
+    if (origin !== ALLOWED_ORIGIN) return json({ error: "Origin not allowed" }, 403, origin);
     if (request.method === "OPTIONS") {
       return new Response(null, {
         status: 204,
@@ -106,16 +107,62 @@ export default {
       });
     }
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405, origin);
-
-    if (!env.MHANNDALORIAN_API_KEY || !env.DASHBOARD_ACCESS_TOKEN || !env.PRIVATE_DATA_GITHUB_TOKEN) {
-      return json({ error: "Worker secrets are not configured" }, 503, origin);
+    if (!env.DASHBOARD_ACCESS_TOKEN) {
+      return json({ error: "Dashboard access token is not configured on the Worker" }, 503, origin);
     }
 
     const authorization = request.headers.get("Authorization") || "";
     const prefix = "Bearer ";
     const token = authorization.startsWith(prefix) ? authorization.slice(prefix.length) : "";
     if (!matchesToken(token, env.DASHBOARD_ACCESS_TOKEN)) {
-      return json({ error: "Unauthorized" }, 401, origin);
+      return json({ error: "Unauthorized: incorrect dashboard access token" }, 401, origin);
+    }
+
+    if (isRosterRefresh) {
+      // This credential lives only in Cloudflare. Never put a GitHub API token in Pages JS.
+      // Prefer a dedicated Actions:write token, falling back to the existing GitHub token
+      // only if it was also granted Actions:write on Swgoh-data.
+      const githubToken = env.ROSTER_REFRESH_GITHUB_TOKEN || env.PRIVATE_DATA_GITHUB_TOKEN;
+      if (!githubToken) {
+        return json({ error: "Roster refresh GitHub token is not configured on the Worker" }, 503, origin);
+      }
+      let response;
+      try {
+        response = await fetch(
+          "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/dispatches",
+          {
+            method: "POST",
+            headers: {
+              "Authorization": "Bearer " + githubToken,
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "Content-Type": "application/json",
+              "User-Agent": "swgoh-command-centre"
+            },
+            body: JSON.stringify({ ref: "main" }),
+            redirect: "manual"
+          }
+        );
+      } catch (error) {
+        console.error("Roster dispatch transport error", error?.name || "Error");
+        return json({ error: "Could not contact GitHub to start roster refresh" }, 502, origin);
+      }
+      if (!response.ok) {
+        console.error("Roster dispatch rejected", response.status);
+        return json({
+          error: response.status === 401 || response.status === 403
+            ? "GitHub rejected the refresh token. Grant Actions: write on the Swgoh-data repository."
+            : "GitHub could not start the roster refresh.",
+          githubStatus: response.status
+        }, 502, origin);
+      }
+      // An accepted dispatch is NOT a completed refresh. The browser monitors
+      // the newer public snapshot and shows completion only after the data changes.
+      return json({ queued: true, message: "Roster refresh requested" }, 202, origin);
+    }
+
+    if (!env.MHANNDALORIAN_API_KEY || !env.PRIVATE_DATA_GITHUB_TOKEN) {
+      return json({ error: "Private game data secrets are not configured" }, 503, origin);
     }
 
     const endpoint = API_ENDPOINTS[match[1]];
