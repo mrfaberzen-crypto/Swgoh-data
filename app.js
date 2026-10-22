@@ -221,8 +221,8 @@ async function refreshFromGame() {
       throw Error(result.error || 'Roster refresh was not accepted (HTTP ' + response.status + ')');
     }
     if (result.recentlyRequested) {
-      status.textContent = 'A refresh was requested in the last 30 minutes. You can reload the saved roster to check for new data.';
       await load();
+      status.textContent = result.message || 'A roster refresh is already running or was requested recently.';
       return;
     }
     if (!result.queued) throw Error('Roster refresh response was not recognized.');
