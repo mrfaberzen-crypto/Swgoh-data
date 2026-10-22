@@ -195,7 +195,17 @@ async function load() {
 $('search').addEventListener('input', () => snapshot && render());
 $('filter').addEventListener('change', () => snapshot && render());
 $('sort').addEventListener('change', () => snapshot && render());
-$('reload').addEventListener('click', load);
+$('reload').addEventListener('click', async () => {
+  const prior = snapshot?.refreshedAt;
+  await load();
+  if (snapshot?.refreshedAt && snapshot.refreshedAt !== prior) {
+    $('refresh-status').textContent = 'New roster loaded · ' +
+      new Date(snapshot.refreshedAt).toLocaleString();
+  } else if (snapshot?.refreshedAt) {
+    $('refresh-status').textContent = 'Showing the latest saved roster · ' +
+      new Date(snapshot.refreshedAt).toLocaleString();
+  }
+});
 
 const privateApiBase = 'https://swgoh-data.mrfaberzen.workers.dev';
 // A Pages site cannot securely dispatch GitHub Actions itself. The Worker holds
