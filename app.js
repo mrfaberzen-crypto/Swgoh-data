@@ -232,7 +232,7 @@ async function checkRefreshStatus() {
       : run.conclusion === 'success' ? 'completed successfully'
       : run.conclusion === 'failure' ? 'failed' : 'finished: ' + (run.conclusion || 'unknown');
     status.textContent = trigger + ' · ' + when + ' · ' + state +
-      (data.failedStep ? ' · Failed step: ' + data.failedStep : '') +
+      (run.conclusion === 'failure' && data.failedStep ? ' · Failed step: ' + data.failedStep : '') +
       (run.conclusion === 'success' ? '. Reload saved roster to see the latest snapshot.' : '.');
   } catch (error) {
     status.textContent = 'Could not check the workflow: ' + error.message;
