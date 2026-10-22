@@ -21,12 +21,14 @@ try {
     headers:{'Access-Control-Allow-Origin':'http://127.0.0.1:8000'},
     body:JSON.stringify({
       active:null,
-      latestManual:{event:'workflow_dispatch',status:'completed',conclusion:'failure',createdAt:'2026-10-23T00:00:00Z'},
-      latest:null,failedStep:'Refresh localized roster'
+      latestManual:{event:'workflow_dispatch',status:'completed',conclusion:'failure',createdAt:'2026-10-22T12:18:29Z'},
+      latest:{event:'push',status:'completed',conclusion:'success',createdAt:'2026-10-22T20:32:16Z'},
+      failedStep:'Refresh localized roster'
     })
   }));
   await page.locator('#check-refresh').click();
-  await page.waitForFunction(() => document.querySelector('#workflow-status').textContent.includes('Failed step: Refresh localized roster'));
+  await page.waitForFunction(() => document.querySelector('#workflow-status').textContent.includes('completed successfully'));
+  assert.ok(!(await page.locator('#workflow-status').textContent()).includes('Failed step'), 'Do not show an older failed workflow after a newer successful refresh');
 
   assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
   // Roster refresh needs no access token; private data is still protected.
