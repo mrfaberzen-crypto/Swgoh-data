@@ -248,8 +248,7 @@ async function refreshFromGame() {
     }
     status.textContent = 'Refresh requested, but no newer snapshot was found within 10 minutes. Try Reload saved roster or check the manual GitHub fallback for workflow errors.';
   } catch (error) {
-    status.textContent = 'Could not start roster refresh: ' + error.message +
-      ' If GitHub permissions are missing, a one-time Cloudflare Worker setup is required.';
+    status.textContent = 'Could not start roster refresh: ' + error.message;
   } finally {
     button.disabled = false;
   }
