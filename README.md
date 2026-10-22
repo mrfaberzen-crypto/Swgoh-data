@@ -15,9 +15,19 @@ The dashboard reads a saved snapshot. Reloading it does **not** make a new game 
 
 ## Refresh from the game
 
-1. Open **Actions → Refresh SWGOH player data**.
-2. Select **Run workflow**, choose **main**, and run it.
-3. Wait for success, then click **Reload saved roster** in the dashboard.
+1. Enter the **Dashboard access token** at the top of the dashboard (the same token used for private GAC/TW/inventory data).
+2. Press **Refresh from game**. The website calls your protected Cloudflare Worker to trigger GitHub Actions, without opening GitHub.
+3. The button reports whether the request was accepted and monitors the saved roster for an updated snapshot. Use **Reload saved roster** to re-read the latest saved data at any time.
+
+### One-time secure setup for direct refresh
+
+The Cloudflare Worker is deployed separately from GitHub Pages. **Updating worker/index.js in GitHub does not automatically update a Worker deployed by hand.** Redeploy this Worker to the existing `swgoh-data` Worker at Cloudflare. Preserve its current `MHANNDALORIAN_API_KEY`, `DASHBOARD_ACCESS_TOKEN` and `PRIVATE_DATA_GITHUB_TOKEN` secrets.
+
+Provide the Worker a GitHub credential capable of dispatching `.github/workflows/refresh-player.yml` in `mrfaberzen-crypto/Swgoh-data`: preferably add a Cloudflare Worker secret named `ROSTER_REFRESH_GITHUB_TOKEN`. Create a fine-grained GitHub personal access token scoped **only** to `Swgoh-data` with **Actions: Read and write** permission. The Worker tries the existing `PRIVATE_DATA_GITHUB_TOKEN` only when a dedicated token is absent; that fallback works only if it already has access to dispatch Actions for this public repository. Never put the GitHub token in frontend JS, in a GitHub file, or in a chat message.
+
+If Cloudflare Workers Builds is connected to this repo, configure it to deploy `worker/index.js` with Node compatibility enabled. Otherwise deploy the updated code in Cloudflare Workers & Pages. After this one-time setup, everyday refreshes need no GitHub visit.
+
+If the Worker is not configured, the dashboard has a separate [manual GitHub fallback](https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml).
 
 A daily refresh also runs at 18:17 UTC (04:17 Sydney during AEST; 05:17 during AEDT). GitHub can delay scheduled runs.
 
