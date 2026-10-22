@@ -46,12 +46,10 @@ const farmGoals = {
     {id:'CAPITALFINALIZER',name:'Finalizer',track:'stars',target:5,goal:'5★'}
   ],
   era: [
-    {id:'LUKESTARKILLER',name:'Starkiller (Luke Concept) — Episode Level',track:'manual',goal:'L95'},
-    {id:'DARTHJARJAR',name:'Darth Jar Jar',track:'stars',target:5,goal:'5★'},
-    {id:'LUKESTARKILLER',name:'Starkiller (Luke Concept)',track:'stars',target:5,goal:'5★'},
-    {id:'CAPTAINENOCH',name:'Captain Enoch',track:'relic',target:6,goal:'R6'},
-    {id:'NIGHTTROOPER',name:'Night Trooper',track:'relic',target:6,goal:'R6'},
-    {id:'DEATHTROOPERPERIDEA',name:'Death Trooper (Peridea)',track:'relic',target:6,goal:'R6'}
+    // Mandalorian and Grogu mini-era: 20 Oct – 17 Nov 2026.
+    // 5★ is the current collection goal, not the GL requirement.
+    {id:'ADELPHIRANGER',name:'Adelphi Ranger',track:'stars',target:5,goal:'5★'},
+    {id:'B1MERCDROID',name:'Mercenary Guard Droid (B1)',track:'stars',target:5,goal:'5★',releaseDate:'2026-11-03'}
   ]
 };
 function renderGoalList(containerId, goals) {
@@ -78,7 +76,9 @@ function renderGoalList(containerId, goals) {
     status.className = 'farm-target-current' + (complete ? ' done' : '');
     status.textContent = goal.track === 'manual'
       ? 'Check in game · episode level is not in this roster snapshot'
-      : !unit ? 'Not unlocked in saved roster'
+      : !unit ? (goal.releaseDate && new Date() < new Date(goal.releaseDate + 'T00:00:00-07:00')
+          ? 'Marquee begins 3 Nov 2026'
+          : 'Not unlocked in saved roster')
       : goal.track === 'relic'
         ? (unit.gear != null && unit.gear < 13 ? 'G' + unit.gear + ' · ' : '') + 'R' + current + ' of ' + goal.goal
         : unit.stars + '★ of ' + goal.goal;
