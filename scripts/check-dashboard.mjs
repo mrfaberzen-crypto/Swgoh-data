@@ -18,12 +18,21 @@ try {
   assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
   // Roster refresh needs no access token; private data is still protected.
   assert.ok(!(await page.locator('header').innerHTML()).includes('access-token'));
-  await page.route('https://swgoh-data.mrfaberzen.workers.dev/api/roster/refresh', route => route.fulfill({
-    status:429,
-    contentType:'application/json',
-    headers:{'Access-Control-Allow-Origin':'http://127.0.0.1:8000'},
-    body:JSON.stringify({error:'Too many refresh requests. Try again in a minute.'})
-  }));
+  await page.route('https://swgoh-data.mrfaberzen.workers.dev/api/roster/refresh', route => {
+    const cors = {
+      'Access-Control-Allow-Origin': 'http://127.0.0.1:8000',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    };
+    return route.request().method() === 'OPTIONS'
+      ? route.fulfill({status:204, headers:cors})
+      : route.fulfill({
+          status:429,
+          contentType:'application/json',
+          headers:cors,
+          body:JSON.stringify({error:'Too many refresh requests. Try again in a minute.'})
+        });
+  });
   await page.locator('#trigger-refresh').click();
   await page.waitForFunction(() => document.querySelector('#refresh-status').textContent.includes('Too many refresh requests.'));
   assert.ok(!(await page.locator('header').innerHTML()).includes('actions/workflows/refresh-player.yml'), 'Refresh button does not redirect to GitHub');
