@@ -61,6 +61,37 @@ jobs:
       - name: Refresh localized roster
         run: python3 scripts/refresh.py
 
+      - name: Validate refreshed roster before publishing
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = json.loads(Path("data/dashboard.json").read_text())
+          units = data.get("units", [])
+          assert str(data.get("allyCode")) == "843153117", "Unexpected ally code"
+          assert len(units) >= 100, "Roster unexpectedly small"
+          assert all(u.get("type") in ("Character", "Ship") for u in units), "Unknown unit type"
+          assert all(u.get("name") and u.get("name") != u.get("id") for u in units), "Unknown unit name"
+          assert data.get("refreshedAt"), "Missing roster refresh timestamp"
+          print("Validated", len(units), "units at", data["refreshedAt"])
+          PY
+
+      - name: Commit changed data
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/player.json data/refresh.json data/dashboard.json data/unit-catalog.json
+          if git diff --cached --quiet; then
+            echo "Roster data is unchanged."
+            exit 0
+          fi
+          git commit -m "Refresh SWGOH player data"
+          git push
+
       - name: Check dashboard in Chromium
         run: |
           npm install --no-save playwright@1.58.2
@@ -76,16 +107,3 @@ jobs:
           path: dashboard-*.png
           if-no-files-found: ignore
 
-      - name: Commit changed data
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/player.json data/refresh.json data/dashboard.json data/unit-catalog.json
-          if git diff --cached --quiet; then
-            echo "Roster data is unchanged."
-            exit 0
-          fi
-          git commit -m "Refresh SWGOH player data"
-          git push
