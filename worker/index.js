@@ -129,20 +129,21 @@ export default {
       if (!githubToken) {
         return json({ error: "Roster refresh GitHub token is not configured on the Worker" }, 503, origin);
       }
-      // Public POST endpoint: a Cloudflare local rate limit protects against bursts,
-      // while GitHub's global run history enforces a 30-minute cooldown across POPs.
-      // Never dispatch anonymously without both safeguards.
-      if (!env.ROSTER_REFRESH_LIMITER) {
-        return json({ error: "Roster refresh rate limiter has not been deployed" }, 503, origin);
-      }
-      let allowed;
-      try {
-        ({ success: allowed } = await env.ROSTER_REFRESH_LIMITER.limit({ key: "swgoh-843153117-roster" }));
-      } catch {
-        return json({ error: "Roster refresh rate limiter is temporarily unavailable" }, 503, origin);
-      }
-      if (!allowed) {
-        return json({ error: "Too many refresh requests. Try again in a minute." }, 429, origin);
+      // Optional Cloudflare edge rate limit: Cloudflare Builds can deploy this
+      // Worker before the binding is provisioned. Never block the public roster
+      // refresh solely because that optional binding is absent. The mandatory
+      // GitHub workflow-run cooldown below still limits global dispatch frequency.
+      if (env.ROSTER_REFRESH_LIMITER) {
+        let allowed;
+        try {
+          ({ success: allowed } = await env.ROSTER_REFRESH_LIMITER.limit({ key: "swgoh-843153117-roster" }));
+        } catch {
+          // Fail over to mandatory GitHub workflow-run cooldown below.
+          console.warn("Roster rate limiter unavailable; enforcing GitHub run cooldown");
+        }
+        if (allowed === false) {
+          return json({ error: "Too many refresh requests. Try again in a minute." }, 429, origin);
+        }
       }
       const githubHeaders = {
         "Authorization": "Bearer " + githubToken,
