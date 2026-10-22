@@ -15,15 +15,17 @@ The dashboard reads a saved snapshot. Reloading it does **not** make a new game 
 
 ## Refresh from the game
 
-1. Enter the **Dashboard access token** at the top of the dashboard (the same token used for private GAC/TW/inventory data).
-2. Press **Refresh from game**. The website calls your protected Cloudflare Worker to trigger GitHub Actions, without opening GitHub.
+1. Press **Refresh from game**. No browser password/token is needed for the public roster.
+2. The Cloudflare Worker enforces a short rate limit and a 30-minute cooldown by checking GitHub workflow run history before dispatching another refresh.
 3. The button reports whether the request was accepted and monitors the saved roster for an updated snapshot. Use **Reload saved roster** to re-read the latest saved data at any time.
+
+Private inventory, GAC and TW requests **still require** the private dashboard access token in their separate field.
 
 ### One-time secure setup for direct refresh
 
-The Cloudflare Worker is deployed separately from GitHub Pages. **Updating worker/index.js in GitHub does not automatically update a Worker deployed by hand.** Redeploy this Worker to the existing `swgoh-data` Worker at Cloudflare. Preserve its current `MHANNDALORIAN_API_KEY`, `DASHBOARD_ACCESS_TOKEN` and `PRIVATE_DATA_GITHUB_TOKEN` secrets.
+The Cloudflare Worker is connected to this GitHub repo through Cloudflare Builds with Root directory set to `worker`. Commits to that folder deploy the existing `swgoh-data` Worker. Preserve its current `MHANNDALORIAN_API_KEY`, `DASHBOARD_ACCESS_TOKEN` and `PRIVATE_DATA_GITHUB_TOKEN` secrets.
 
-Provide the Worker a GitHub credential capable of dispatching `.github/workflows/refresh-player.yml` in `mrfaberzen-crypto/Swgoh-data`: preferably add a Cloudflare Worker secret named `ROSTER_REFRESH_GITHUB_TOKEN`. Create a fine-grained GitHub personal access token scoped **only** to `Swgoh-data` with **Actions: Read and write** permission. The Worker tries the existing `PRIVATE_DATA_GITHUB_TOKEN` only when a dedicated token is absent; that fallback works only if it already has access to dispatch Actions for this public repository. Never put the GitHub token in frontend JS, in a GitHub file, or in a chat message.
+Provide the Worker a GitHub credential capable of dispatching `.github/workflows/refresh-player.yml` in `mrfaberzen-crypto/Swgoh-data`: preferably add a Cloudflare Worker secret named `ROSTER_REFRESH_GITHUB_TOKEN`. Create a fine-grained GitHub personal access token scoped **only** to `Swgoh-data` with **Actions: Read and write** permission. The Worker tries the existing `PRIVATE_DATA_GITHUB_TOKEN` only when a dedicated token is absent; that fallback works only if it already has access to dispatch Actions for this public repository. Anonymous public roster refresh is limited by Cloudflare's `ROSTER_REFRESH_LIMITER` binding and by a 30-minute global cooldown checked against GitHub run history. Requests that cannot verify the cooldown fail closed. Never put the GitHub token in frontend JS, in a GitHub file, or in a chat message.
 
 If Cloudflare Workers Builds is connected to this repo, configure it to deploy `worker/index.js` with Node compatibility enabled. Otherwise deploy the updated code in Cloudflare Workers & Pages. After this one-time setup, everyday refreshes need no GitHub visit.
 
