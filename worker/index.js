@@ -107,15 +107,18 @@ export default {
       });
     }
     if (request.method !== "POST") return json({ error: "Method not allowed" }, 405, origin);
-    if (!env.DASHBOARD_ACCESS_TOKEN) {
-      return json({ error: "Dashboard access token is not configured on the Worker" }, 503, origin);
-    }
-
-    const authorization = request.headers.get("Authorization") || "";
-    const prefix = "Bearer ";
-    const token = authorization.startsWith(prefix) ? authorization.slice(prefix.length) : "";
-    if (!matchesToken(token, env.DASHBOARD_ACCESS_TOKEN)) {
-      return json({ error: "Unauthorized: incorrect dashboard access token" }, 401, origin);
+    // Public roster refresh requires no browser token. Only the separate
+    // private inventory/GAC/TW APIs require the dashboard access token.
+    if (!isRosterRefresh) {
+      if (!env.DASHBOARD_ACCESS_TOKEN) {
+        return json({ error: "Dashboard access token is not configured on the Worker" }, 503, origin);
+      }
+      const authorization = request.headers.get("Authorization") || "";
+      const prefix = "Bearer ";
+      const token = authorization.startsWith(prefix) ? authorization.slice(prefix.length) : "";
+      if (!matchesToken(token, env.DASHBOARD_ACCESS_TOKEN)) {
+        return json({ error: "Unauthorized: incorrect dashboard access token" }, 401, origin);
+      }
     }
 
     if (isRosterRefresh) {
@@ -126,19 +129,66 @@ export default {
       if (!githubToken) {
         return json({ error: "Roster refresh GitHub token is not configured on the Worker" }, 503, origin);
       }
+      // Public POST endpoint: a Cloudflare local rate limit protects against bursts,
+      // while GitHub's global run history enforces a 30-minute cooldown across POPs.
+      // Never dispatch anonymously without both safeguards.
+      if (!env.ROSTER_REFRESH_LIMITER) {
+        return json({ error: "Roster refresh rate limiter has not been deployed" }, 503, origin);
+      }
+      let allowed;
+      try {
+        ({ success: allowed } = await env.ROSTER_REFRESH_LIMITER.limit({ key: "swgoh-843153117-roster" }));
+      } catch {
+        return json({ error: "Roster refresh rate limiter is temporarily unavailable" }, 503, origin);
+      }
+      if (!allowed) {
+        return json({ error: "Too many refresh requests. Try again in a minute." }, 429, origin);
+      }
+      const githubHeaders = {
+        "Authorization": "Bearer " + githubToken,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "swgoh-command-centre"
+      };
+      // GitHub workflow runs provide a cross-location cooldown, including while
+      // a previous run is still queued. Fail closed if run history is unavailable.
+      let runHistory;
+      try {
+        const runsResponse = await fetch(
+          "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/runs?per_page=1",
+          { headers: githubHeaders, redirect: "manual", cache: "no-store" }
+        );
+        if (!runsResponse.ok) {
+          return json({
+            error: runsResponse.status === 401 || runsResponse.status === 403
+              ? "GitHub token cannot read workflow runs. Check Actions permissions."
+              : "Cannot check the last roster refresh on GitHub.",
+            githubStatus: runsResponse.status
+          }, 502, origin);
+        }
+        runHistory = await runsResponse.json();
+      } catch {
+        return json({ error: "Cannot check recent refreshes. Try again later." }, 502, origin);
+      }
+      if (!Array.isArray(runHistory.workflow_runs)) {
+        return json({ error: "GitHub returned an unexpected refresh history" }, 502, origin);
+      }
+      const lastRun = runHistory.workflow_runs[0];
+      const lastRunAt = lastRun ? Date.parse(lastRun.created_at) : NaN;
+      if (Number.isFinite(lastRunAt) && Date.now() - lastRunAt < 30 * 60 * 1000) {
+        return json({
+          queued: false,
+          recentlyRequested: true,
+          message: "A roster refresh was requested recently; check the saved roster again shortly."
+        }, 200, origin);
+      }
       let response;
       try {
         response = await fetch(
           "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/dispatches",
           {
             method: "POST",
-            headers: {
-              "Authorization": "Bearer " + githubToken,
-              "Accept": "application/vnd.github+json",
-              "X-GitHub-Api-Version": "2022-11-28",
-              "Content-Type": "application/json",
-              "User-Agent": "swgoh-command-centre"
-            },
+            headers: { ...githubHeaders, "Content-Type": "application/json" },
             body: JSON.stringify({ ref: "main" }),
             redirect: "manual"
           }
