@@ -15,6 +15,19 @@ try {
   assert.equal(await page.locator('#rows tr').count(), data.units.length);
   assert.ok(await page.locator('#farm-plan').isVisible(), 'Farm advice section is visible');
   assert.ok(await page.locator('#trigger-refresh').isVisible(), 'Direct refresh button is present');
+  assert.ok(await page.locator('#check-refresh').isVisible(), 'Workflow status button is present');
+  await page.route('https://swgoh-data.mrfaberzen.workers.dev/api/roster/status', route => route.fulfill({
+    status:200, contentType:'application/json',
+    headers:{'Access-Control-Allow-Origin':'http://127.0.0.1:8000'},
+    body:JSON.stringify({
+      active:null,
+      latestManual:{event:'workflow_dispatch',status:'completed',conclusion:'failure',createdAt:'2026-10-23T00:00:00Z'},
+      latest:null,failedStep:'Refresh localized roster'
+    })
+  }));
+  await page.locator('#check-refresh').click();
+  await page.waitForFunction(() => document.querySelector('#workflow-status').textContent.includes('Failed step: Refresh localized roster'));
+
   assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
   // Roster refresh needs no access token; private data is still protected.
   assert.ok(!(await page.locator('header').innerHTML()).includes('access-token'));
