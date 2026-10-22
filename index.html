@@ -26,6 +26,7 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 @media(max-width:600px){th:nth-child(2),td:nth-child(2),th:nth-child(6),td:nth-child(6){display:none}th:first-child{width:44%}}
 
 #private-data{margin-bottom:24px}.private-output{max-height:520px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#111d2a;border:1px solid #304055;border-radius:8px;padding:14px;font-size:.82rem;line-height:1.45}.private-controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.private-controls input{flex:1;min-width:240px}
+.target-summary{font-size:.85rem;font-weight:650;color:#7ed6c2;margin:10px 0}.completed-goals{border-top:1px solid #304055;margin-top:8px;padding-top:10px}.completed-goals summary{cursor:pointer;color:#a8b8ca;font-size:.86rem;margin-bottom:10px}.completed-goals .farm-target{margin:8px 0}.completed-goals[open] summary{margin-bottom:10px}
 </style>
 </head>
 <body><main>
@@ -40,15 +41,16 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 </section>
 
 <section class="panel" id="farm-plan" aria-labelledby="farm-title">
-<div class="plan-heading"><div><div class="eyebrow">Your current plan</div><h2 id="farm-title">Farm advice</h2><div class="muted">Executor first · SLKR is your first Galactic Legend after Executor.</div></div><a href="#roster">Check the roster ↓</a></div>
+<div class="plan-heading"><div><div class="eyebrow">Your current targets</div><h2 id="farm-title">Farm advice and journey progress</h2><div class="muted">SLKR prerequisites complete · Executor relics and ships still in progress.</div></div><a href="#roster">Check the roster ↓</a></div>
 <div class="plan-grid">
-<article class="plan-card"><div class="eyebrow">Main project</div><h3>Executor path</h3><p class="muted">Razor Crest is the key ship blocker. Buy it from the Fleet Store whenever it appears.</p><div id="executor-targets" class="target-list" aria-label="Executor target progress"></div></article>
-<article class="plan-card"><div class="eyebrow">Daily farms</div><h3>Energy plan</h3><ul class="advice-list">
+<article class="plan-card"><div class="eyebrow">Priority unlock</div><h3>SLKR · first Galactic Legend</h3><p class="muted" id="slkr-status">Checking SLKR prerequisites…</p><p class="muted target-summary" id="slkr-summary"></p><div id="slkr-targets" class="target-list" aria-label="SLKR prerequisite progress"></div></article>
+<article class="plan-card"><div class="eyebrow">Main build</div><h3>Executor path</h3><p class="muted">Relic priorities: Darth Vader R7, Admiral Piett R8, Boba Fett R8. Razor Crest needs 5★ to enter the event; the seven required ships need 7★ for the final tier. Razor Crest blueprints remain a high priority in the Fleet Store and Proving Grounds.</p><p class="muted target-summary" id="executor-summary"></p><div id="executor-targets" class="target-list" aria-label="Executor prerequisites progress"></div></article>
+<article class="plan-card"><div class="eyebrow">Daily farms</div><h3>Ship and signal data plan</h3><ul class="advice-list">
 <li><strong>Fleet energy</strong>Punishing One, 5 attempts daily, then TIE Echelon, 5 attempts daily. After both, use leftover Fleet energy on Fleet 2-E Normal for Mk 12 Fusion Furnaces.</li>
 <li><strong>Separate ship farm</strong>Imperial TIE Bomber on its Light Side hard node, 5 attempts daily.</li>
-<li><strong>Cantina</strong>Signal Data only.</li>
-</ul><div id="fleet-targets" class="target-list" aria-label="Fleet farm progress"></div><p class="muted plan-note">Keep to the two planned Fleet hard-node farms; no third hard-node farm.</p></article>
-<article class="plan-card"><div class="eyebrow">Next project</div><h3>SLKR · first Galactic Legend</h3><p class="muted">After Executor, continue the relic queue: Palpatine R7 → Kylo Ren (Unmasked) R7 → Kylo Ren R7.</p><div id="slkr-targets" class="target-list" aria-label="SLKR relic target progress"></div><hr class="plan-divider"><h3>Era goals</h3><p class="muted">Farm Darth Jar Jar and Starkiller (Luke Concept) shards to 5★; then take Starkiller to Episode Level 95.</p><div id="era-targets" class="target-list" aria-label="Era character shard progress"></div><p class="muted plan-note">When Darth Jar Jar reaches 5★, the planned three R6 Kyber upgrades are Captain Enoch, Night Trooper, and Death Trooper (Peridea).</p></article>
+<li><strong>Cantina</strong>Signal Data for Executor relics. Keep relic materials focused on Vader, Piett and Boba.</li>
+</ul><p class="muted target-summary" id="fleet-summary"></p><div id="fleet-targets" class="target-list" aria-label="Fleet farming progress"></div><p class="muted plan-note">Keep to the two planned Fleet hard-node farms; no third hard-node farm.</p></article>
+<article class="plan-card"><div class="eyebrow">Era follow-through</div><h3>Era goals</h3><p class="muted">Darth Jar Jar and Starkiller (Luke Concept) have reached 5★. Captain Enoch, Night Trooper and Death Trooper (Peridea) have reached R6. The remaining Episode Level 95 goal must be checked in game because the public roster does not report episode levels.</p><p class="muted target-summary" id="era-summary"></p><div id="era-targets" class="target-list" aria-label="Era target progress"></div></article>
 </div><p id="farm-freshness" class="muted plan-note"></p>
 </section>
 <section class="panel" id="private-data" aria-labelledby="private-title">
