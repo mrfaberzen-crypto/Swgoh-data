@@ -28,11 +28,12 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 #private-data{margin-bottom:24px}.private-output{max-height:520px;overflow:auto;white-space:pre-wrap;overflow-wrap:anywhere;background:#111d2a;border:1px solid #304055;border-radius:8px;padding:14px;font-size:.82rem;line-height:1.45}.private-controls{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.private-controls input{flex:1;min-width:240px}
 .target-summary{font-size:.85rem;font-weight:650;color:#7ed6c2;margin:10px 0}.completed-goals{border-top:1px solid #304055;margin-top:8px;padding-top:10px}.completed-goals summary{cursor:pointer;color:#a8b8ca;font-size:.86rem;margin-bottom:10px}.completed-goals .farm-target{margin:8px 0}.completed-goals[open] summary{margin-bottom:10px}
 header>div.header-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;width:min(100%,440px)}.header-actions label{font-size:.83rem}.header-actions input{min-width:0;width:100%}.header-actions .action-row{display:flex;gap:8px;flex-wrap:wrap}.header-actions .action-row button{flex:1;min-width:145px}#refresh-status{margin:10px 0;line-height:1.4}
+#check-refresh.subtle-check{font-size:.88rem;color:#a8d6f5;background:transparent;border:1px solid #304055;padding:8px 12px;margin:6px 0}#workflow-status{margin:6px 0 14px;line-height:1.5}
 </style>
 </head>
 <body><main>
 <header><div><div class="eyebrow">SWGOH command centre</div><h1 id="name">Faberzen</h1><div class="muted" id="guild"></div><div class="muted" id="freshness">Loading roster…</div></div>
-<div class="header-actions"><div class="action-row"><button id="trigger-refresh" type="button">Refresh from game</button><button id="reload" type="button">Reload saved roster</button></div></div></header><p id="refresh-status" class="muted" role="status" aria-live="polite"></p><p id="status" class="warning" role="status"></p>
+<div class="header-actions"><div class="action-row"><button id="trigger-refresh" type="button">Refresh from game</button><button id="reload" type="button">Reload saved roster</button></div></div></header><p id="refresh-status" class="muted" role="status" aria-live="polite"></p><button id="check-refresh" class="subtle-check" type="button">Check workflow status</button><p id="workflow-status" class="muted" role="status" aria-live="polite"></p><p id="status" class="warning" role="status"></p>
 <section class="cards" aria-label="Roster summary">
 <div class="card"><div class="muted">Ally code</div><div class="value" id="ally">—</div></div>
 <div class="card"><div class="muted">Roster units</div><div class="value" id="total">—</div></div>
