@@ -165,7 +165,7 @@ function render() {
 async function load() {
   $('reload').disabled = true;
   try {
-    const response = await fetch(snapshotUrl, {cache: 'no-store'});
+    const response = await fetch(freshSnapshotUrl(), {cache: 'no-store'});
     if (!response.ok) throw Error('Roster unavailable (HTTP ' + response.status + ')');
     const data = await response.json();
     if (data.allyCode !== '843153117' || !Array.isArray(data.units) || !data.units.length)
@@ -198,6 +198,67 @@ $('sort').addEventListener('change', () => snapshot && render());
 $('reload').addEventListener('click', load);
 
 const privateApiBase = 'https://swgoh-data.mrfaberzen.workers.dev';
+// A Pages site cannot securely dispatch GitHub Actions itself. The Worker holds
+// the server-side GitHub credential and authenticates the dashboard access token.
+const pollDelayMs = 15000;
+const pollMaximumMs = 10 * 60 * 1000;
+const freshSnapshotUrl = () => snapshotUrl + (snapshotUrl.includes('?') ? '&' : '?') + 'v=' + Date.now();
+async function refreshFromGame() {
+  const button = $('trigger-refresh');
+  const status = $('refresh-status');
+  const token = $('access-token').value.trim();
+  if (!token) {
+    status.textContent = 'Enter your dashboard access token above, then press Refresh from game.';
+    $('access-token').focus();
+    return;
+  }
+  const previousRefreshAt = snapshot ? Date.parse(snapshot.refreshedAt) : 0;
+  button.disabled = true;
+  status.textContent = 'Sending secure roster refresh request…';
+  try {
+    const response = await fetch(privateApiBase + '/api/roster/refresh', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json'
+      },
+      body: '{}',
+      cache: 'no-store'
+    });
+    const result = await response.json();
+    if (!response.ok || !result.queued) {
+      throw Error(result.error || 'Roster refresh was not accepted (HTTP ' + response.status + ')');
+    }
+    status.textContent = 'Refresh requested. Checking for the updated roster automatically…';
+    const began = Date.now();
+    while (Date.now() - began < pollMaximumMs) {
+      await new Promise(resolve => setTimeout(resolve, pollDelayMs));
+      let data;
+      try {
+        const check = await fetch(freshSnapshotUrl(), {cache:'no-store'});
+        if (!check.ok) continue;
+        data = await check.json();
+      } catch {
+        continue;
+      }
+      if (data.allyCode === '843153117' && Array.isArray(data.units) &&
+          Date.parse(data.refreshedAt) > previousRefreshAt) {
+        await load();
+        status.textContent = 'Roster refreshed from the game · ' +
+          new Date(data.refreshedAt).toLocaleString();
+        return;
+      }
+    }
+    status.textContent = 'Refresh requested, but no newer snapshot was found within 10 minutes. Try Reload saved roster or check the manual GitHub fallback for workflow errors.';
+  } catch (error) {
+    status.textContent = 'Could not start roster refresh: ' + error.message +
+      '. Check that your Worker has the roster-refresh code and Actions: write permission.';
+  } finally {
+    button.disabled = false;
+  }
+}
+$('trigger-refresh').addEventListener('click', refreshFromGame);
+
 async function loadPrivateData(resource, button) {
   const token = $('access-token').value;
   const status = $('private-status');
