@@ -90,6 +90,76 @@ export default {
       return json({ ok: true, service: "swgoh-private-api" }, 200, origin);
     }
 
+    // Read-only status lets the dashboard show workflow failure without requiring
+    // a GitHub login or exposing the server-side token.
+    if (url.pathname === "/api/roster/status") {
+      if (origin !== ALLOWED_ORIGIN) return json({ error: "Origin not allowed" }, 403, origin);
+      if (request.method !== "GET") return json({ error: "Method not allowed" }, 405, origin);
+      const githubToken = env.ROSTER_REFRESH_GITHUB_TOKEN || env.PRIVATE_DATA_GITHUB_TOKEN;
+      if (!githubToken) return json({ error: "GitHub status token not configured" }, 503, origin);
+      const headers = {
+        "Authorization": "Bearer " + githubToken,
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "swgoh-command-centre"
+      };
+      try {
+        const runsResponse = await fetch(
+          "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/runs?per_page=20",
+          { headers, redirect: "manual", cache: "no-store" }
+        );
+        if (!runsResponse.ok) {
+          return json({ error: "GitHub workflow status unavailable", githubStatus: runsResponse.status }, 502, origin);
+        }
+        const data = await runsResponse.json();
+        if (!Array.isArray(data.workflow_runs)) {
+          return json({ error: "Unexpected GitHub workflow status response" }, 502, origin);
+        }
+        const runs = data.workflow_runs;
+        const summarize = run => run ? ({
+          event: run.event,
+          status: run.status,
+          conclusion: run.conclusion,
+          createdAt: run.created_at,
+          updatedAt: run.updated_at,
+          url: run.html_url
+        }) : null;
+        const active = runs.find(run =>
+          ["queued", "in_progress", "waiting", "pending", "requested"].includes(run.status));
+        const manual = runs.find(run => run.event === "workflow_dispatch");
+        const latest = runs[0] || null;
+        // Show the first failing step to make troubleshooting actionable.
+        let failedStep = null;
+        const diagnose = active || manual || latest;
+        if (diagnose?.conclusion === "failure" && Number.isSafeInteger(diagnose.id)) {
+          const jobsResponse = await fetch(
+            "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/runs/" +
+              diagnose.id + "/jobs?per_page=20",
+            { headers, redirect: "manual", cache: "no-store" }
+          );
+          if (jobsResponse.ok) {
+            const jobsData = await jobsResponse.json();
+            const failure = Array.isArray(jobsData.jobs) &&
+              jobsData.jobs.find(job => job.conclusion === "failure");
+            if (failure) {
+              const step = Array.isArray(failure.steps) &&
+                failure.steps.find(step => step.conclusion === "failure");
+              failedStep = step?.name || failure.name || null;
+            }
+          }
+        }
+        return json({
+          active: summarize(active),
+          latestManual: summarize(manual),
+          latest: summarize(latest),
+          failedStep
+        }, 200, origin);
+      } catch (error) {
+        console.error("Roster status lookup failed", error?.name || "Error");
+        return json({ error: "Could not load GitHub workflow status" }, 502, origin);
+      }
+    }
+
     const match = url.pathname.match(new RegExp("^/api/private/(inventory|gac|tw)$"));
     const isRosterRefresh = url.pathname === "/api/roster/refresh";
     if (!match && !isRosterRefresh) return json({ error: "Not found" }, 404, origin);
