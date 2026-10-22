@@ -33,7 +33,7 @@ If the Worker is not configured, the dashboard has a separate [manual GitHub fal
 
 A daily refresh also runs at 18:17 UTC (04:17 Sydney during AEST; 05:17 during AEDT). GitHub can delay scheduled runs.
 
-The workflow starts Comlink temporarily inside GitHub Actions. No paid API account, EA login, or permanent server is required for this version. New game-data versions automatically refresh the unit-name catalog. Responses are validated before snapshots are replaced; workflow failure leaves the last committed data available.
+The roster-refresh workflow starts Comlink temporarily inside GitHub Actions, validates roster data and commits it without depending on browser tests. Dashboard tests run separately through `.github/workflows/check-dashboard.yml` on webpage or test changes. A failing browser test does not make a successfully saved roster appear to have failed. No paid API account, EA login, or permanent server is required for this version. New game-data versions automatically refresh the unit-name catalog. Responses are validated before snapshots are replaced; workflow failure leaves the last committed data available.
 
 ## Open the dashboard
 
