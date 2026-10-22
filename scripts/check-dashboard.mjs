@@ -14,6 +14,12 @@ try {
   await page.waitForFunction(() => document.querySelector('#total').textContent !== '—');
   assert.equal(await page.locator('#rows tr').count(), data.units.length);
   assert.ok(await page.locator('#farm-plan').isVisible(), 'Farm advice section is visible');
+  assert.ok(await page.locator('#trigger-refresh').isVisible(), 'Direct refresh button is present');
+  assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
+  await page.locator('#trigger-refresh').click();
+  assert.ok((await page.locator('#refresh-status').innerText()).includes('Enter your dashboard access token'));
+  assert.ok(!(await page.locator('header').innerHTML()).includes('actions/workflows/refresh-player.yml'), 'Refresh button does not redirect to GitHub');
+
   const executorPlan = await page.locator('#executor-targets').textContent();
   assert.ok(executorPlan.includes('Dengar') && executorPlan.includes('R5'));
   assert.ok(executorPlan.includes('Razor Crest'));
