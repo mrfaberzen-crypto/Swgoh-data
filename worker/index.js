@@ -151,12 +151,14 @@ export default {
         "X-GitHub-Api-Version": "2022-11-28",
         "User-Agent": "swgoh-command-centre"
       };
-      // GitHub workflow runs provide a cross-location cooldown, including while
-      // a previous run is still queued. Fail closed if run history is unavailable.
+      // Only user-triggered workflow_dispatch runs count toward the 30-minute
+      // cooldown. Push and scheduled runs must not masquerade as button presses.
+      // Also avoid dispatching while any refresh job is currently active.
+      // Fail closed if GitHub run history cannot be verified.
       let runHistory;
       try {
         const runsResponse = await fetch(
-          "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/runs?per_page=1",
+          "https://api.github.com/repos/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml/runs?per_page=100",
           { headers: githubHeaders, redirect: "manual", cache: "no-store" }
         );
         if (!runsResponse.ok) {
@@ -174,13 +176,29 @@ export default {
       if (!Array.isArray(runHistory.workflow_runs)) {
         return json({ error: "GitHub returned an unexpected refresh history" }, 502, origin);
       }
-      const lastRun = runHistory.workflow_runs[0];
-      const lastRunAt = lastRun ? Date.parse(lastRun.created_at) : NaN;
-      if (Number.isFinite(lastRunAt) && Date.now() - lastRunAt < 30 * 60 * 1000) {
+      const now = Date.now();
+      const runs = runHistory.workflow_runs;
+      const isRecent = run => {
+        const date = Date.parse(run.created_at);
+        return Number.isFinite(date) && now - date >= 0 && now - date < 30 * 60 * 1000;
+      };
+      const active = runs.find(run =>
+        isRecent(run) && ["queued", "in_progress", "waiting", "pending", "requested"].includes(run.status));
+      if (active) {
         return json({
           queued: false,
           recentlyRequested: true,
-          message: "A roster refresh was requested recently; check the saved roster again shortly."
+          message: "A roster refresh is already running. Reload saved roster to check its progress."
+        }, 200, origin);
+      }
+      const recentButtonRun = runs.find(run =>
+        run.event === "workflow_dispatch" && isRecent(run) &&
+        !["failure", "cancelled", "timed_out", "action_required"].includes(run.conclusion));
+      if (recentButtonRun) {
+        return json({
+          queued: false,
+          recentlyRequested: true,
+          message: "You used Refresh from game within the last 30 minutes. Reload saved roster to check for new data."
         }, 200, origin);
       }
       let response;
