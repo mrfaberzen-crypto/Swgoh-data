@@ -203,6 +203,43 @@ const privateApiBase = 'https://swgoh-data.mrfaberzen.workers.dev';
 const pollDelayMs = 15000;
 const pollMaximumMs = 10 * 60 * 1000;
 const freshSnapshotUrl = () => snapshotUrl + (snapshotUrl.includes('?') ? '&' : '?') + 'v=' + Date.now();
+
+// Read-only workflow status, so the mobile dashboard can diagnose a failed
+// GitHub action without requiring navigation to GitHub or a browser token.
+async function checkRefreshStatus() {
+  const button = $('check-refresh');
+  const status = $('workflow-status');
+  button.disabled = true;
+  status.textContent = 'Checking GitHub refresh status…';
+  try {
+    const response = await fetch(privateApiBase + '/api/roster/status', {cache:'no-store'});
+    const data = await response.json();
+    if (!response.ok) throw Error(data.error || 'Status request failed (HTTP ' + response.status + ')');
+    const run = data.active || data.latestManual || data.latest;
+    if (!run) {
+      status.textContent = 'No roster refresh runs found.';
+      return;
+    }
+    const when = run.createdAt && Number.isFinite(Date.parse(run.createdAt))
+      ? new Date(run.createdAt).toLocaleString() : 'unknown time';
+    const trigger = run.event === 'workflow_dispatch' ? 'Button/manual refresh'
+      : run.event === 'schedule' ? 'Scheduled refresh'
+      : run.event === 'push' ? 'Automatic code-change refresh' : 'Roster refresh';
+    const state = run.status !== 'completed'
+      ? 'currently ' + String(run.status).replaceAll('_',' ')
+      : run.conclusion === 'success' ? 'completed successfully'
+      : run.conclusion === 'failure' ? 'failed' : 'finished: ' + (run.conclusion || 'unknown');
+    status.textContent = trigger + ' · ' + when + ' · ' + state +
+      (data.failedStep ? ' · Failed step: ' + data.failedStep : '') +
+      (run.conclusion === 'success' ? '. Reload saved roster to see the latest snapshot.' : '.');
+  } catch (error) {
+    status.textContent = 'Could not check the workflow: ' + error.message;
+  } finally {
+    button.disabled = false;
+  }
+}
+$('check-refresh').addEventListener('click', checkRefreshStatus);
+
 async function refreshFromGame() {
   const button = $('trigger-refresh');
   const status = $('refresh-status');
