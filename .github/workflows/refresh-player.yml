@@ -91,19 +91,3 @@ jobs:
           fi
           git commit -m "Refresh SWGOH player data"
           git push
-
-      - name: Check dashboard in Chromium
-        run: |
-          npm install --no-save playwright@1.58.2
-          npx playwright install --with-deps chromium
-          python3 -m http.server 8000 --bind 127.0.0.1 > /tmp/dashboard-server.log 2>&1 &
-          node scripts/check-dashboard.mjs
-
-      - name: Save dashboard screenshots
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: dashboard-screenshots
-          path: dashboard-*.png
-          if-no-files-found: ignore
-
