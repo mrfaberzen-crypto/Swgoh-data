@@ -6,3 +6,4 @@ main = "index.js"
 compatibility_date = "2026-10-22"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = true
+# Keep Cloudflare Builds root directory set to worker; Git pushes to main deploy this Worker.
