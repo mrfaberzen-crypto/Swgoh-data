@@ -206,29 +206,26 @@ const freshSnapshotUrl = () => snapshotUrl + (snapshotUrl.includes('?') ? '&' : 
 async function refreshFromGame() {
   const button = $('trigger-refresh');
   const status = $('refresh-status');
-  const token = $('access-token').value.trim();
-  if (!token) {
-    status.textContent = 'Enter your dashboard access token above, then press Refresh from game.';
-    $('access-token').focus();
-    return;
-  }
   const previousRefreshAt = snapshot ? Date.parse(snapshot.refreshedAt) : 0;
   button.disabled = true;
   status.textContent = 'Sending secure roster refresh request…';
   try {
     const response = await fetch(privateApiBase + '/api/roster/refresh', {
       method: 'POST',
-      headers: {
-        'Authorization': 'Bearer ' + token,
-        'Content-Type': 'application/json'
-      },
+      headers: {'Content-Type': 'application/json'},
       body: '{}',
       cache: 'no-store'
     });
     const result = await response.json();
-    if (!response.ok || !result.queued) {
+    if (!response.ok) {
       throw Error(result.error || 'Roster refresh was not accepted (HTTP ' + response.status + ')');
     }
+    if (result.recentlyRequested) {
+      status.textContent = 'A refresh was requested in the last 30 minutes. You can reload the saved roster to check for new data.';
+      await load();
+      return;
+    }
+    if (!result.queued) throw Error('Roster refresh response was not recognized.');
     status.textContent = 'Refresh requested. Checking for the updated roster automatically…';
     const began = Date.now();
     while (Date.now() - began < pollMaximumMs) {
@@ -252,7 +249,7 @@ async function refreshFromGame() {
     status.textContent = 'Refresh requested, but no newer snapshot was found within 10 minutes. Try Reload saved roster or check the manual GitHub fallback for workflow errors.';
   } catch (error) {
     status.textContent = 'Could not start roster refresh: ' + error.message +
-      '. Check that your Worker has the roster-refresh code and Actions: write permission.';
+      ' If GitHub permissions are missing, a one-time Cloudflare Worker setup is required.';
   } finally {
     button.disabled = false;
   }
