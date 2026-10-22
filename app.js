@@ -215,7 +215,9 @@ async function checkRefreshStatus() {
     const response = await fetch(privateApiBase + '/api/roster/status', {cache:'no-store'});
     const data = await response.json();
     if (!response.ok) throw Error(data.error || 'Status request failed (HTTP ' + response.status + ')');
-    const run = data.active || data.latestManual || data.latest;
+    // Prefer the newest workflow run. An older failed manual run must not
+    // conceal a newer successful automatic roster refresh.
+    const run = data.active || data.latest || data.latestManual;
     if (!run) {
       status.textContent = 'No roster refresh runs found.';
       return;
