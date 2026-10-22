@@ -6,38 +6,63 @@ const snapshotUrl = location.hostname === 'mrfaberzen-crypto.github.io'
 let snapshot;
 
 const farmGoals = {
+  // Complete Executor prerequisites; incomplete targets are shown first.
   executor: [
-    {id:'BOSSK',name:'Bossk',track:'relic',target:5,goal:'R5'},
-    {id:'TIEFIGHTERPILOT',name:'TIE Fighter Pilot',track:'relic',target:5,goal:'R5'},
-    {id:'DENGAR',name:'Dengar',track:'relic',target:5,goal:'R5'},
-    {id:'IG88',name:'IG-88',track:'relic',target:5,goal:'R5'},
-    {id:'BOBAFETT',name:'Boba Fett',track:'relic',target:8,goal:'R8'},
+    {id:'VADER',name:'Darth Vader',track:'relic',target:7,goal:'R7'},
     {id:'ADMIRALPIETT',name:'Admiral Piett',track:'relic',target:8,goal:'R8'},
+    {id:'BOBAFETT',name:'Boba Fett',track:'relic',target:8,goal:'R8'},
     {id:'RAZORCREST',name:'Razor Crest',track:'stars',target:7,goal:'7★'},
     {id:'IG2000',name:'IG-2000',track:'stars',target:7,goal:'7★'},
-    {id:'CAPITALFINALIZER',name:'Finalizer',track:'stars',target:5,goal:'5★'}
+    {id:'TIEBOMBERIMPERIAL',name:'Imperial TIE Bomber',track:'stars',target:7,goal:'7★'},
+    {id:'DENGAR',name:'Dengar',track:'relic',target:5,goal:'R5'},
+    {id:'IG88',name:'IG-88',track:'relic',target:5,goal:'R5'},
+    {id:'BOSSK',name:'Bossk',track:'relic',target:5,goal:'R5'},
+    {id:'TIEFIGHTERPILOT',name:'TIE Fighter Pilot',track:'relic',target:5,goal:'R5'},
+    {id:'SLAVE1',name:'Slave I',track:'stars',target:7,goal:'7★'},
+    {id:'HOUNDSTOOTH',name:"Hound's Tooth",track:'stars',target:7,goal:'7★'},
+    {id:'TIEADVANCED',name:'TIE Advanced x1',track:'stars',target:7,goal:'7★'},
+    {id:'TIEFIGHTERIMPERIAL',name:'Imperial TIE Fighter',track:'stars',target:7,goal:'7★'}
   ],
+  // Fleet targets support Executor and First Order; they are not all journey prerequisites.
   fleet: [
     {id:'PUNISHINGONE',name:'Punishing One',track:'stars',target:7,goal:'7★'},
-    {id:'TIEECHELON',name:'TIE Echelon',track:'stars',target:7,goal:'7★'},
+    {id:'FIRSTORDERTIEECHELON',name:'TIE Echelon',track:'stars',target:7,goal:'7★'},
     {id:'TIEBOMBERIMPERIAL',name:'Imperial TIE Bomber',track:'stars',target:7,goal:'7★'}
   ],
+  // All 12 relic characters plus Finalizer are required for SLKR.
   slkr: [
-    {id:'EMPERORPALPATINE',name:'Emperor Palpatine',track:'relic',target:7,goal:'R7'},
     {id:'KYLORENUNMASKED',name:'Kylo Ren (Unmasked)',track:'relic',target:7,goal:'R7'},
-    {id:'KYLOREN',name:'Kylo Ren',track:'relic',target:7,goal:'R7'}
+    {id:'FIRSTORDERTROOPER',name:'First Order Stormtrooper',track:'relic',target:5,goal:'R5'},
+    {id:'FIRSTORDEROFFICERMALE',name:'First Order Officer',track:'relic',target:5,goal:'R5'},
+    {id:'KYLOREN',name:'Kylo Ren',track:'relic',target:7,goal:'R7'},
+    {id:'PHASMA',name:'Captain Phasma',track:'relic',target:5,goal:'R5'},
+    {id:'FIRSTORDEREXECUTIONER',name:'First Order Executioner',track:'relic',target:5,goal:'R5'},
+    {id:'SMUGGLERHAN',name:'Veteran Smuggler Han Solo',track:'relic',target:3,goal:'R3'},
+    {id:'FOSITHTROOPER',name:'Sith Trooper',track:'relic',target:5,goal:'R5'},
+    {id:'FIRSTORDERSPECIALFORCESPILOT',name:'First Order SF TIE Pilot',track:'relic',target:3,goal:'R3'},
+    {id:'GENERALHUX',name:'General Hux',track:'relic',target:5,goal:'R5'},
+    {id:'FIRSTORDERTIEPILOT',name:'First Order TIE Pilot',track:'relic',target:3,goal:'R3'},
+    {id:'EMPERORPALPATINE',name:'Emperor Palpatine',track:'relic',target:7,goal:'R7'},
+    {id:'CAPITALFINALIZER',name:'Finalizer',track:'stars',target:5,goal:'5★'}
   ],
   era: [
+    {id:'LUKESTARKILLER',name:'Starkiller (Luke Concept) — Episode Level',track:'manual',goal:'L95'},
     {id:'DARTHJARJAR',name:'Darth Jar Jar',track:'stars',target:5,goal:'5★'},
-    {id:'LUKESTARKILLER',name:'Starkiller (Luke Concept)',track:'stars',target:5,goal:'5★'}
+    {id:'LUKESTARKILLER',name:'Starkiller (Luke Concept)',track:'stars',target:5,goal:'5★'},
+    {id:'CAPTAINENOCH',name:'Captain Enoch',track:'relic',target:6,goal:'R6'},
+    {id:'NIGHTTROOPER',name:'Night Trooper',track:'relic',target:6,goal:'R6'},
+    {id:'DEATHTROOPERPERIDEA',name:'Death Trooper (Peridea)',track:'relic',target:6,goal:'R6'}
   ]
 };
 function renderGoalList(containerId, goals) {
   const container = $(containerId);
-  container.replaceChildren(...goals.map(goal => {
+  const evaluated = goals.map(goal => {
     const unit = snapshot.units.find(u => u.id === goal.id);
-    const current = unit ? (goal.track === 'relic' ? (unit.relic ?? 0) : (unit.stars ?? 0)) : 0;
-    const complete = Boolean(unit && current >= goal.target);
+    const current = !unit || goal.track === 'manual' ? null
+      : goal.track === 'relic' ? (unit.relic ?? 0) : (unit.stars ?? 0);
+    return {goal, unit, current, complete:current !== null && current >= goal.target};
+  });
+  const makeCard = ({goal, unit, current, complete}) => {
     const card = document.createElement('div');
     card.className = 'farm-target';
     const line = document.createElement('div');
@@ -51,13 +76,14 @@ function renderGoalList(containerId, goals) {
     line.append(name, target);
     const status = document.createElement('div');
     status.className = 'farm-target-current' + (complete ? ' done' : '');
-    status.textContent = unit
-      ? (goal.track === 'relic'
-          ? (unit.gear != null && unit.gear < 13 ? 'G' + unit.gear + ' · ' : '') + 'R' + current + ' of ' + goal.goal
-          : unit.stars + '★ of ' + goal.goal)
-      : 'Not in saved roster';
+    status.textContent = goal.track === 'manual'
+      ? 'Check in game · episode level is not in this roster snapshot'
+      : !unit ? 'Not unlocked in saved roster'
+      : goal.track === 'relic'
+        ? (unit.gear != null && unit.gear < 13 ? 'G' + unit.gear + ' · ' : '') + 'R' + current + ' of ' + goal.goal
+        : unit.stars + '★ of ' + goal.goal;
     card.append(line, status);
-    if (unit) {
+    if (unit && goal.track !== 'manual') {
       const progress = document.createElement('progress');
       progress.max = goal.target;
       progress.value = Math.min(current, goal.target);
@@ -65,13 +91,45 @@ function renderGoalList(containerId, goals) {
       card.append(progress);
     }
     return card;
-  }));
+  };
+  const outstanding = evaluated.filter(item => !item.complete);
+  const completed = evaluated.filter(item => item.complete);
+  container.replaceChildren(...outstanding.map(makeCard));
+  if (!outstanding.length) {
+    const message = document.createElement('p');
+    message.className = 'muted plan-note';
+    message.textContent = 'All tracked targets complete.';
+    container.append(message);
+  }
+  if (completed.length) {
+    const details = document.createElement('details');
+    details.className = 'completed-goals';
+    const summary = document.createElement('summary');
+    summary.textContent = 'Completed targets (' + completed.length + ')';
+    details.append(summary, ...completed.map(makeCard));
+    container.append(details);
+  }
+  const summaryNode = $(containerId.replace('-targets', '-summary'));
+  const tracked = evaluated.filter(item => item.goal.track !== 'manual').length;
+  if (summaryNode) summaryNode.textContent =
+    completed.length + ' of ' + tracked + ' tracked targets complete' +
+    (evaluated.length > tracked ? ' · ' + (evaluated.length - tracked) + ' manual target' : '');
 }
 function renderFarmPlan() {
   renderGoalList('executor-targets', farmGoals.executor);
   renderGoalList('fleet-targets', farmGoals.fleet);
   renderGoalList('slkr-targets', farmGoals.slkr);
   renderGoalList('era-targets', farmGoals.era);
+  const unlocked = snapshot.units.some(u => u.name === 'Supreme Leader Kylo Ren');
+  const slkrReady = farmGoals.slkr.every(goal => {
+    const unit = snapshot.units.find(u => u.id === goal.id);
+    return unit && (goal.track === 'relic' ? (unit.relic ?? 0) : unit.stars) >= goal.target;
+  });
+  $('slkr-status').textContent = unlocked
+    ? 'SLKR is unlocked. All prerequisites are complete.'
+    : slkrReady
+      ? 'All 13 prerequisites met — you can start Heir to the Dark Side. Earn Dark Side tickets and complete the unlock tiers.'
+      : 'Complete the outstanding prerequisites below before beginning the SLKR event.';
   const date = new Date(snapshot.refreshedAt);
   $('farm-freshness').textContent = Number.isFinite(date.getTime())
     ? 'Character and ship progress uses the saved roster · refreshed ' + date.toLocaleString()
