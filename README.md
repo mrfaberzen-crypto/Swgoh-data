@@ -17,7 +17,7 @@ The dashboard reads a saved snapshot. Reloading it does **not** make a new game 
 
 1. Press **Refresh from game**. No browser password/token is needed for the public roster.
 2. The Cloudflare Worker checks GitHub workflow run history. Automatic scheduled/code-push refreshes do not count against the 30-minute manual-refresh cooldown. An active refresh, of any origin, prevents duplicate dispatches.
-3. The button reports whether the request was accepted and monitors the saved roster for an updated snapshot. Use **Reload saved roster** to re-read the latest saved data at any time.
+3. The button reports whether the request was accepted and monitors the saved roster for an updated snapshot. Use **Check workflow status** to read the latest GitHub Actions run, including any failing step, without leaving the dashboard. Use **Reload saved roster** to re-read the saved data.
 
 Private inventory, GAC and TW requests **still require** the private dashboard access token in their separate field.
 
