@@ -32,7 +32,7 @@ header>div.header-actions{display:flex;flex-direction:column;align-items:stretch
 </head>
 <body><main>
 <header><div><div class="eyebrow">SWGOH command centre</div><h1 id="name">Faberzen</h1><div class="muted" id="guild"></div><div class="muted" id="freshness">Loading roster…</div></div>
-<div class="header-actions"><label for="access-token" class="muted">Dashboard access token</label><input id="access-token" type="password" autocomplete="off" placeholder="Access token for roster and private data" aria-label="Cloudflare dashboard access token"><div class="action-row"><button id="trigger-refresh" type="button">Refresh from game</button><button id="reload" type="button">Reload saved roster</button></div></div></header><p id="refresh-status" class="muted" role="status" aria-live="polite"></p><p id="status" class="warning" role="status"></p>
+<div class="header-actions"><div class="action-row"><button id="trigger-refresh" type="button">Refresh from game</button><button id="reload" type="button">Reload saved roster</button></div></div></header><p id="refresh-status" class="muted" role="status" aria-live="polite"></p><p id="status" class="warning" role="status"></p>
 <section class="cards" aria-label="Roster summary">
 <div class="card"><div class="muted">Ally code</div><div class="value" id="ally">—</div></div>
 <div class="card"><div class="muted">Roster units</div><div class="value" id="total">—</div></div>
@@ -56,19 +56,20 @@ header>div.header-actions{display:flex;flex-direction:column;align-items:stretch
 </section>
 <section class="panel" id="private-data" aria-labelledby="private-title">
 <h2 id="private-title">Private game data</h2>
-<p class="muted">Fetch live inventory, GAC, or TW data through your protected Worker. Use the same dashboard access token as roster refresh. The token stays in this tab; successful responses are synced to the separate private GitHub repository for analysis.</p>
+<p class="muted">Inventory, GAC and TW remain private and require your Cloudflare dashboard access token. Public roster refresh above does not require a token. Private responses are synced to your separate private GitHub repository for analysis.</p>
 <div class="private-controls">
+<input id="access-token" type="password" autocomplete="off" placeholder="Access token for private data only" aria-label="Private game data access token">
 <button type="button" data-private="inventory">Load inventory</button>
 <button type="button" data-private="gac">Load GAC</button>
 <button type="button" data-private="tw">Load TW</button>
 </div>
-<p id="private-status" class="muted" role="status">Enter your access token at the top of the page, then choose which data to fetch.</p>
+<p id="private-status" class="muted" role="status">Enter your private data access token above, then choose which data to fetch.</p>
 <pre id="private-output" class="private-output" aria-label="Private API response">No private data loaded.</pre>
 </section>
 <section class="panel" id="roster"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
 <div class="controls"><input id="search" type="search" placeholder="Search characters or ships…" aria-label="Search roster"><select id="filter" aria-label="Filter roster"><option value="all">All units</option><option value="characters">Characters</option><option value="ships">Ships</option><option value="seven">Seven stars</option><option value="relic">Relic characters</option></select><select id="sort" aria-label="Sort roster"><option value="progress">Upgrade level</option><option value="name">Name</option><option value="stars">Stars</option></select></div>
 <div class="muted" id="count"></div><div class="tablewrap"><table><thead><tr><th>Unit</th><th>Type</th><th>Stars</th><th>Level</th><th>Gear / relic</th><th>Equipped mods</th></tr></thead><tbody id="rows"></tbody></table></div>
 <p id="empty" hidden>No units match these filters.</p>
-</section><footer>Public roster snapshot · Updated daily. “Refresh from game” starts a GitHub Actions refresh through your protected Worker and automatically checks for new roster data. If the Worker has not been configured yet, use the <a href="https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml">manual GitHub fallback</a>.</footer>
+</section><footer>Public roster snapshot · Updated daily. “Refresh from game” requests a public roster refresh without a password, subject to anti-abuse limits, and checks for new roster data. If the Worker has not been configured yet, use the <a href="https://github.com/mrfaberzen-crypto/Swgoh-data/actions/workflows/refresh-player.yml">manual GitHub fallback</a>.</footer>
 </main>
 <script src="app.js" defer></script></body></html>
