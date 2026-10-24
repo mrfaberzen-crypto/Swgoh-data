@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-23T21:26:53Z",
+  "refreshedAt": "2026-10-24T20:52:59Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 279,
+    "1": 285,
     "2": 43
   },
   "units": [
@@ -716,6 +716,16 @@
       "stars": 7,
       "level": 85,
       "gear": 8,
+      "relic": null,
+      "mods": 0
+    },
+    {
+      "id": "SUPREMELEADERKYLOREN",
+      "name": "Supreme Leader Kylo Ren",
+      "type": "Character",
+      "stars": 7,
+      "level": 83,
+      "gear": 3,
       "relic": null,
       "mods": 0
     },
@@ -1784,7 +1794,7 @@
       "name": "Adelphi Ranger",
       "type": "Character",
       "stars": 4,
-      "level": 11,
+      "level": 13,
       "gear": 3,
       "relic": null,
       "mods": 0
