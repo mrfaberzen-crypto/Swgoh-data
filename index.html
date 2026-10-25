@@ -29,6 +29,7 @@ table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:12px 8px
 .target-summary{font-size:.85rem;font-weight:650;color:#7ed6c2;margin:10px 0}.completed-goals{border-top:1px solid #304055;margin-top:8px;padding-top:10px}.completed-goals summary{cursor:pointer;color:#a8b8ca;font-size:.86rem;margin-bottom:10px}.completed-goals .farm-target{margin:8px 0}.completed-goals[open] summary{margin-bottom:10px}
 header>div.header-actions{display:flex;flex-direction:column;align-items:stretch;gap:8px;width:min(100%,440px)}.header-actions label{font-size:.83rem}.header-actions input{min-width:0;width:100%}.header-actions .action-row{display:flex;gap:8px;flex-wrap:wrap}.header-actions .action-row button{flex:1;min-width:145px}#refresh-status{margin:10px 0;line-height:1.4}
 #check-refresh.subtle-check{font-size:.88rem;color:#a8d6f5;background:transparent;border:1px solid #304055;padding:8px 12px;margin:6px 0}#workflow-status{margin:6px 0 14px;line-height:1.5}
+.private-key-form{display:grid;gap:9px;margin-top:16px}.private-key-form>label:first-child{font-size:.88rem;font-weight:650}.private-key-row{display:flex;flex-wrap:wrap;gap:8px}.private-key-row input{flex:1;min-width:min(100%,190px)}.private-key-row button{flex:0 0 auto;background:#223647;color:#c7e6f7;border:1px solid #516479}.remember-key-option{display:flex;align-items:flex-start;gap:9px;color:#a8b8ca;font-size:.85rem;line-height:1.4}.remember-key-option input{flex:0 0 auto;min-width:0;width:18px;height:18px;margin-top:1px;accent-color:#76d4bc}.private-key-form .hidden-login-name{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 </style>
 </head>
 <body><main>
@@ -58,13 +59,21 @@ header>div.header-actions{display:flex;flex-direction:column;align-items:stretch
 <section class="panel" id="private-data" aria-labelledby="private-title">
 <h2 id="private-title">Private game data</h2>
 <p class="muted">Inventory, GAC and TW remain private and require your Cloudflare dashboard access token. Public roster refresh above does not require a token. Private responses are synced to your separate private GitHub repository for analysis.</p>
+<form id="private-key-form" class="private-key-form" autocomplete="on">
+<label for="access-token">Private data access key</label>
+<input type="text" name="username" value="Faberzen" autocomplete="username" readonly tabindex="-1" aria-hidden="true" class="hidden-login-name">
+<div class="private-key-row">
+<input id="access-token" name="password" type="password" autocomplete="current-password" placeholder="Enter once, then save with Chrome" aria-label="Private game data access key">
+<button id="use-saved-key" type="button">Use saved key</button>
+</div>
+<label class="remember-key-option"><input id="save-private-key" type="checkbox"> Offer to save this key in my phone's password manager after it works</label>
+</form>
 <div class="private-controls">
-<input id="access-token" type="password" autocomplete="off" placeholder="Access token for private data only" aria-label="Private game data access token">
 <button type="button" data-private="inventory">Load inventory</button>
 <button type="button" data-private="gac">Load GAC</button>
 <button type="button" data-private="tw">Load TW</button>
 </div>
-<p id="private-status" class="muted" role="status">Enter your private data access token above, then choose which data to fetch.</p>
+<p id="private-status" class="muted" role="status">Enter your private-data key once, or use Chrome's saved key, then choose the data to fetch.</p>
 <pre id="private-output" class="private-output" aria-label="Private API response">No private data loaded.</pre>
 </section>
 <section class="panel" id="roster"><h2>Roster</h2><p class="muted">Your characters and ships. Search by name and sort by upgrade level.</p>
