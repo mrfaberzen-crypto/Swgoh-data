@@ -32,8 +32,9 @@ try {
 
   assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
   assert.equal(await page.locator('#access-token').getAttribute('autocomplete'), 'current-password');
-  assert.ok(await page.locator('#use-saved-key').isVisible(), 'Saved key button appears');
-  assert.ok(await page.locator('#save-private-key').isVisible(), 'Opt-in password-manager checkbox appears');
+  assert.ok((await page.locator('#private-key-form').innerText()).includes('Dashlane'));
+  assert.equal(await page.locator('#use-saved-key').count(), 0, 'Removed Chrome-only key retrieval');
+  assert.equal(await page.locator('#save-private-key').count(), 0, 'Removed unreliable Chrome save prompt');
   // Roster refresh needs no access token; private data is still protected.
   assert.ok(!(await page.locator('header').innerHTML()).includes('access-token'));
   await page.route('https://swgoh-data.mrfaberzen.workers.dev/api/roster/refresh', route => {
