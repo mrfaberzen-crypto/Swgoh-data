@@ -31,6 +31,9 @@ try {
   assert.ok(!(await page.locator('#workflow-status').textContent()).includes('Failed step'), 'Do not show an older failed workflow after a newer successful refresh');
 
   assert.equal(await page.locator('#access-token').count(), 1, 'Access token only entered once');
+  assert.equal(await page.locator('#access-token').getAttribute('autocomplete'), 'current-password');
+  assert.ok(await page.locator('#use-saved-key').isVisible(), 'Saved key button appears');
+  assert.ok(await page.locator('#save-private-key').isVisible(), 'Opt-in password-manager checkbox appears');
   // Roster refresh needs no access token; private data is still protected.
   assert.ok(!(await page.locator('header').innerHTML()).includes('access-token'));
   await page.route('https://swgoh-data.mrfaberzen.workers.dev/api/roster/refresh', route => {
