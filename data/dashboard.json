@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-25T07:07:40Z",
+  "refreshedAt": "2026-10-25T20:54:15Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 285,
-    "2": 43
+    "1": 270,
+    "2": 33
   },
   "units": [
     {
@@ -1793,7 +1793,7 @@
       "id": "ADELPHIRANGER",
       "name": "Adelphi Ranger",
       "type": "Character",
-      "stars": 4,
+      "stars": 5,
       "level": 13,
       "gear": 3,
       "relic": null,
