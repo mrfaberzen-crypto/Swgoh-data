@@ -304,6 +304,49 @@ async function refreshFromGame() {
 }
 $('trigger-refresh').addEventListener('click', refreshFromGame);
 
+// Use the browser's credential manager instead of persisting API keys in
+// localStorage/sessionStorage or putting them in the page URL.
+$('private-key-form').addEventListener('submit', event => event.preventDefault());
+$('use-saved-key').addEventListener('click', async () => {
+  const status = $('private-status');
+  if (!navigator.credentials?.get || typeof PasswordCredential === 'undefined') {
+    status.textContent = 'Saved-key lookup is not supported in this browser. Try Chrome on Android or its normal password autofill.';
+    $('access-token').focus();
+    return;
+  }
+  const button = $('use-saved-key');
+  button.disabled = true;
+  status.textContent = 'Checking Chrome Password Manager…';
+  try {
+    const credential = await navigator.credentials.get({password:true, mediation:'required'});
+    if (credential?.password && credential.id === 'Faberzen') {
+      $('access-token').value = credential.password;
+      status.textContent = 'Saved key filled. Choose Inventory, GAC or TW.';
+    } else {
+      status.textContent = 'No saved SWGOH key was selected. Enter it once and check the save option below.';
+    }
+  } catch {
+    status.textContent = 'The password manager could not supply a saved key. You can still enter the key manually.';
+  } finally {
+    button.disabled = false;
+  }
+});
+async function offerKeyToPasswordManager(token) {
+  if (!navigator.credentials?.store || typeof PasswordCredential === 'undefined') {
+    return 'Chrome password saving is unavailable here. You can add the site manually in Google Password Manager.';
+  }
+  try {
+    await navigator.credentials.store(new PasswordCredential({
+      id: 'Faberzen',
+      name: 'SWGOH private data',
+      password: token
+    }));
+    return 'Password manager offered to save the key. Approve the Chrome prompt if one appears.';
+  } catch {
+    return 'Chrome did not save the key. You can still use its normal password autofill.';
+  }
+}
+
 async function loadPrivateData(resource, button) {
   const token = $('access-token').value;
   const status = $('private-status');
@@ -328,7 +371,15 @@ async function loadPrivateData(resource, button) {
     const data = await response.json();
     if (!response.ok) throw Error(data.error || 'Request failed (HTTP ' + response.status + ')');
     output.textContent = JSON.stringify(data, null, 2);
-    status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() + (response.headers.get('X-Snapshot-Saved') === 'true' ? ' and saved to your private GitHub repository.' : '.');
+    const detail = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() +
+      (response.headers.get('X-Snapshot-Saved') === 'true' ? ' and saved to your private GitHub repository.' : '.');
+    if ($('save-private-key').checked) {
+      const saveMessage = await offerKeyToPasswordManager(token);
+      $('save-private-key').checked = false;
+      status.textContent = detail + ' ' + saveMessage;
+    } else {
+      status.textContent = detail;
+    }
   } catch (error) {
     status.textContent = 'Could not load ' + resource.toUpperCase() + ': ' + error.message;
   } finally {
