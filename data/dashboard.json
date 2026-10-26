@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-26T03:02:19Z",
+  "refreshedAt": "2026-10-26T12:07:04Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 238,
@@ -727,7 +727,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "ADMIRALACKBAR",
