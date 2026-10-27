@@ -4,6 +4,10 @@ A read-only roster dashboard for ally code **843153117**.
 
 ## What works
 
+- Mobile-friendly tabs for Goals, 5v5 squads, 3v3 squads, Roster and Private data.
+- Goal shortcuts for SLKR, Executor, energy, tokens, Inquisitors and the current era.
+- Separate roster-specific ranked lineups for 5v5 and 3v3, with searchable member lists, live mod-slot warnings and unranked build projects. See [SQUADS.md](SQUADS.md) for the method and allocations. Rankings are dated coaching judgments, not automated win-rate estimates.
+
 - Current saved character and ship roster, with official English unit names.
 - Search by name or game identifier; filter characters, ships, seven-star units, or relic characters.
 - Sort by name, stars, or upgrade level.

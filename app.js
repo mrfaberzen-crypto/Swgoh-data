@@ -182,6 +182,8 @@ function render() {
   }));
   $('empty').hidden = shown.length > 0;
   renderFarmPlan();
+  renderSquads('5v5');
+  renderSquads('3v3');
 }
 async function load() {
   $('reload').disabled = true;
@@ -366,3 +368,106 @@ document.querySelectorAll('[data-private]').forEach(button => {
 });
 
 load();
+
+// Each tab has a stable hash, so links and Back work on mobile.
+function activateDashboardTab(id, updateHash = true) {
+  if (![...document.querySelectorAll('[data-tab]')].some(button => button.dataset.tab === id)) id = 'farm-plan';
+  document.querySelectorAll('[data-tab]').forEach(button => {
+    const selected = button.dataset.tab === id;
+    button.setAttribute('aria-selected', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+  });
+  document.querySelectorAll('.tab-panel').forEach(panel => { panel.hidden = panel.id !== id; });
+  if (updateHash && location.hash !== '#' + id) location.hash = id;
+}
+function activateGoalTab(id) {
+  document.querySelectorAll('[data-goal-tab]').forEach(button => {
+    const selected = button.dataset.goalTab === id;
+    button.setAttribute('aria-selected', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+    $('goal-' + button.dataset.goalTab).hidden = !selected;
+  });
+}
+function wireTabs(selector, activate) {
+  const buttons = [...document.querySelectorAll(selector)];
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => activate(button));
+    button.addEventListener('keydown', event => {
+      let next;
+      if (event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+      if (event.key === 'ArrowLeft') next = (index - 1 + buttons.length) % buttons.length;
+      if (event.key === 'Home') next = 0;
+      if (event.key === 'End') next = buttons.length - 1;
+      if (next === undefined) return;
+      event.preventDefault(); buttons[next].focus(); activate(buttons[next]);
+    });
+  });
+}
+wireTabs('[data-tab]', button => activateDashboardTab(button.dataset.tab));
+wireTabs('[data-goal-tab]', button => activateGoalTab(button.dataset.goalTab));
+window.addEventListener('hashchange', () => activateDashboardTab(location.hash.slice(1), false));
+activateDashboardTab(location.hash.slice(1), false);
+
+function squadElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (text !== undefined) element.textContent = text;
+  return element;
+}
+function renderSquads(mode) {
+  const container = $('squad-list-' + mode);
+  const query = $('squad-search-' + mode).value.trim().toLocaleLowerCase();
+  const filter = $('squad-filter-' + mode).value;
+  const plans = squadPlans[mode];
+  const assigned = new Map();
+  plans.filter(s => !s.project).forEach(s => s.members.forEach(id => assigned.set(id, s.name)));
+  const openNames = new Set([...container.querySelectorAll('details[open]')].map(d => d.dataset.squad));
+  container.replaceChildren();
+  let rank = 0, shown = 0, projectHeading = false;
+  plans.forEach(squad => {
+    if (!squad.project) rank++;
+    const members = squad.members.map(id => snapshot.units.find(u => u.id === id));
+    const names = members.map((u,i) => u?.name || squad.members[i]);
+    if (filter === 'main' && squad.project || filter === 'project' && !squad.project) return;
+    if (!(squad.name + ' ' + names.join(' ')).toLocaleLowerCase().includes(query)) return;
+    if (squad.project && !projectHeading) {
+      container.append(squadElement('h3','squad-section-title','Needs work / alternative allocations'));
+      projectHeading = true;
+    }
+    shown++;
+    const missing = members.filter(u => !u).length;
+    const modGaps = members.reduce((sum,u) => sum + (u ? Math.max(0, 6 - (u.mods ?? 0)) : 0), 0);
+    const lowGear = members.filter(u => u && (u.gear ?? 0) < 12).length;
+    const card = squadElement('details','squad-card'); card.dataset.squad = squad.name;
+    card.open = openNames.has(squad.name);
+    const summary = squadElement('summary');
+    const top = squadElement('div','squad-top');
+    top.append(squadElement('span','squad-rank',squad.project ? '↗' : '#' + rank), squadElement('span','squad-title',squad.name),squadElement('span','squad-open','+'));
+    summary.append(top,squadElement('p','squad-members', names.map((name,i) => name + (i === 0 ? ' (L)' : '')).join(' · ')));
+    const tags = squadElement('div','squad-tags');
+    tags.append(squadElement('span','badge',squad.role));
+    tags.append(squadElement('span','badge' + (modGaps || missing ? ' warn' : ''),missing ? missing + ' not unlocked' : modGaps ? modGaps + ' empty mod slots' : 'Full mod slots · verify quality'));
+    if (lowGear) tags.append(squadElement('span','badge warn',lowGear + ' below G12'));
+    summary.append(tags); card.append(summary);
+    const detail = squadElement('div','squad-detail');
+    detail.append(squadElement('p','',squad.note),squadElement('p','warning','Before battle: ' + squad.check));
+    if (squad.project) {
+      const overlaps = [...new Set(squad.members.map(id => assigned.get(id)).filter(Boolean))];
+      if (overlaps.length) detail.append(squadElement('p','warning','Shares characters with: ' + overlaps.join(', ') + '. Choose one allocation; these are not extra independent squads.'));
+    }
+    members.forEach((unit,i) => {
+      const row = squadElement('div','unit-line');
+      row.append(squadElement('span','',names[i] + (i === 0 ? ' · Leader' : '')));
+      row.append(squadElement('span','',unit ? unit.stars + '★ · ' + (unit.relic !== null ? 'R' + unit.relic : 'G' + unit.gear) + ' · ' + unit.mods + '/6 mods' : 'Not unlocked in saved roster'));
+      detail.append(row);
+    });
+    card.append(detail); container.append(card);
+  });
+  if (!shown) container.append(squadElement('p','squad-empty','No squads match. Try another character or show all squads.'));
+  $('squad-count-' + mode).textContent = shown + ' of ' + plans.length + ' squads shown';
+  $('squad-freshness-' + mode).textContent = 'Order reviewed 27 Oct 2026 · live roster ' + new Date(snapshot.refreshedAt).toLocaleString();
+}
+['5v5','3v3'].forEach(mode => {
+  $('squad-search-' + mode).addEventListener('input', () => snapshot && renderSquads(mode));
+  $('squad-filter-' + mode).addEventListener('change', () => snapshot && renderSquads(mode));
+});

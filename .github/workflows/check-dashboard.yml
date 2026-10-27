@@ -7,6 +7,8 @@ on:
     paths:
       - "index.html"
       - "app.js"
+      - "squads.js"
+      - "scripts/check-squads.cjs"
       - "scripts/check-dashboard.mjs"
       - ".github/workflows/check-dashboard.yml"
 
@@ -20,6 +22,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+      - name: Validate dashboard scripts and squad allocations
+        run: |
+          node --check app.js
+          node --check squads.js
+          node scripts/check-squads.cjs
       - name: Install Playwright and Chromium
         run: |
           npm install --no-save playwright@1.58.2

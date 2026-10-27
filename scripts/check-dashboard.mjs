@@ -56,10 +56,11 @@ try {
   await page.waitForFunction(() => document.querySelector('#refresh-status').textContent.includes('Too many refresh requests.'));
   assert.ok(!(await page.locator('header').innerHTML()).includes('actions/workflows/refresh-player.yml'), 'Refresh button does not redirect to GitHub');
 
+  await page.locator('[data-tab="farm-plan"]').click();
   const executorPlan = await page.locator('#executor-targets').textContent();
   assert.ok(executorPlan.includes('Dengar') && executorPlan.includes('R5'));
   assert.ok(executorPlan.includes('Razor Crest'));
-  assert.ok((await page.locator('#farm-plan').innerText()).includes('Fleet Store'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('Fleet Store'));
   assert.ok((await page.locator('#fleet-targets').innerText()).includes('Punishing One'));
   assert.ok((await page.locator('#slkr-targets').textContent()).includes('Emperor Palpatine'));
   assert.ok((await page.locator('#slkr-build-targets').textContent()).includes('G13'));
@@ -74,15 +75,38 @@ try {
   if (adelphi) {
     assert.ok((await page.locator('#era-targets').textContent()).includes(adelphi.stars + '★ of 5★'));
   }
-  assert.ok((await page.locator('#farm-plan').innerText()).includes('20 Oct – 17 Nov 2026'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('20 Oct – 17 Nov 2026'));
   assert.ok((await page.locator('#executor-targets').textContent()).includes('Darth Vader'));
   // Once SLKR is unlocked the status legitimately changes, so check both cases.
   const slkrMessage = await page.locator('#slkr-status').textContent();
   assert.ok(slkrMessage.includes('prerequisites met') || slkrMessage.includes('SLKR is unlocked') ||
     slkrMessage.includes('Complete the outstanding prerequisites'), 'SLKR progression is shown');
   assert.ok(!(await page.locator('#era-targets').textContent()).includes('Darth Jar Jar'));
-  assert.ok((await page.locator('#farm-plan').innerText()).includes('Fleet 2-E Normal'));
-  assert.ok((await page.locator('#farm-plan').innerText()).includes('Light Side hard node'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('Fleet 2-E Normal'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('Light Side hard node'));
+  await page.locator('[data-tab="squads-5v5"]').click();
+  assert.ok(await page.locator('#squads-5v5').isVisible());
+  assert.ok(!(await page.locator('#farm-plan').isVisible()));
+  assert.equal(await page.locator('#squad-list-5v5 .squad-card').count(), 15);
+  await page.locator('#squad-search-5v5').fill('Great Mothers');
+  assert.equal(await page.locator('#squad-list-5v5 .squad-card').count(), 1);
+  await page.locator('#squad-list-5v5 summary').click();
+  assert.ok((await page.locator('#squad-list-5v5').innerText()).includes('Night Trooper'));
+  await page.locator('#squad-search-5v5').fill('');
+  await page.locator('#squad-filter-5v5').selectOption('project');
+  assert.equal(await page.locator('#squad-list-5v5 .squad-card').count(), 4);
+  await page.locator('[data-tab="squads-3v3"]').click();
+  assert.equal(await page.locator('#squad-list-3v3 .squad-card').count(), 16);
+  assert.ok((await page.locator('#squad-list-3v3').textContent()).includes('Enoch'));
+  await page.locator('#tab-squads-3v3').press('ArrowRight');
+  assert.ok(await page.locator('#roster').isVisible(), 'Arrow navigation selects the roster');
+  await page.locator('#tab-roster').press('Home');
+  assert.ok(await page.locator('#farm-plan').isVisible());
+  await page.locator('[data-goal-tab="energy"]').click();
+  assert.ok(await page.locator('#goal-energy').isVisible());
+  assert.ok(!(await page.locator('#goal-slkr').isVisible()));
+  await page.locator('a[href="#roster"]').click();
+  assert.ok(await page.locator('#roster').isVisible(), 'Existing roster deep link opens its tab');
   await page.locator('#search').fill('Captain Rex');
   assert.equal(await page.locator('#rows tr').count(), 1);
   const rex = data.units.find(u => u.id === 'CAPTAINREX');
@@ -95,7 +119,10 @@ try {
   await page.locator('#sort').selectOption('name');
   await page.screenshot({path:'dashboard-desktop.png',fullPage:true});
   await page.setViewportSize({width:390,height:844});
+  await page.locator('[data-tab="squads-5v5"]').click();
+  await page.locator('#squad-filter-5v5').selectOption('all');
   await page.screenshot({path:'dashboard-mobile.png',fullPage:true});
+  await page.locator('[data-tab="roster"]').click();
   assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Page overflows mobile viewport');
   await page.locator('#search').fill('no_such_unit_999');
   assert.equal(await page.locator('#rows tr').count(), 0);
