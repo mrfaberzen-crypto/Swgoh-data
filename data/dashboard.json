@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-27T10:56:16Z",
+  "refreshedAt": "2026-10-27T22:17:55Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 238,
-    "2": 47
+    "2": 37
   },
   "units": [
     {
@@ -583,8 +583,8 @@
       "id": "CAPITALRADDUS",
       "name": "Raddus",
       "type": "Ship",
-      "stars": 6,
-      "level": 1,
+      "stars": 7,
+      "level": 85,
       "gear": null,
       "relic": null,
       "mods": null
@@ -813,7 +813,7 @@
       "id": "TIEBOMBERIMPERIAL",
       "name": "Imperial TIE Bomber",
       "type": "Ship",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": null,
       "relic": null,
@@ -953,7 +953,7 @@
       "id": "BLADEOFDORIN",
       "name": "Plo Koon's Jedi Starfighter",
       "type": "Ship",
-      "stars": 3,
+      "stars": 4,
       "level": 85,
       "gear": null,
       "relic": null,
@@ -1410,6 +1410,16 @@
       "mods": 4
     },
     {
+      "id": "GARSAXON",
+      "name": "Gar Saxon",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "BISHOP",
       "name": "Colonel Ward",
       "type": "Character",
@@ -1723,10 +1733,10 @@
       "id": "GRIEVOUS",
       "name": "General Grievous",
       "type": "Character",
-      "stars": 2,
-      "level": 1,
-      "gear": 1,
-      "relic": null,
+      "stars": 6,
+      "level": 85,
+      "gear": 13,
+      "relic": 5,
       "mods": 0
     },
     {
@@ -1794,7 +1804,7 @@
       "name": "Adelphi Ranger",
       "type": "Character",
       "stars": 5,
-      "level": 17,
+      "level": 19,
       "gear": 4,
       "relic": null,
       "mods": 0
@@ -2230,6 +2240,16 @@
       "mods": 0
     },
     {
+      "id": "GAUNTLETSTARFIGHTER",
+      "name": "Gauntlet Starfighter",
+      "type": "Ship",
+      "stars": 2,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null
+    },
+    {
       "id": "SITHASSASSIN",
       "name": "Sith Assassin",
       "type": "Character",
@@ -2396,7 +2416,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 1,
+      "relic": 5,
       "mods": 6
     },
     {
