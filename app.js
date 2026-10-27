@@ -29,7 +29,23 @@ const farmGoals = {
     {id:'FIRSTORDERTIEECHELON',name:'TIE Echelon',track:'stars',target:7,goal:'7★'},
     {id:'TIEBOMBERIMPERIAL',name:'Imperial TIE Bomber',track:'stars',target:7,goal:'7★'}
   ],
-  // All 12 relic characters plus Finalizer are required for SLKR.
+  slkrBuild: [
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · unlock relics',track:'gear',target:13,goal:'G13'},
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · first milestone',track:'relic',target:5,goal:'R5'},
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · main target',track:'relic',target:7,goal:'R7'}
+  ],
+  inquisitors: [
+    {id:'NINTHSISTER',name:'Ninth Sister · tank token',track:'relic',target:5,goal:'R5'},
+    {id:'EIGHTHBROTHER',name:'Eighth Brother · attacker token after Grievous',track:'relic',target:5,goal:'R5'},
+    {id:'SECONDSISTER',name:'Second Sister · attacker token',track:'relic',target:5,goal:'R5'},
+    {id:'SEVENTHSISTER',name:'Seventh Sister · healer token',track:'relic',target:5,goal:'R5'},
+    {id:'FIFTHBROTHER',name:'Fifth Brother · support token',track:'relic',target:5,goal:'R5'}
+  ],
+  grievous: [
+    {id:'GRIEVOUS',name:'General Grievous · attacker token',track:'relic',target:5,goal:'R5'},
+    {id:'GRIEVOUS',name:'General Grievous · finish shards after token',track:'stars',target:7,goal:'7★'}
+  ],
+  // Keep completed unlock requirements available for reference.
   slkr: [
     {id:'KYLORENUNMASKED',name:'Kylo Ren (Unmasked)',track:'relic',target:7,goal:'R7'},
     {id:'FIRSTORDERTROOPER',name:'First Order Stormtrooper',track:'relic',target:5,goal:'R5'},
@@ -57,7 +73,8 @@ function renderGoalList(containerId, goals) {
   const evaluated = goals.map(goal => {
     const unit = snapshot.units.find(u => u.id === goal.id);
     const current = !unit || goal.track === 'manual' ? null
-      : goal.track === 'relic' ? (unit.relic ?? 0) : (unit.stars ?? 0);
+      : goal.track === 'relic' ? (unit.relic ?? 0)
+      : goal.track === 'gear' ? (unit.gear ?? 0) : (unit.stars ?? 0);
     return {goal, unit, current, complete:current !== null && current >= goal.target};
   });
   const makeCard = ({goal, unit, current, complete}) => {
@@ -81,6 +98,7 @@ function renderGoalList(containerId, goals) {
           : 'Not unlocked in saved roster')
       : goal.track === 'relic'
         ? (unit.gear != null && unit.gear < 13 ? 'G' + unit.gear + ' · ' : '') + 'R' + current + ' of ' + goal.goal
+        : goal.track === 'gear' ? 'G' + current + ' of ' + goal.goal
         : unit.stars + '★ of ' + goal.goal;
     card.append(line, status);
     if (unit && goal.track !== 'manual') {
@@ -119,6 +137,9 @@ function renderFarmPlan() {
   renderGoalList('executor-targets', farmGoals.executor);
   renderGoalList('fleet-targets', farmGoals.fleet);
   renderGoalList('slkr-targets', farmGoals.slkr);
+  renderGoalList('slkr-build-targets', farmGoals.slkrBuild);
+  renderGoalList('inquisitor-targets', farmGoals.inquisitors);
+  renderGoalList('grievous-targets', farmGoals.grievous);
   renderGoalList('era-targets', farmGoals.era);
   const unlocked = snapshot.units.some(u => u.name === 'Supreme Leader Kylo Ren');
   const slkrReady = farmGoals.slkr.every(goal => {
@@ -126,7 +147,7 @@ function renderFarmPlan() {
     return unit && (goal.track === 'relic' ? (unit.relic ?? 0) : unit.stars) >= goal.target;
   });
   $('slkr-status').textContent = unlocked
-    ? 'SLKR is unlocked. All prerequisites are complete.'
+    ? 'SLKR is unlocked. Prioritise G13 → R5 → R7, remaining zetas and the ultimate. 27 October screenshots confirm normal abilities at level 2 and ultimate locked. Queue zeta upgrades and level chosen mods to 15 alongside gear; this manual status needs a new in-game check after upgrades.'
     : slkrReady
       ? 'All 13 prerequisites met — you can start Heir to the Dark Side. Earn Dark Side tickets and complete the unlock tiers.'
       : 'Complete the outstanding prerequisites below before beginning the SLKR event.';

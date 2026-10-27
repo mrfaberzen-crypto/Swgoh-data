@@ -62,6 +62,11 @@ try {
   assert.ok((await page.locator('#farm-plan').innerText()).includes('Fleet Store'));
   assert.ok((await page.locator('#fleet-targets').innerText()).includes('Punishing One'));
   assert.ok((await page.locator('#slkr-targets').textContent()).includes('Emperor Palpatine'));
+  assert.ok((await page.locator('#slkr-build-targets').textContent()).includes('G13'));
+  assert.ok((await page.locator('#slkr-build-targets').textContent()).includes('R7'));
+  assert.equal(await page.locator('#inquisitor-targets .farm-target').count(), 5);
+  assert.ok((await page.locator('#grievous-targets').textContent()).includes('General Grievous'));
+  assert.ok((await page.locator('#slkr-status').textContent()).includes('ultimate locked'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Adelphi Ranger'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Mercenary Guard Droid (B1)'));
   // The roster updates over time: never hardcode a character's current stars.
