@@ -2,10 +2,10 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-27T22:17:55Z",
+  "refreshedAt": "2026-10-28T22:38:16Z",
   "source": "SWGoH Comlink",
   "arena": {
-    "1": 238,
+    "1": 281,
     "2": 37
   },
   "units": [
@@ -1230,6 +1230,16 @@
       "mods": 6
     },
     {
+      "id": "CINTA",
+      "name": "Cinta Kaz",
+      "type": "Character",
+      "stars": 2,
+      "level": 1,
+      "gear": 1,
+      "relic": null,
+      "mods": 0
+    },
+    {
       "id": "YOUNGLANDO",
       "name": "Young Lando Calrissian",
       "type": "Character",
@@ -1804,7 +1814,7 @@
       "name": "Adelphi Ranger",
       "type": "Character",
       "stars": 5,
-      "level": 19,
+      "level": 21,
       "gear": 4,
       "relic": null,
       "mods": 0

@@ -1,7 +1,7 @@
 {
   "versions": {
-    "latestGamedataVersion": "0.40.6:tAj6zvcnT7GKXm7VxX_QIQ",
-    "latestLocalizationBundleVersion": "3P4tM7xJQIiKyjTJUjE-xg"
+    "latestGamedataVersion": "0.40.6:W8EftHi2TSizGnD-1QzTFg",
+    "latestLocalizationBundleVersion": "NBtg8ikGTz-rnCFHrdUd8A"
   },
   "units": {
     "BADBATCHECHO": {
@@ -1084,6 +1084,10 @@
       "name": "Sith Eternal Emperor",
       "combatType": 1
     },
+    "RACCOON_MANDOGROGU_EVENT": {
+      "name": "Rotta the Hutt",
+      "combatType": 1
+    },
     "ARCTROOPER501ST_GLE_INHERIT": {
       "name": "501st ARC Trooper",
       "combatType": 1
@@ -1891,6 +1895,10 @@
     "GHOST": {
       "name": "Ghost",
       "combatType": 2
+    },
+    "GLMANDOGROGU": {
+      "name": "The Mandalorian and Grogu",
+      "combatType": 1
     },
     "IG86SENTINELDROID": {
       "name": "IG-86 Sentinel Droid",
