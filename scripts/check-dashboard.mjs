@@ -106,7 +106,7 @@ try {
   assert.ok(await page.locator('#goal-energy').isVisible());
   assert.ok(!(await page.locator('#goal-slkr').isVisible()));
   await page.locator('a[href="#roster"]').click();
-  assert.ok(await page.locator('#roster').isVisible(), 'Existing roster deep link opens its tab');
+  await page.locator('#roster').waitFor({ state: 'visible', timeout: 5000 });
   await page.locator('#search').fill('Captain Rex');
   assert.equal(await page.locator('#rows tr').count(), 1);
   const rex = data.units.find(u => u.id === 'CAPTAINREX');
