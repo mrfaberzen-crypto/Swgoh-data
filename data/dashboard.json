@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-29T22:47:29Z",
+  "refreshedAt": "2026-10-30T21:21:45Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
-    "2": 37
+    "2": 50
   },
   "units": [
     {
@@ -725,8 +725,8 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 12,
-      "relic": null,
+      "gear": 13,
+      "relic": 6,
       "mods": 6
     },
     {
