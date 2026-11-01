@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-10-31T21:38:55Z",
+  "refreshedAt": "2026-11-01T22:05:19Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
-    "2": 40
+    "2": 50
   },
   "units": [
     {
@@ -37,7 +37,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 4
+      "mods": 6
     },
     {
       "id": "ZEBS3",
@@ -47,7 +47,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "BARRISSOFFEE",
@@ -67,7 +67,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 5
+      "mods": 1
     },
     {
       "id": "FIRSTORDERTIEECHELON",
@@ -87,7 +87,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "THERONIN",
@@ -97,7 +97,7 @@
       "level": 85,
       "gear": 13,
       "relic": null,
-      "mods": 4
+      "mods": 0
     },
     {
       "id": "B1BATTLEDROIDV2",
@@ -117,7 +117,7 @@
       "level": 85,
       "gear": 11,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "TIEFIGHTERFOSF",
@@ -147,7 +147,7 @@
       "level": 85,
       "gear": 7,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "POGGLETHELESSER",
@@ -347,7 +347,7 @@
       "level": 85,
       "gear": 13,
       "relic": 2,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "RANGETROOPER",
@@ -367,7 +367,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "ROYALGUARD",
@@ -377,7 +377,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "BASTILASHAN",
@@ -387,7 +387,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "GEONOSIANSPY",
@@ -457,7 +457,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "NIGHTTROOPER",
@@ -497,7 +497,7 @@
       "level": 85,
       "gear": 11,
       "relic": null,
-      "mods": 5
+      "mods": 1
     },
     {
       "id": "SCARIFREBEL",
@@ -567,7 +567,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "LUKESKYWALKER",
@@ -597,7 +597,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 5
+      "mods": 1
     },
     {
       "id": "YODADSV",
@@ -607,7 +607,7 @@
       "level": 85,
       "gear": 13,
       "relic": 2,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "GAMORREANGUARD",
@@ -667,7 +667,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "ADMIRALPIETT",
@@ -737,7 +737,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "FULCRUMAHSOKA",
@@ -757,7 +757,7 @@
       "level": 85,
       "gear": 10,
       "relic": null,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "SCORCH",
@@ -787,7 +787,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "HOTHREBELSCOUT",
@@ -797,7 +797,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "GHOST",
@@ -827,7 +827,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "DISGUISEDCLONETROOPER",
@@ -887,7 +887,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "DARTHTALON",
@@ -897,7 +897,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "STORMTROOPERLUKE",
@@ -917,7 +917,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "MILLENNIUMFALCONPRISTINE",
@@ -967,7 +967,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 4
+      "mods": 0
     },
     {
       "id": "EMPERORPALPATINE",
@@ -1007,7 +1007,7 @@
       "level": 85,
       "gear": 9,
       "relic": null,
-      "mods": 5
+      "mods": 2
     },
     {
       "id": "GRANDMOFFTARKIN",
@@ -1017,7 +1017,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "LOGRAY",
@@ -1037,7 +1037,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 2
+      "mods": 6
     },
     {
       "id": "GEONOSIANSOLDIER",
@@ -1077,7 +1077,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "VULTUREDROID",
@@ -1097,7 +1097,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "HK47",
@@ -1127,7 +1127,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "CASSIANANDOR",
@@ -1137,7 +1137,7 @@
       "level": 85,
       "gear": 9,
       "relic": null,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "BAZEMALBUS",
@@ -1147,7 +1147,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "CLONEWARSCHEWBACCA",
@@ -1197,7 +1197,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 5
+      "mods": 1
     },
     {
       "id": "OLDBENKENOBI",
@@ -1227,7 +1227,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "CINTA",
@@ -1247,7 +1247,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "DEATHTROOPERPERIDEA",
@@ -1267,7 +1267,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "SMUGGLERHAN",
@@ -1397,7 +1397,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "UWINGSCARIF",
@@ -1427,7 +1427,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 0
+      "mods": 6
     },
     {
       "id": "GARSAXON",
@@ -1447,7 +1447,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 4
+      "mods": 2
     },
     {
       "id": "CORUSCANTUNDERWORLDPOLICE",
@@ -1477,7 +1477,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "MORGANELSBETH",
@@ -1507,7 +1507,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "C3POLEGENDARY",
@@ -1527,7 +1527,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 5
+      "mods": 0
     },
     {
       "id": "NIGHTSISTERINITIATE",
@@ -1547,7 +1547,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "MOFFGIDEONS1",
@@ -1567,7 +1567,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 2
+      "mods": 0
     },
     {
       "id": "ZAMWESELL",
@@ -1597,7 +1597,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 1
+      "mods": 0
     },
     {
       "id": "CAPITALMONCALAMARICRUISER",
@@ -1637,7 +1637,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "TIESILENCER",
@@ -1677,7 +1677,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 5
+      "mods": 0
     },
     {
       "id": "CAPITALSTARDESTROYER",
@@ -1697,7 +1697,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "XWINGRED2",
@@ -1716,7 +1716,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 0,
+      "relic": 5,
       "mods": 6
     },
     {
@@ -1757,7 +1757,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "CHIRRUTIMWE",
@@ -1767,7 +1767,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "KANANJARRUSS3",
@@ -1837,7 +1837,7 @@
       "level": 85,
       "gear": 12,
       "relic": null,
-      "mods": 6
+      "mods": 0
     },
     {
       "id": "STORMTROOPERHAN",
@@ -1847,7 +1847,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "HERASYNDULLAS3",
@@ -1867,7 +1867,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "FIRSTORDEREXECUTIONER",
@@ -1897,7 +1897,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 2
     },
     {
       "id": "ARC170CLONESERGEANT",
@@ -1927,7 +1927,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "CHIEFNEBIT",
@@ -2057,7 +2057,7 @@
       "level": 80,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "CHEWBACCALEGENDARY",
@@ -2097,7 +2097,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "MARAJADE",
@@ -2117,7 +2117,7 @@
       "level": 85,
       "gear": 9,
       "relic": null,
-      "mods": 6
+      "mods": 2
     },
     {
       "id": "CARTHONASI",
@@ -2127,7 +2127,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "WICKET",
@@ -2187,7 +2187,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "DATHCHA",
@@ -2207,7 +2207,7 @@
       "level": 85,
       "gear": 13,
       "relic": 6,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "JYNERSO",
@@ -2217,7 +2217,7 @@
       "level": 85,
       "gear": 8,
       "relic": null,
-      "mods": 6
+      "mods": 4
     },
     {
       "id": "TEEBO",
@@ -2337,7 +2337,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "CAPITALFINALIZER",
@@ -2397,7 +2397,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "DARTHJARJAR",
@@ -2407,7 +2407,7 @@
       "level": 85,
       "gear": 13,
       "relic": 3,
-      "mods": 6
+      "mods": 1
     },
     {
       "id": "AAYLASECURA",
@@ -2437,7 +2437,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 3
+      "mods": 6
     },
     {
       "id": "RESISTANCEPILOT",
@@ -2487,7 +2487,7 @@
       "level": 85,
       "gear": 13,
       "relic": 5,
-      "mods": 6
+      "mods": 5
     },
     {
       "id": "TIEFIGHTERPILOT",
@@ -2507,7 +2507,7 @@
       "level": 85,
       "gear": 13,
       "relic": 1,
-      "mods": 5
+      "mods": 6
     },
     {
       "id": "IG12",
@@ -2527,7 +2527,7 @@
       "level": 85,
       "gear": 13,
       "relic": 0,
-      "mods": 6
+      "mods": 3
     },
     {
       "id": "IG11",
