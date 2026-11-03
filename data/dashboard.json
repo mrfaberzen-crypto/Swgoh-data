@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-11-03T08:53:21Z",
+  "refreshedAt": "2026-11-03T23:25:57Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
@@ -583,6 +583,17 @@
         12,
         9
       ]
+    },
+    {
+      "id": "B1MERCDROID",
+      "name": "Mercenary Guard Droid (B1)",
+      "type": "Character",
+      "stars": 4,
+      "level": 39,
+      "gear": 6,
+      "relic": null,
+      "mods": 0,
+      "modLevels": []
     },
     {
       "id": "JAWA",
@@ -2182,7 +2193,7 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 10,
+      "gear": 11,
       "relic": null,
       "mods": 6,
       "modLevels": [
@@ -2606,7 +2617,7 @@
       "type": "Character",
       "stars": 5,
       "level": 31,
-      "gear": 5,
+      "gear": 6,
       "relic": null,
       "mods": 0,
       "modLevels": []

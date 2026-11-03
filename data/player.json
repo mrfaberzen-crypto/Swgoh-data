@@ -14800,6 +14800,62 @@
       }
     },
     {
+      "skill": [
+        {
+          "id": "uniqueskill_B1MERCDROID03",
+          "tier": 1
+        },
+        {
+          "id": "uniqueskill_B1MERCDROID02",
+          "tier": 1
+        },
+        {
+          "id": "uniqueskill_B1MERCDROID01",
+          "tier": 1
+        },
+        {
+          "id": "basicskill_B1MERCDROID",
+          "tier": 2
+        },
+        {
+          "id": "specialskill_B1MERCDROID01",
+          "tier": 2
+        }
+      ],
+      "equipment": [
+        {
+          "equipmentId": "075",
+          "slot": 0
+        },
+        {
+          "equipmentId": "055",
+          "slot": 1
+        },
+        {
+          "equipmentId": "092",
+          "slot": 2
+        },
+        {
+          "equipmentId": "092",
+          "slot": 3
+        }
+      ],
+      "equippedStatModOld": [],
+      "equippedStatMod": [],
+      "purchasedAbilityId": [],
+      "id": "8jv2KNbwRIe5_6n4LdHhkQ",
+      "definitionId": "B1MERCDROID:FOUR_STAR",
+      "currentRarity": 4,
+      "currentLevel": 39,
+      "currentXp": 16125,
+      "promotionRecipeReference": "",
+      "unitStat": null,
+      "currentTier": 6,
+      "relic": {
+        "currentTier": 1
+      }
+    },
+    {
       "skill": [],
       "equipment": [],
       "equippedStatModOld": [],
@@ -50130,15 +50186,15 @@
       ],
       "equipment": [
         {
-          "equipmentId": "146",
+          "equipmentId": "014",
           "slot": 1
         },
         {
-          "equipmentId": "129",
+          "equipmentId": "144",
           "slot": 2
         },
         {
-          "equipmentId": "107",
+          "equipmentId": "105",
           "slot": 5
         }
       ],
@@ -50837,7 +50893,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 10,
+      "currentTier": 11,
       "relic": {
         "currentTier": 1
       }
@@ -58987,24 +59043,7 @@
           "tier": 1
         }
       ],
-      "equipment": [
-        {
-          "equipmentId": "063",
-          "slot": 0
-        },
-        {
-          "equipmentId": "071",
-          "slot": 1
-        },
-        {
-          "equipmentId": "083",
-          "slot": 2
-        },
-        {
-          "equipmentId": "046",
-          "slot": 3
-        }
-      ],
+      "equipment": [],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
@@ -59015,7 +59054,7 @@
       "currentXp": 7135,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 5,
+      "currentTier": 6,
       "relic": {
         "currentTier": 1
       }
@@ -83144,10 +83183,16 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
+      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "56",
-      "index": 5
+      "value": "1980500",
+      "index": 3
+    },
+    {
+      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "94",
+      "index": 6
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
@@ -83156,10 +83201,76 @@
       "index": 11
     },
     {
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "versionKey": "NULL",
+      "value": "11010",
+      "index": 7
+    },
+    {
+      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "11",
+      "index": 10
+    },
+    {
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
+      "versionKey": "NULL",
+      "value": "68",
+      "index": 19
+    },
+    {
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 20
+    },
+    {
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
+      "versionKey": "NULL",
+      "value": "15365",
+      "index": 16
+    },
+    {
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "1232",
+      "index": 9
+    },
+    {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
+    },
+    {
+      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
+      "versionKey": "NULL",
+      "value": "68",
+      "index": 14
+    },
+    {
       "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "5678",
+      "value": "5726",
       "index": 8
+    },
+    {
+      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "10",
+      "index": 17
+    },
+    {
+      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
+      "versionKey": "NULL",
+      "value": "22076131902883",
+      "index": 21
     },
     {
       "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
@@ -83168,10 +83279,16 @@
       "index": 13
     },
     {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "1220",
-      "index": 9
+      "value": "4990904",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
+      "versionKey": "NULL",
+      "value": "56",
+      "index": 5
     },
     {
       "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
@@ -83182,92 +83299,14 @@
     {
       "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
-      "value": "3009279",
+      "value": "3010404",
       "index": 2
-    },
-    {
-      "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "10",
-      "index": 17
-    },
-    {
-      "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "10",
-      "index": 10
-    },
-    {
-      "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "1980500",
-      "index": 3
-    },
-    {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
-      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
-      "versionKey": "NULL",
-      "value": "22076131902883",
-      "index": 21
     },
     {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
       "versionKey": "NULL",
       "value": "22",
       "index": 15
-    },
-    {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "68",
-      "index": 19
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "15365",
-      "index": 16
-    },
-    {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
-    },
-    {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "4989779",
-      "index": 1
-    },
-    {
-      "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
-      "versionKey": "NULL",
-      "value": "68",
-      "index": 14
-    },
-    {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
-      "versionKey": "NULL",
-      "value": "10928",
-      "index": 7
-    },
-    {
-      "nameKey": "STAT_SEASON_LEAGUE_SCORE_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_PVP_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "94",
-      "index": 6
     }
   ],
   "pvpProfile": [
@@ -83962,7 +84001,11 @@
   "eraUnitStatus": [
     {
       "unitBaseId": "ADELPHIRANGER",
-      "eraLevel": 39
+      "eraLevel": 40
+    },
+    {
+      "unitBaseId": "B1MERCDROID",
+      "eraLevel": 47
     }
   ],
   "name": "Faberzen",
@@ -83979,7 +84022,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1793695996000",
+  "lastActivityTime": "1793741468000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -83994,5 +84037,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 41
+  "loanedUnitEraLevel": 43
 }
