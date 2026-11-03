@@ -67,7 +67,7 @@ try {
   assert.ok((await page.locator('#slkr-build-targets').textContent()).includes('R7'));
   assert.equal(await page.locator('#inquisitor-targets .farm-target').count(), 5);
   assert.ok((await page.locator('#grievous-targets').textContent()).includes('General Grievous'));
-  assert.ok((await page.locator('#slkr-status').textContent()).includes('ultimate locked'));
+  assert.ok((await page.locator('#slkr-status').textContent()).includes('Verify remaining zetas and ultimate'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Adelphi Ranger'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Mercenary Guard Droid (B1)'));
   // The roster updates over time: never hardcode a character's current stars.
@@ -82,8 +82,8 @@ try {
   assert.ok(slkrMessage.includes('prerequisites met') || slkrMessage.includes('SLKR is unlocked') ||
     slkrMessage.includes('Complete the outstanding prerequisites'), 'SLKR progression is shown');
   assert.ok(!(await page.locator('#era-targets').textContent()).includes('Darth Jar Jar'));
-  assert.ok((await page.locator('#farm-plan').textContent()).includes('Fleet 2-E Normal'));
-  assert.ok((await page.locator('#farm-plan').textContent()).includes('Light Side hard node'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('Fleet 5-F Hard'));
+  assert.ok((await page.locator('#farm-plan').textContent()).includes('Light Side 6-E Hard'));
   await page.locator('[data-tab="squads-5v5"]').click();
   assert.ok(await page.locator('#squads-5v5').isVisible());
   assert.ok(!(await page.locator('#farm-plan').isVisible()));

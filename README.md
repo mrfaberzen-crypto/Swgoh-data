@@ -6,7 +6,7 @@ A read-only roster dashboard for ally code **843153117**.
 
 - Mobile-friendly tabs for Goals, 5v5 squads, 3v3 squads, Roster and Private data.
 - Goal shortcuts for SLKR, Executor, energy, tokens, Inquisitors and the current era.
-- Separate roster-specific ranked lineups for 5v5 and 3v3, with searchable member lists, live mod-slot warnings and unranked build projects. See [SQUADS.md](SQUADS.md) for the method and allocations. Rankings are dated coaching judgments, not automated win-rate estimates.
+- Separate roster-specific ranked lineups for 5v5 and 3v3, with searchable member lists, live empty-slot and underlevelled-mod warnings and unranked build projects. See [SQUADS.md](SQUADS.md) for the method and allocations. Rankings are dated coaching judgments, not automated win-rate estimates.
 
 - Current saved character and ship roster, with official English unit names.
 - Search by name or game identifier; filter characters, ships, seven-star units, or relic characters.
@@ -53,7 +53,9 @@ For local preview, clone this repository, run `python3 -m http.server 8000` in i
 
 - `index.html`, `app.js` — dashboard.
 - `scripts/refresh.py` — Comlink retrieval, localization, validation and snapshot generation.
-- `scripts/check-dashboard.mjs` — Chromium checks against the generated snapshot.
+- `scripts/check-plan.cjs` — non-browser checks for goal progression, public mod evidence, timestamps and tab structure.
+- `scripts/check-squads.cjs` — format sizes, roster IDs, unique main allocations and protected Mothers composition.
+- `scripts/check-dashboard.mjs` — existing Chromium smoke checks; not run as part of the weekly no-visual-check review.
 - `data/dashboard.json` — one consistent dashboard snapshot including its timestamp.
 - `data/unit-catalog.json` — English unit names/types and source versions.
 - `data/player.json` — full public Comlink response, retained for other analysis.

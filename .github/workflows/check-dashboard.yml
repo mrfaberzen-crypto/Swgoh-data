@@ -9,6 +9,8 @@ on:
       - "app.js"
       - "squads.js"
       - "scripts/check-squads.cjs"
+      - "scripts/check-plan.cjs"
+      - "scripts/refresh.py"
       - "scripts/check-dashboard.mjs"
       - ".github/workflows/check-dashboard.yml"
 
@@ -27,6 +29,7 @@ jobs:
           node --check app.js
           node --check squads.js
           node scripts/check-squads.cjs
+          node scripts/check-plan.cjs
       - name: Install Playwright and Chromium
         run: |
           npm install --no-save playwright@1.58.2

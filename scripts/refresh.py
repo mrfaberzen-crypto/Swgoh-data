@@ -63,6 +63,7 @@ def dashboard(player, catalog, refreshed_at):
             "gear": unit.get("currentTier") if kind == 1 else None,
             "relic": tier - 2 if kind == 1 and tier >= 2 else None,
             "mods": len(unit.get("equippedStatMod", [])) if kind == 1 else None,
+            "modLevels": [mod.get("level", 0) for mod in unit.get("equippedStatMod", [])] if kind == 1 else None,
         })
     arena = {str(item["tab"]): item.get("rank") for item in player.get("pvpProfile", [])}
     return {"name": player["name"], "allyCode": ALLY_CODE,

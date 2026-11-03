@@ -32,18 +32,20 @@ const farmGoals = {
   slkrBuild: [
     {id:'SUPREMELEADERKYLOREN',name:'SLKR · unlock relics',track:'gear',target:13,goal:'G13'},
     {id:'SUPREMELEADERKYLOREN',name:'SLKR · first milestone',track:'relic',target:5,goal:'R5'},
-    {id:'SUPREMELEADERKYLOREN',name:'SLKR · main target',track:'relic',target:7,goal:'R7'}
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · main target',track:'relic',target:7,goal:'R7'},
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · purchased abilities',track:'manual',goal:'Verify remaining zetas',status:'Public tier mapping is unresolved; check purchased upgrades in game.'},
+    {id:'SUPREMELEADERKYLOREN',name:'SLKR · ultimate',track:'manual',goal:'Complete ultimate',status:'Not evidenced in the export; verify event progress and unlock in game.'}
   ],
   inquisitors: [
     {id:'NINTHSISTER',name:'Ninth Sister · tank token',track:'relic',target:5,goal:'R5'},
-    {id:'EIGHTHBROTHER',name:'Eighth Brother · attacker token after Grievous',track:'relic',target:5,goal:'R5'},
+    {id:'EIGHTHBROTHER',name:'Eighth Brother · next attacker token',track:'relic',target:5,goal:'R5'},
     {id:'SECONDSISTER',name:'Second Sister · attacker token',track:'relic',target:5,goal:'R5'},
     {id:'SEVENTHSISTER',name:'Seventh Sister · healer token',track:'relic',target:5,goal:'R5'},
     {id:'FIFTHBROTHER',name:'Fifth Brother · support token',track:'relic',target:5,goal:'R5'}
   ],
   grievous: [
-    {id:'GRIEVOUS',name:'General Grievous · attacker token',track:'relic',target:5,goal:'R5'},
-    {id:'GRIEVOUS',name:'General Grievous · finish shards after token',track:'stars',target:7,goal:'7★'}
+    {id:'GRIEVOUS',name:'General Grievous · R5 milestone',track:'relic',target:5,goal:'R5'},
+    {id:'GRIEVOUS',name:'General Grievous · remaining seventh star',track:'stars',target:7,goal:'7★'}
   ],
   // Keep completed unlock requirements available for reference.
   slkr: [
@@ -92,7 +94,7 @@ function renderGoalList(containerId, goals) {
     const status = document.createElement('div');
     status.className = 'farm-target-current' + (complete ? ' done' : '');
     status.textContent = goal.track === 'manual'
-      ? 'Check in game · episode level is not in this roster snapshot'
+      ? (goal.status || 'Check in game · not established by this roster snapshot')
       : !unit ? (goal.releaseDate && new Date() < new Date(goal.releaseDate + 'T00:00:00-07:00')
           ? 'Marquee begins 3 Nov 2026'
           : 'Not unlocked in saved roster')
@@ -133,6 +135,16 @@ function renderGoalList(containerId, goals) {
     completed.length + ' of ' + tracked + ' tracked targets complete' +
     (evaluated.length > tracked ? ' · ' + (evaluated.length - tracked) + ' manual target' : '');
 }
+function slkrProgressText(unit) {
+  const milestone = (unit.gear ?? 0) < 13 ? 'Finish G13, then R5 and R7.'
+    : (unit.relic ?? 0) < 7 ? 'G13 complete; R' + unit.relic + ' saved. Finish R7.'
+    : 'R7 target complete. Reserve further relic spending for Executor.';
+  return 'SLKR is unlocked. ' + milestone + ' Verify remaining zetas and ultimate in game; the public export does not reliably resolve purchased upgrades. Do not assume a finished GL kit.';
+}
+function modReadiness(unit) {
+  if (!unit || !Array.isArray(unit.modLevels)) return null;
+  return unit.modLevels.filter(level => level < 15).length;
+}
 function renderFarmPlan() {
   renderGoalList('executor-targets', farmGoals.executor);
   renderGoalList('fleet-targets', farmGoals.fleet);
@@ -147,7 +159,7 @@ function renderFarmPlan() {
     return unit && (goal.track === 'relic' ? (unit.relic ?? 0) : unit.stars) >= goal.target;
   });
   $('slkr-status').textContent = unlocked
-    ? 'SLKR is unlocked. Prioritise G13 → R5 → R7, remaining zetas and the ultimate. 27 October screenshots confirm normal abilities at level 2 and ultimate locked. Queue zeta upgrades and level chosen mods to 15 alongside gear; this manual status needs a new in-game check after upgrades.'
+    ? slkrProgressText(snapshot.units.find(u => u.id === 'SUPREMELEADERKYLOREN'))
     : slkrReady
       ? 'All 13 prerequisites met — you can start Heir to the Dark Side. Earn Dark Side tickets and complete the unlock tiers.'
       : 'Complete the outstanding prerequisites below before beginning the SLKR event.';
@@ -437,6 +449,8 @@ function renderSquads(mode) {
     shown++;
     const missing = members.filter(u => !u).length;
     const modGaps = members.reduce((sum,u) => sum + (u ? Math.max(0, 6 - (u.mods ?? 0)) : 0), 0);
+    const lowMods = members.reduce((sum,u) => sum + (modReadiness(u) ?? 0), 0);
+    const unknownMods = members.some(u => u && modReadiness(u) === null);
     const lowGear = members.filter(u => u && (u.gear ?? 0) < 12).length;
     const card = squadElement('details','squad-card'); card.dataset.squad = squad.name;
     card.open = openNames.has(squad.name);
@@ -447,6 +461,8 @@ function renderSquads(mode) {
     const tags = squadElement('div','squad-tags');
     tags.append(squadElement('span','badge',squad.role));
     tags.append(squadElement('span','badge' + (modGaps || missing ? ' warn' : ''),missing ? missing + ' not unlocked' : modGaps ? modGaps + ' empty mod slots' : 'Full mod slots · verify quality'));
+    if (lowMods) tags.append(squadElement('span','badge warn',lowMods + ' mods below level 15'));
+    if (unknownMods) tags.append(squadElement('span','badge warn','Mod levels unavailable'));
     if (lowGear) tags.append(squadElement('span','badge warn',lowGear + ' below G12'));
     summary.append(tags); card.append(summary);
     const detail = squadElement('div','squad-detail');
@@ -458,14 +474,14 @@ function renderSquads(mode) {
     members.forEach((unit,i) => {
       const row = squadElement('div','unit-line');
       row.append(squadElement('span','',names[i] + (i === 0 ? ' · Leader' : '')));
-      row.append(squadElement('span','',unit ? unit.stars + '★ · ' + (unit.relic !== null ? 'R' + unit.relic : 'G' + unit.gear) + ' · ' + unit.mods + '/6 mods' : 'Not unlocked in saved roster'));
+      row.append(squadElement('span','',unit ? unit.stars + '★ · ' + (unit.relic !== null ? 'R' + unit.relic : 'G' + unit.gear) + ' · ' + unit.mods + '/6 mods' + (modReadiness(unit) === null ? ' · levels unknown' : ' · ' + modReadiness(unit) + ' below level 15') : 'Not unlocked in saved roster'));
       detail.append(row);
     });
     card.append(detail); container.append(card);
   });
   if (!shown) container.append(squadElement('p','squad-empty','No squads match. Try another character or show all squads.'));
   $('squad-count-' + mode).textContent = shown + ' of ' + plans.length + ' squads shown';
-  $('squad-freshness-' + mode).textContent = 'Order reviewed 27 Oct 2026 · live roster ' + new Date(snapshot.refreshedAt).toLocaleString();
+  $('squad-freshness-' + mode).textContent = 'Order reviewed 3 Nov 2026 · live roster ' + new Date(snapshot.refreshedAt).toLocaleString();
 }
 ['5v5','3v3'].forEach(mode => {
   $('squad-search-' + mode).addEventListener('input', () => snapshot && renderSquads(mode));
