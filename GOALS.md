@@ -2,7 +2,7 @@
 
 ## Evidence and limits
 
-Latest saved public roster at review: `2b4ceb418bb950d2e166ed8cf1b64f1e904beaa2`, `data/dashboard.json` / `data/player.json`, **2 November 2026, 09:05:19 AEDT (Australia/Sydney)**, `2026-11-01T22:05:19Z`. This was about 35 hours old at review, beyond the dashboard's 24-hour freshness threshold. Refresh before spending; this review does not claim new game observations.
+Latest saved public roster after the successful refresh: `40833664d3055148d0d191406e1f6e71858ce7d4`, `data/dashboard.json` / `data/player.json`, **3 November 2026, 19:50:34 AEDT (Australia/Sydney)**, `2026-11-03T08:50:34Z`. This is fresh. The initial review used the 2 November 09:05 snapshot, about 35 hours old after a failed Comlink-download step; the post-update refresh recovered. Rechecking the new snapshot found no changes to the core squad investments, equipped mods, or SLKR ability evidence below.
 
 Public roster evidence establishes equipped characters, stars, gear/relics and mods. It does **not** establish inventory, unspent shards, tickets, token ownership, current shop availability, locked GAC roster or battle availability. No private snapshot or balances are included here. `unitStat` is null; sheet speeds below are estimates reconstructed from public base speed plus equipped mods, not measured combat stats.
 
@@ -67,6 +67,10 @@ After SLKR R7, default to **Great Mothers 7★ on Cantina 8-E, then Morgan 7★ 
 
 Alternatives remain behind it: Starkiller still needs Kyle (5★/level 1/G1) and Dash/Talon seventh stars; GAS adds ship/character preparation; Revan/Malak introduce further farm chains. Grievous is already unlocked and R5, so his next work is mods/abilities and seventh-star shards, not a new journey or repeat token.
 
+## Era collection update
+
+Adelphi Ranger has now reached **5★**, completing the stated collection target; stop buying packs solely to reach that completed milestone. Its remaining era/GL requirements are separate and are not adopted as a new spending goal. Mercenary Guard Droid (B1) is not present in the fresh roster; retain its existing 5★ collection target without assuming it is owned or its event has been played.
+
 ## Material changes since 27 October
 
 - SLKR G12→R6 and all chosen mods now level 15: remove stun-gun and generic mod-levelling advice; retain only R7, verified missing abilities and ultimate work.
@@ -80,4 +84,5 @@ Alternatives remain behind it: Starkiller still needs Kyle (5★/level 1/G1) and
 - [SLKR kit/base speed](https://swgoh.gg/units/supreme-leader-kylo-ren/) and [relic recipe](https://swgoh.gg/units/supreme-leader-kylo-ren/relic/).
 - [Cantina stage 8](https://swgoh.gg/campaigns/cantina-battles/M08/), [Mothers](https://swgoh.gg/units/great-mothers/), [Morgan](https://swgoh.gg/units/morgan-elsbeth/).
 - [Punishing One](https://swgoh.gg/units/punishing-one/), [Echelon](https://swgoh.gg/units/tie-echelon/), [IG-2000](https://swgoh.gg/units/ig-2000/).
+- [Grand Inquisitor event requirements](https://swgoh.gg/journey-guides/GRANDINQUISITOR/).
 - [Aurodium Attacker](https://swgoh.gg/lst/LST_ERA10_TIER04_ATTACKER/): live account-specific stock/price/eligible list remains unverified.

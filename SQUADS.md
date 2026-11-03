@@ -1,6 +1,6 @@
 # Ranked squads — reviewed 3 November 2026
 
-These are recommendations for Faberzen's saved roster, not global meta rankings or guaranteed counters. The baseline is the saved 21 October TW/GAC plan, rechecked against the 2 November 2026, 09:05 AEDT roster (over 24 hours old at review). The main 5v5 list preserves its eleven allocations. BAM and Bastila are additions in the projects section, not replacements.
+These are recommendations for Faberzen's saved roster, not global meta rankings or guaranteed counters. The baseline is the saved 21 October TW/GAC plan, rechecked against the 3 November 2026, 19:50 AEDT roster after the refresh recovered. The main 5v5 list preserves its eleven allocations. BAM and Bastila are additions in the projects section, not replacements.
 
 ## Ranking method
 
