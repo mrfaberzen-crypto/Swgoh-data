@@ -18,7 +18,7 @@ function json(body, status, origin) {
     headers.set("Vary", "Origin");
     headers.set("Access-Control-Allow-Methods", "POST, OPTIONS");
     headers.set("Access-Control-Allow-Headers", "Authorization, Content-Type");
-    headers.set("Access-Control-Expose-Headers", "X-Snapshot-Saved");
+    headers.set("Access-Control-Expose-Headers", "X-Snapshot-Saved, X-Snapshot-Error");
   }
   return new Response(JSON.stringify(body), { status, headers });
 }
@@ -42,6 +42,7 @@ function toBase64Utf8(value) {
 }
 
 async function savePrivateSnapshot(resource, data, token) {
+  if (!token) throw new Error("Private GitHub save token is not configured in Cloudflare.");
   const path = "data/" + resource + ".json";
   const url = "https://api.github.com/repos/mrfaberzen-crypto/swgoh-private-data/contents/" + path;
   const headers = {
@@ -50,35 +51,58 @@ async function savePrivateSnapshot(resource, data, token) {
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": "swgoh-command-centre"
   };
-  const existing = await fetch(url, { headers });
-  let sha;
-  if (existing.ok) {
-    const file = await existing.json();
-    sha = file.sha;
-  } else if (existing.status !== 404) {
-    throw new Error("GitHub snapshot lookup failed (HTTP " + existing.status + ")");
+  const snapshot = { allyCode: ALLY_CODE, resource, fetchedAt: new Date().toISOString(), data };
+  const content = toBase64Utf8(JSON.stringify(snapshot, null, 2) + "\n");
+  // Re-read the SHA on every attempt: concurrent saves can change the file.
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    if (attempt) await new Promise(resolve => setTimeout(resolve, 250 * 2 ** (attempt - 1)));
+    try {
+      const existing = await fetch(url + "?ref=main", { headers, redirect: "manual" });
+      let sha;
+      if (existing.ok) {
+        const file = await existing.json();
+        sha = file.sha;
+      } else if (existing.status !== 404) {
+        const status = existing.status;
+        await existing.body?.cancel();
+        throw snapshotError("lookup", status);
+      } else {
+        await existing.body?.cancel();
+      }
+      const writeResponse = await fetch(url, {
+        method: "PUT",
+        headers: { ...headers, "Content-Type": "application/json" },
+        redirect: "manual",
+        body: JSON.stringify({
+          message: "Refresh SWGOH " + resource.toUpperCase() + " snapshot",
+          content,
+          branch: "main",
+          ...(sha ? { sha } : {})
+        })
+      });
+      const status = writeResponse.status;
+      await writeResponse.body?.cancel();
+      if (!writeResponse.ok) throw snapshotError("save", status);
+      return;
+    } catch (error) {
+      // Network errors, conflicts and temporary GitHub failures get bounded retries.
+      if (attempt === 2 || (error.githubStatus &&
+          ![409, 429].includes(error.githubStatus) && error.githubStatus < 500)) throw error;
+    }
   }
+}
 
-  const snapshot = {
-    allyCode: ALLY_CODE,
-    resource,
-    fetchedAt: new Date().toISOString(),
-    data
-  };
-  const content = JSON.stringify(snapshot, null, 2) + "\n";
-  const writeResponse = await fetch(url, {
-    method: "PUT",
-    headers: { ...headers, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message: "Refresh SWGOH " + resource.toUpperCase() + " snapshot",
-      content: toBase64Utf8(content),
-      branch: "main",
-      ...(sha ? { sha } : {})
-    })
-  });
-  if (!writeResponse.ok) {
-    throw new Error("GitHub snapshot save failed (HTTP " + writeResponse.status + ")");
-  }
+function snapshotError(stage, status) {
+  const advice = status === 401 ? "The private GitHub token is invalid or expired. Replace PRIVATE_DATA_GITHUB_TOKEN in Cloudflare."
+    : status === 403 ? "Check PRIVATE_DATA_GITHUB_TOKEN access and Contents read/write permission for swgoh-private-data; GitHub may also be rate limiting it."
+    : status === 404 ? "Check that PRIVATE_DATA_GITHUB_TOKEN can access swgoh-private-data and its main branch."
+    : status === 409 ? "Another save changed the file. Try loading again."
+    : status === 422 ? "GitHub rejected the snapshot update. Check the private repository branch and file settings."
+    : status === 429 || status >= 500 ? "GitHub is temporarily unavailable. Try loading again shortly."
+    : "Check the private repository save configuration.";
+  const error = new Error("GitHub snapshot " + stage + " failed (HTTP " + status + "). " + advice);
+  error.githubStatus = status;
+  return error;
 }
 
 export default {
@@ -87,7 +111,7 @@ export default {
     const origin = request.headers.get("Origin");
 
     if (url.pathname === "/health" && request.method === "GET") {
-      return json({ ok: true, service: "swgoh-private-api" }, 200, origin);
+      return json({ ok: true, service: "swgoh-private-api", privateSnapshotVersion: 2 }, 200, origin);
     }
 
     // Read-only status lets the dashboard show workflow failure without requiring
@@ -300,8 +324,8 @@ export default {
       return json({ queued: true, message: "Roster refresh requested" }, 202, origin);
     }
 
-    if (!env.MHANNDALORIAN_API_KEY || !env.PRIVATE_DATA_GITHUB_TOKEN) {
-      return json({ error: "Private game data secrets are not configured" }, 503, origin);
+    if (!env.MHANNDALORIAN_API_KEY) {
+      return json({ error: "Private game data API secret is not configured" }, 503, origin);
     }
 
     const endpoint = API_ENDPOINTS[match[1]];
@@ -346,21 +370,29 @@ export default {
       return json({ error: "Mhanndalorian API returned invalid JSON" }, 502, origin);
     }
 
+    let snapshotSaved = false;
+    let snapshotFailure = "";
     try {
       await savePrivateSnapshot(match[1], data, env.PRIVATE_DATA_GITHUB_TOKEN);
+      snapshotSaved = true;
     } catch (error) {
-      console.error("Private GitHub snapshot save failed", match[1], error?.name || "Error", error?.message || "No details");
-      return json({ error: "Live data loaded but private GitHub snapshot could not be saved" }, 502, origin);
+      // Return the fetched data even when persistence fails. Only expose fixed,
+      // safe diagnostics; transport error messages may contain private details.
+      snapshotFailure = error.githubStatus ? snapshotError("save", error.githubStatus).message
+        : !env.PRIVATE_DATA_GITHUB_TOKEN ? "Private GitHub save token is not configured in Cloudflare."
+        : "Could not contact GitHub to save the snapshot. Try loading again shortly.";
+      console.error("Private GitHub snapshot save failed", match[1], snapshotFailure);
     }
 
     const headers = new Headers({
       "Content-Type": "application/json; charset=utf-8",
       "Cache-Control": "no-store, private",
       "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
-      "Access-Control-Expose-Headers": "X-Snapshot-Saved",
+      "Access-Control-Expose-Headers": "X-Snapshot-Saved, X-Snapshot-Error",
       "Vary": "Origin",
-      "X-Snapshot-Saved": "true"
+      "X-Snapshot-Saved": String(snapshotSaved)
     });
+    if (snapshotFailure) headers.set("X-Snapshot-Error", snapshotFailure);
     return new Response(JSON.stringify(data), { status: 200, headers });
   }
 };

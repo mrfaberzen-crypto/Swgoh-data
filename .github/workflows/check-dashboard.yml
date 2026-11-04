@@ -7,6 +7,8 @@ on:
     paths:
       - "index.html"
       - "app.js"
+      - "worker/index.js"
+      - "scripts/check-private-data.mjs"
       - "squads.js"
       - "scripts/check-squads.cjs"
       - "scripts/check-plan.cjs"
@@ -27,6 +29,8 @@ jobs:
       - name: Validate dashboard scripts and squad allocations
         run: |
           node --check app.js
+          node --check worker/index.js
+          node scripts/check-private-data.mjs
           node --check squads.js
           node scripts/check-squads.cjs
           node scripts/check-plan.cjs

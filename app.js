@@ -368,7 +368,10 @@ async function loadPrivateData(resource, button) {
     if (!response.ok) throw Error(data.error || 'Request failed (HTTP ' + response.status + ')');
     output.textContent = JSON.stringify(data, null, 2);
     status.textContent = resource.toUpperCase() + ' data loaded at ' + new Date().toLocaleTimeString() +
-      (response.headers.get('X-Snapshot-Saved') === 'true' ? ' and saved to your private GitHub repository.' : '.');
+      (response.headers.get('X-Snapshot-Saved') === 'true'
+        ? ' and saved to your private GitHub repository.'
+        : '. Live data is shown below, but the private GitHub snapshot was not saved. ' +
+          (response.headers.get('X-Snapshot-Error') || 'Try loading again to retry the save.'));
   } catch (error) {
     status.textContent = 'Could not load ' + resource.toUpperCase() + ': ' + error.message;
   } finally {
