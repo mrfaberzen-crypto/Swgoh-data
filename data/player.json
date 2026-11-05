@@ -14824,15 +14824,24 @@
           "tier": 2
         }
       ],
-      "equipment": [],
+      "equipment": [
+        {
+          "equipmentId": "042",
+          "slot": 0
+        },
+        {
+          "equipmentId": "042",
+          "slot": 1
+        }
+      ],
       "equippedStatModOld": [],
       "equippedStatMod": [],
       "purchasedAbilityId": [],
       "id": "8jv2KNbwRIe5_6n4LdHhkQ",
       "definitionId": "B1MERCDROID:FOUR_STAR",
       "currentRarity": 4,
-      "currentLevel": 41,
-      "currentXp": 21225,
+      "currentLevel": 45,
+      "currentXp": 35325,
       "promotionRecipeReference": "",
       "unitStat": null,
       "currentTier": 7,
@@ -50817,24 +50826,16 @@
       ],
       "equipment": [
         {
-          "equipmentId": "142",
+          "equipmentId": "159",
           "slot": 0
         },
         {
-          "equipmentId": "014",
+          "equipmentId": "165",
           "slot": 1
         },
         {
-          "equipmentId": "144",
+          "equipmentId": "162",
           "slot": 2
-        },
-        {
-          "equipmentId": "137",
-          "slot": 3
-        },
-        {
-          "equipmentId": "105",
-          "slot": 5
         }
       ],
       "equippedStatModOld": [],
@@ -51532,7 +51533,7 @@
       "currentXp": 883025,
       "promotionRecipeReference": "",
       "unitStat": null,
-      "currentTier": 11,
+      "currentTier": 12,
       "relic": {
         "currentTier": 1
       }
@@ -83878,22 +83879,10 @@
   ],
   "profileStat": [
     {
-      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 20
-    },
-    {
-      "nameKey": "STAT_PVP_BATTLES_WIN_LEGACY_NAME",
-      "versionKey": "NULL",
-      "value": "94",
-      "index": 106
-    },
-    {
-      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "1244",
-      "index": 9
+      "value": "9",
+      "index": 12
     },
     {
       "nameKey": "STAT_SEASON_OFFENSIVE_BATTLES_WON_NAME",
@@ -83902,40 +83891,22 @@
       "index": 14
     },
     {
-      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 18
-    },
-    {
-      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
-      "versionKey": "NULL",
-      "value": "22076131902883",
-      "index": 21
-    },
-    {
-      "nameKey": "STAT_ERA_ARENA_BATTLES_WIN_NAME",
-      "versionKey": "NULL",
-      "value": "0",
-      "index": 4
-    },
-    {
-      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
-      "versionKey": "NULL",
-      "value": "5806",
-      "index": 8
-    },
-    {
       "nameKey": "STAT_PVP_SHIP_BATTLES_WIN_NAME",
       "versionKey": "NULL",
       "value": "56",
       "index": 5
     },
     {
-      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
+      "nameKey": "STAT_PVP_BATTLES_WIN_LEGACY_NAME",
       "versionKey": "NULL",
-      "value": "11132",
-      "index": 7
+      "value": "94",
+      "index": 106
+    },
+    {
+      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "3025466",
+      "index": 2
     },
     {
       "nameKey": "STAT_GUILD_RAID_WON_NAME_TU07_2",
@@ -83944,34 +83915,10 @@
       "index": 10
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
       "versionKey": "NULL",
-      "value": "34870",
-      "index": 11
-    },
-    {
-      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
-      "versionKey": "NULL",
-      "value": "15365",
-      "index": 16
-    },
-    {
-      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "5007588",
-      "index": 1
-    },
-    {
-      "nameKey": "STAT_CHARACTER_GALACTIC_POWER_ACQUIRED_NAME",
-      "versionKey": "NULL",
-      "value": "3024638",
-      "index": 2
-    },
-    {
-      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
-      "versionKey": "NULL",
-      "value": "68",
-      "index": 19
+      "value": "0",
+      "index": 13
     },
     {
       "nameKey": "STAT_SEASON_SUCCESSFUL_DEFENDS_NAME",
@@ -83980,28 +83927,82 @@
       "index": 15
     },
     {
+      "nameKey": "STAT_PVE_HARD_BATTLES_WIN_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "5837",
+      "index": 8
+    },
+    {
       "nameKey": "STAT_SEASON_FULL_CLEAR_ROUND_WINS_NAME",
       "versionKey": "NULL",
       "value": "10",
       "index": 17
     },
     {
-      "nameKey": "STAT_SEASON_PROMOTIONS_EARNED_NAME",
+      "nameKey": "STAT_PVE_BATTLES_WIN_NAME_TU15",
       "versionKey": "NULL",
-      "value": "0",
-      "index": 13
+      "value": "11203",
+      "index": 7
     },
     {
-      "nameKey": "STAT_TOTAL_GUILD_EXCHANGE_DONATIONS_TU07_2",
+      "nameKey": "STAT_TOTAL_GALACTIC_WON_NAME_TU07_2",
       "versionKey": "NULL",
-      "value": "9",
-      "index": 12
+      "value": "1256",
+      "index": 9
     },
     {
       "nameKey": "STAT_SHIP_GALACTIC_POWER_ACQUIRED_NAME",
       "versionKey": "NULL",
       "value": "1982950",
       "index": 3
+    },
+    {
+      "nameKey": "STAT_SEASON_MOST_LEAGUE_SCORE_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 20
+    },
+    {
+      "nameKey": "STAT_SEASON_BEST_RANK_NAME",
+      "versionKey": "NULL",
+      "value": "22076131902883",
+      "index": 21
+    },
+    {
+      "nameKey": "STAT_TOTAL_GUILD_CONTRIBUTION_NAME_TU07_2",
+      "versionKey": "NULL",
+      "value": "35005",
+      "index": 11
+    },
+    {
+      "nameKey": "STAT_SEASON_UNDERSIZED_SQUAD_WINS_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 18
+    },
+    {
+      "nameKey": "STAT_ERA_ARENA_BATTLES_WIN_NAME",
+      "versionKey": "NULL",
+      "value": "0",
+      "index": 4
+    },
+    {
+      "nameKey": "STAT_GALACTIC_POWER_ACQUIRED_NAME",
+      "versionKey": "NULL",
+      "value": "5008416",
+      "index": 1
+    },
+    {
+      "nameKey": "STAT_SEASON_BANNERS_EARNED_NAME",
+      "versionKey": "NULL",
+      "value": "15365",
+      "index": 16
+    },
+    {
+      "nameKey": "STAT_SEASON_TERRITORIES_DEFEATED_NAME",
+      "versionKey": "NULL",
+      "value": "68",
+      "index": 19
     }
   ],
   "pvpProfile": [
@@ -84171,7 +84172,7 @@
     },
     {
       "tab": 2,
-      "rank": 50,
+      "rank": 58,
       "squad": {
         "cell": [
           {
@@ -84700,7 +84701,7 @@
     },
     {
       "unitBaseId": "B1MERCDROID",
-      "eraLevel": 50
+      "eraLevel": 53
     }
   ],
   "name": "Faberzen",
@@ -84717,7 +84718,7 @@
   },
   "guildTypeId": "NORMAL",
   "localTimeZoneOffsetMinutes": 600,
-  "lastActivityTime": "1793827519000",
+  "lastActivityTime": "1793914759000",
   "selectedPlayerPortrait": {
     "id": "PLAYERPORTRAIT_CANTINAKEEPER"
   },
@@ -84732,5 +84733,5 @@
     }
   },
   "nucleusId": "1000703366225",
-  "loanedUnitEraLevel": 45
+  "loanedUnitEraLevel": 47
 }
