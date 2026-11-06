@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-11-05T23:39:59Z",
+  "refreshedAt": "2026-11-06T04:56:38Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
@@ -589,8 +589,8 @@
       "name": "Mercenary Guard Droid (B1)",
       "type": "Character",
       "stars": 4,
-      "level": 45,
-      "gear": 7,
+      "level": 57,
+      "gear": 8,
       "relic": null,
       "mods": 0,
       "modLevels": []
@@ -653,7 +653,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 0,
+      "relic": 5,
       "mods": 6,
       "modLevels": [
         12,
@@ -2822,7 +2822,7 @@
       "id": "PUNISHINGONE",
       "name": "Punishing One",
       "type": "Ship",
-      "stars": 5,
+      "stars": 6,
       "level": 85,
       "gear": null,
       "relic": null,
