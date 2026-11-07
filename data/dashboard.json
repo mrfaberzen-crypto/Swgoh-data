@@ -2,7 +2,7 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-11-06T23:12:29Z",
+  "refreshedAt": "2026-11-07T21:53:51Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
@@ -237,6 +237,17 @@
         12,
         12
       ]
+    },
+    {
+      "id": "CEREJUNDA",
+      "name": "Cere Junda",
+      "type": "Character",
+      "stars": 4,
+      "level": 85,
+      "gear": 13,
+      "relic": 1,
+      "mods": 0,
+      "modLevels": []
     },
     {
       "id": "JAWASCAVENGER",
@@ -1496,6 +1507,17 @@
         12,
         12
       ]
+    },
+    {
+      "id": "CALKESTIS",
+      "name": "Cal Kestis",
+      "type": "Character",
+      "stars": 5,
+      "level": 85,
+      "gear": 13,
+      "relic": 3,
+      "mods": 0,
+      "modLevels": []
     },
     {
       "id": "KELLERANBEQ",
