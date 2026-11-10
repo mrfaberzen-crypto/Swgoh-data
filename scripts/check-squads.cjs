@@ -19,5 +19,9 @@ const mothers5 = plans['5v5'].find(s => s.name==='Great Mothers');
 assert.ok(mothers5.members.includes('NIGHTTROOPER') && mothers5.members.includes('DEATHTROOPERPERIDEA'));
 assert.ok(!plans['5v5'].some(s=>s.members[0]==='CAPTAINENOCH'));
 assert.ok(plans['3v3'].find(s=>s.members[0]==='CAPTAINENOCH').project);
-for(const mode of Object.keys(plans))assert.ok(plans[mode].find(s=>s.members[0]==='SUPREMELEADERKYLOREN').project);
-console.log('PASS: both formats have correct sizes, valid IDs, no repeated main-lineup characters, and protected Mothers allocation.');
+for(const mode of Object.keys(plans)) {
+  assert.ok(!plans[mode].find(s=>s.members[0]==='SUPREMELEADERKYLOREN').project, mode + ': SLKR should be a main allocation');
+  assert.ok(!plans[mode].find(s=>s.members[0]==='GRIEVOUS').project, mode + ': Grievous should be a conditional main allocation');
+  assert.ok(plans[mode].find(s=>s.name.includes('KRU alternative')).project, mode + ': KRU alternative should be an overlapping project');
+}
+console.log('PASS: both formats have correct sizes, valid IDs, no repeated main-lineup characters, promoted SLKR/Grievous, and protected Mothers allocation.');

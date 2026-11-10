@@ -1,88 +1,66 @@
-# Current progression goals — reviewed 3 November 2026
+# Current progression goals — reviewed 10 November 2026
 
 ## Evidence and limits
 
-Latest saved public roster after the successful refresh: `40833664d3055148d0d191406e1f6e71858ce7d4`, `data/dashboard.json` / `data/player.json`, **3 November 2026, 19:50:34 AEDT (Australia/Sydney)**, `2026-11-03T08:50:34Z`. This is fresh. The initial review used the 2 November 09:05 snapshot, about 35 hours old after a failed Comlink-download step; the post-update refresh recovered. Rechecking the new snapshot found no changes to the core squad investments, equipped mods, or SLKR ability evidence below.
+Latest saved public roster: `ccd3ff65d027e0ad30a33feb4080ebeae4c54dff`, `data/dashboard.json` / `data/player.json`, **10 November 2026, 12:35:31 AEDT (Australia/Sydney)**, `2026-11-10T01:35:31Z`. It was about seven hours old at review and is fresh. `data/unit-catalog.json` is present.
 
-Public roster evidence establishes equipped characters, stars, gear/relics and mods. It does **not** establish inventory, unspent shards, tickets, token ownership, current shop availability, locked GAC roster or battle availability. No private snapshot or balances are included here. `unitStat` is null; sheet speeds below are estimates reconstructed from public base speed plus equipped mods, not measured combat stats.
+Public data establishes equipped units, stars, gear/relics and mods. It does **not** establish inventory, unspent shards, tickets, token balances, current shop stock, locked GAC roster, defence or battle availability. No private balance or GAC/TW detail is published here. Ability tiers in the export cannot safely be mapped to displayed levels or purchased zetas; manual ability status is labelled separately.
 
-The export's ability tiers cannot safely be equated to displayed levels or purchased zetas: SLKR records five tiers at 0 and Stasis Strike at 1, while prior screenshots showed level-2 abilities. `purchasedAbilityId` is empty and no ultimate ability appears. This is **not evidence of six missing zetas**, nor proof of a completed ultimate. Keep the last known ultimate-unfinished status provisional and verify in game. Do not apply full-kit counter expectations to uncertain upgrades.
+## 1. SLKR: R7 complete; finish the kit
 
-## 1. SLKR: finish the remaining build, not completed gear
+**SLKR is now 7★ / level 85 / R7**, with six level-15, 6-dot Speed + Health mods. Stop all prior gear and relic-material farming for R7. Equipped flat speed is +129; the health cross remains a defensible safety choice. Current Kyber mod data still strongly favours Speed + Health, speed arrow, critical-damage triangle and health circle; an offense cross is a future damage tradeoff, not an urgent correction.
 
-**Now 7★ / level 85 / G13 / R6. G13 and R5 are complete.** Stop farming his old G12 stun guns. Next relic target remains R7; defer R8/R9 for Executor pilots.
-
-R6→R7 recipe, **before subtracting inventory**:
-
-| Material | Required |
-|---|---:|
-| Fragmented / Incomplete / Flawed Signal Data | 20 / 25 / 35 |
-| Carbonite Circuit Boards / Bronzium Wiring | 20 / 30 |
-| Chromium Transistors / Aurodium Heatsinks | 20 / 20 |
-| Electrium Conductors / Zinbiddle Cards | 20 / 10 |
-| Credits | 500,000 |
-
-The earlier user estimate of about 30 blue still needed is historical, not a current balance. Farm only actual deficits. No completion date is inferred.
-
-**Mods:** six 6-dot, level-15 mods, Speed + Health. Mod levelling is complete. Speed arrow +32, critical-damage triangle, health cross and circle. Equipped flat speed is +129; with G13 base speed 393 and the completed Speed set, estimated sheet speed is approximately **561**, before leadership. This health-focused setup is reasonable while survivability is a concern; an offense cross is a future damage tradeoff, not a mandatory immediate swap. Preserve Mothers' mods.
-
-**Abilities:** verify purchased upgrades first. If absent, prioritise Supreme Leader and Stasis Strike; move Galactic Legend alongside these for the reported survivability problem. Then Furious Onslaught, Brutal Assault and Press the Advantage as needed. This is a conditional queue, not six assumed purchases. Current normal abilities have three displayed levels. Max Galactic Legend adds relic-scaled health/protection and damage reduction; do not count that benefit until acquired.
-
-**Ultimate:** finish remaining event stages with a verified team, generate Dark Side tickets from useful farms while unfinished, and avoid speculative attempts. No ultimate materials, tickets or battles-completed count can be derived here. Once R7 is reached, remaining abilities/ultimate continue while Cantina moves on; do not hold all other progression until the ultimate is done.
+The user has reported **two normal zetas applied**. The public export does not identify which two and does not evidence the ultimate, so do not assume a completed GL kit. Verify the ability screen before the next zeta. If Supreme Leader or Stasis Strike is missing, prioritise it; otherwise Galactic Legend is the next survivability upgrade, followed by Furious Onslaught and the remaining normal zetas. Continue ultimate event attempts only with verified tickets/materials and a vetted team. Their quantities and completed-stage count are unknown.
 
 ## 2. Energy and Executor
 
 | Resource | Current allocation | Exit condition |
 |---|---|---|
-| Fleet energy | Punishing One (now 5★), Fleet 5-F Hard, five attempts; resume TIE Echelon, Fleet 4-E Hard, five attempts | Stop each at 7★; no third hard-node farm. Echelon is 2★/level 1, not ready for arena. |
-| Spare Fleet energy | Actual missing gear for the active next build, after checking recipes and stock | No obsolete SLKR G12 diversion or blind gear fallback. |
-| Normal energy | IG-2000, Light Side 6-E Hard, still 6★; useful Dark Side gear for tickets | IG-2000's Light Side node does not generate tickets. Imperial TIE Bomber is 7★: stop that farm. |
-| Fleet Store / eligible Proving Grounds | Continue Razor Crest appearances/rewards | Razor Crest is absent from the roster; unspent blueprint progress is unknown. This is not Fleet energy. |
-| Cantina | SLKR R6→R7 deficits: Fragmented 8-C, Incomplete 8-F, Flawed 8-G | Use material names and Find if nodes change. 8-E is Mothers, not blue signal data. |
+| Fleet energy | Punishing One 6★, Fleet 5-F Hard; TIE Echelon 2★, Fleet 4-E Hard | Five attempts on the active node; stop at 7★. Prefer Punishing One, then Echelon unless immediate event timing changes the need. |
+| Normal energy | IG-2000 6★, Light Side 6-E Hard; useful Dark Side gear when ultimate tickets are still needed | Stop IG-2000 at 7★. Imperial TIE Bomber is complete at 7★. |
+| Fleet Store / eligible events | Razor Crest is now unlocked at 5★; continue buying its Fleet Arena Store appearances and claim eligible event rewards | Stop at 7★. Blueprint inventory and appearance timing are unknown. |
+| Cantina | Great Mothers 6★→7★ on 8-E, one character at a time | Reassess before Morgan 6★→7★ on 7-B. If Executor pilot relics become the binding gate, switch to the actual missing signal data. |
+| Signal data / relics | Executor pilots: Vader R5→R7, Piett R5→R8, Boba R5→R8 | Farm only observed recipe deficits; inventory is unknown. Time expensive R8 work to ship readiness. |
 | Prestige | Reserve primarily for Executor | Buy only a justified essential Finalizer improvement, not blanket upgrades. |
 
-**Executor remains the next major journey.** Outstanding roster milestones: Vader R5→R7, Piett R5→R8, Boba R5→R8, IG-2000 6★→7★ and Razor Crest unlock→7★. Bomber is complete. Plan the mandatory pilot relics after SLKR R7, but time expensive R8 spending to ship readiness. Punishing One supports the resulting fleet but is not an unlock prerequisite.
+**Executor remains the next major journey.** Remaining public milestones are Razor Crest 5★→7★, IG-2000 6★→7★, Vader R5→R7, Piett R5→R8 and Boba R5→R8. Punishing One is useful fleet development but not an Executor unlock prerequisite.
 
-## 3. Aurodium tokens: progress beyond completed recipients
+The Cantina choice now changes because SLKR R7 is done. Great Mothers first improves an established protected squad and enables seven-star uses that the current 6★ leader cannot access. Do not split the farm across Mothers and Morgan or invent a completion date from unknown shards. If the two Executor ships approach 7★ first, pause character shards and bank the precise pilot signal-data deficits.
 
-**Completed R5 targets:** Grievous (6★), Ninth Sister (7★), Seventh Sister (7★). Their roster upgrades are observed; the method of acquisition is not inferred. Do not buy another R5 token for them or expect one to finish Grievous's seventh star.
+## 3. Aurodium Lightspeed tokens
 
-| Eligible token role | Next useful Inquisitor recipient |
+Completed since the prior review: **Eighth Brother R5 and Fifth Brother R5**. Ninth and Seventh were already R5. **Second Sister R0→R5 is now the sole remaining original-five Inquisitor relic requirement and the best next Attacker-token choice if she appears on the live account whitelist.**
+
+| Role | Current choice |
 |---|---|
-| Attacker | Eighth Brother R0→R5, then Second Sister R0→R5 |
-| Support | Fifth Brother R2→R5 |
-| Tank / Healer | Neither advances the remaining original-five R5 requirements; retain currency unless a separate worthwhile recipient is established |
+| Attacker | Second Sister R0→R5, conditional on live eligibility |
+| Support / Healer / Tank | Hold unless a separate roster goal has a clearly eligible, higher-value recipient; no purchase is needed for the GI prerequisites now completed in those roles |
 
-Budget using the user's last confirmed **3,500 Era currency per Aurodium**, **1,000 per Carbonite**. Current account-specific price, role stock and whitelist were **not independently retrievable** on 3 November. The public Attacker token page reports a rotation through at least 3 November but its unit list is dynamically rendered. These are conditional recipients: check the exact in-game token list and price, not just the character's role. No purchased token is presumed. Aurodium's recorded 6★/R5 floor does not finish an existing 6★ unit's stars, and tokens do not provide zetas/omicrons. Journey/GL units are not proposed recipients.
-
-Keep Scout deferred: do not borrow Night Trooper or Death Trooper (Peridea) to justify a new Enoch 5v5 squad.
+Use the user's confirmed planning prices of **3,500 Aurodium** and **1,000 Carbonite**, but verify the live shop price and role whitelist before spending. Public pages confirm the current role-token rotation, not this account's stock or balance. Tokens do not supply zetas, omicrons or the event clear. Do not repeat completed purchases.
 
 ## 4. Nightsisters and next character journey
 
-Protected 5v5 allocation: **Great Mothers / Morgan / Nightsister Spirit / Night Trooper / Death Trooper (Peridea)**. Mothers/Morgan are 6★/R5, Spirit 7★/R5, both troopers 7★/R6. Repair their existing underlevelled mods without stripping the team.
+Protected 5v5 allocation remains **Great Mothers / Morgan / Nightsister Spirit / Night Trooper / Death Trooper (Peridea)**. Mothers and Morgan are 6★/R5, Spirit is 7★/R5, and both troopers are 7★/R6. There is no evidence that splitting this working team improves the 5v5 plan. Finish Spirit's remaining underlevelled mod without stripping the squad. The tradeoff of a split is a speculative Enoch team at the cost of a proven premium squad; retain the current five.
 
-After SLKR R7, default to **Great Mothers 7★ on Cantina 8-E, then Morgan 7★ on Cantina 7-B**, one promotion at a time. This improves an established squad but delays pilot signal data; if current ship readiness makes Executor immediately attainable, finish its mandatory relic budget first. Shards-in-hand are unknown, so no invented duration or simultaneous full-time farms. The 3v3 Enoch project may use the two troopers because the Mothers trio uses Morgan/Spirit; this does not authorize a 5v5 split.
-
-**Grand Inquisitor remains the next character journey**, preferably token-assisted. Two of five original Inquisitors now meet R5; Eighth, Second and Fifth remain. All five are 7★. Repair mod levels and check abilities before the event; R5 eligibility is not a guarantee of a clear. GI's own build will require a separate budget.
-
-Alternatives remain behind it: Starkiller still needs Kyle (5★/level 1/G1) and Dash/Talon seventh stars; GAS adds ship/character preparation; Revan/Malak introduce further farm chains. Grievous is already unlocked and R5, so his next work is mods/abilities and seventh-star shards, not a new journey or repeat token.
+**Grand Inquisitor is the next character journey.** Four of the original five are now R5; only Second Sister remains R0. This is a shorter and more immediate character unlock than Starkiller, GAS or Revan/Malak. After Second reaches R5, repair mod levels and verify abilities before attempting the event: entry eligibility is not clear-readiness. GI's own gear is a separate later budget.
 
 ## Era collection update
 
-Adelphi Ranger has now reached **5★**, completing the stated collection target; stop buying packs solely to reach that completed milestone. Its remaining era/GL requirements are separate and are not adopted as a new spending goal. Mercenary Guard Droid (B1) is not present in the fresh roster; retain its existing 5★ collection target without assuming it is owned or its event has been played.
+Adelphi Ranger and B1 Mercenary Battle Droid have both reached the prior **5★ collection goal**. That goal is complete; do not retain obsolete “absent” or pack-spending advice. Neither is adopted as a new immediate relic project.
 
-## Material changes since 27 October
+## Material changes since 3 November
 
-- SLKR G12→R6 and all chosen mods now level 15: remove stun-gun and generic mod-levelling advice; retain only R7, verified missing abilities and ultimate work.
-- Grievous, Ninth and Seventh R5 targets complete: advance tokens to Eighth/Second/Fifth.
-- Bomber reached 7★; Punishing One reached 5★; Razor Crest still absent. Resume Echelon after the completed SLKR gear bottleneck.
-- Full mod slots no longer hide level-1 mods: dashboard now reports underlevelled equipped mods from the same public snapshot, without changing its saved timestamp.
-- Keep SLKR and Grievous as explicitly described readiness projects until ability/mod gaps are resolved. No evidence supports dismantling Mothers or inventing improved win rates.
+- SLKR R6→R7: promote him into both main squad allocations; ability/ultimate verification replaces relic farming.
+- Eighth Brother and Fifth Brother reached R5: advance the token and GI plan to Second Sister only.
+- Punishing One 5★→6★ and Razor Crest absent→5★ unlocked: update fleet priorities; Echelon remains 2★.
+- Grievous now has six level-15 mods, so promote his R5 droid squad to a conditional main allocation; support mod levels and key abilities remain the safety gates.
+- Piett's six equipped mods are now level 15; remove the obsolete level-1/12 warning. Gideon, Dark and Range still have underlevelled mods.
+- Both era collection targets are complete. Great Mothers becomes the first post-SLKR Cantina shard target, subject to the Executor ship/relic gate.
 
-## Sources checked 3 November 2026
+## Sources checked 10 November 2026
 
-- [SLKR kit/base speed](https://swgoh.gg/units/supreme-leader-kylo-ren/) and [relic recipe](https://swgoh.gg/units/supreme-leader-kylo-ren/relic/).
-- [Cantina stage 8](https://swgoh.gg/campaigns/cantina-battles/M08/), [Mothers](https://swgoh.gg/units/great-mothers/), [Morgan](https://swgoh.gg/units/morgan-elsbeth/).
-- [Punishing One](https://swgoh.gg/units/punishing-one/), [Echelon](https://swgoh.gg/units/tie-echelon/), [IG-2000](https://swgoh.gg/units/ig-2000/).
-- [Grand Inquisitor event requirements](https://swgoh.gg/journey-guides/GRANDINQUISITOR/).
-- [Aurodium Attacker](https://swgoh.gg/lst/LST_ERA10_TIER04_ATTACKER/): live account-specific stock/price/eligible list remains unverified.
+- [SLKR current Kyber mod sets](https://swgoh.gg/units/supreme-leader-kylo-ren/best-mods/) and [primary-stat distribution](https://swgoh.gg/units/supreme-leader-kylo-ren/best-mods/).
+- [Great Mothers farm, Cantina 8-E](https://swgoh.gg/units/great-mothers/) and [Morgan Elsbeth farm, Cantina 7-B](https://swgoh.gg/units/morgan-elsbeth/).
+- [Punishing One, Fleet 5-F](https://swgoh.gg/units/punishing-one/), [TIE Echelon, Fleet 4-E](https://swgoh.gg/units/tie-echelon/) and [Razor Crest Fleet Arena Store listing](https://swgoh.gg/units/razor-crest/).
+- [Grand Inquisitor requirements](https://swgoh.gg/journey-guides/GRANDINQUISITOR/).
+- [Current Lightspeed Token rotation](https://swgoh.gg/lst/) and [Aurodium Attacker token](https://swgoh.gg/lst/LST_ERA10_TIER04_ATTACKER/); live account stock, eligibility and balance remain decisive.

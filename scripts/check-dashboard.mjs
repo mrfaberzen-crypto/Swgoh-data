@@ -67,7 +67,7 @@ try {
   assert.ok((await page.locator('#slkr-build-targets').textContent()).includes('R7'));
   assert.equal(await page.locator('#inquisitor-targets .farm-target').count(), 5);
   assert.ok((await page.locator('#grievous-targets').textContent()).includes('General Grievous'));
-  assert.ok((await page.locator('#slkr-status').textContent()).includes('Verify remaining zetas and ultimate'));
+  assert.ok((await page.locator('#slkr-status').textContent()).includes('Two normal zetas are user-reported'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Adelphi Ranger'));
   assert.ok((await page.locator('#era-targets').textContent()).includes('Mercenary Guard Droid (B1)'));
   // The roster updates over time: never hardcode a character's current stars.
@@ -94,7 +94,7 @@ try {
   assert.ok((await page.locator('#squad-list-5v5').innerText()).includes('Night Trooper'));
   await page.locator('#squad-search-5v5').fill('');
   await page.locator('#squad-filter-5v5').selectOption('project');
-  assert.equal(await page.locator('#squad-list-5v5 .squad-card').count(), 4);
+  assert.equal(await page.locator('#squad-list-5v5 .squad-card').count(), 3);
   await page.locator('[data-tab="squads-3v3"]').click();
   assert.equal(await page.locator('#squad-list-3v3 .squad-card').count(), 16);
   assert.ok((await page.locator('#squad-list-3v3').textContent()).includes('Enoch'));
