@@ -1,7 +1,7 @@
 {
   "versions": {
-    "latestGamedataVersion": "0.41.0:q5tE9_yXRiu_cwex6t0ekA",
-    "latestLocalizationBundleVersion": "OBB_J6BeSg-RcgUauXQFYA"
+    "latestGamedataVersion": "0.41.0:G-Ss_dRATPm9PgTc_q_gHQ",
+    "latestLocalizationBundleVersion": "z8TQ2lkgRMCFU_b4ja_dsA"
   },
   "units": {
     "BADBATCHECHO": {
@@ -210,6 +210,10 @@
     },
     "UNDERCOVERLANDO": {
       "name": "Skiff Guard (Lando Calrissian)",
+      "combatType": 1
+    },
+    "EDRIOTWOTUBES": {
+      "name": "Edrio Two Tubes",
       "combatType": 1
     },
     "OMEGAS3": {
@@ -960,6 +964,10 @@
       "name": "KX Security Droid",
       "combatType": 1
     },
+    "SERGEANTMELSHI": {
+      "name": "Sergeant Melshi",
+      "combatType": 1
+    },
     "CT210408_GLE_INHERIT": {
       "name": "501st Clone Trooper",
       "combatType": 1
@@ -1084,8 +1092,16 @@
       "name": "Sith Eternal Emperor",
       "combatType": 1
     },
+    "GENERALDRAVEN": {
+      "name": "General Draven",
+      "combatType": 1
+    },
     "RACCOON_MANDOGROGU_EVENT": {
       "name": "Rotta the Hutt",
+      "combatType": 1
+    },
+    "MOROFF": {
+      "name": "Moroff",
       "combatType": 1
     },
     "ARCTROOPER501ST_GLE_INHERIT": {
@@ -1290,6 +1306,10 @@
     },
     "EWOKELDER_SPEEDERBIKERAID": {
       "name": "Ewok Elder",
+      "combatType": 1
+    },
+    "BAILORGANA": {
+      "name": "Bail Organa",
       "combatType": 1
     },
     "THEMANDALORIANBESKARARMOR_JOURNEY_EVENT_TIER4": {
@@ -1636,6 +1656,10 @@
       "name": "Princess Leia",
       "combatType": 1
     },
+    "GENERALMERRICK": {
+      "name": "General Merrick",
+      "combatType": 1
+    },
     "SITHASSASSIN": {
       "name": "Sith Assassin",
       "combatType": 1
@@ -1942,6 +1966,10 @@
     },
     "REMNANTSNOWCOMMANDER": {
       "name": "Snowtrooper Commander",
+      "combatType": 1
+    },
+    "JYNERSOUNDERCOVER": {
+      "name": "Jyn Erso (Undercover)",
       "combatType": 1
     },
     "REY": {

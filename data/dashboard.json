@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-11-08T22:09:38Z",
+  "refreshedAt": "2026-11-10T01:35:31Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
-    "2": 48
+    "2": 52
   },
   "units": [
     {
@@ -95,7 +95,7 @@
       "name": "TIE Echelon",
       "type": "Ship",
       "stars": 2,
-      "level": 1,
+      "level": 85,
       "gear": null,
       "relic": null,
       "mods": null,
@@ -499,7 +499,7 @@
       "stars": 7,
       "level": 85,
       "gear": 13,
-      "relic": 2,
+      "relic": 5,
       "mods": 6,
       "modLevels": [
         12,
@@ -599,7 +599,7 @@
       "id": "B1MERCDROID",
       "name": "Mercenary Guard Droid (B1)",
       "type": "Character",
-      "stars": 4,
+      "stars": 5,
       "level": 57,
       "gear": 8,
       "relic": null,
@@ -1448,6 +1448,17 @@
       ]
     },
     {
+      "id": "RAZORCREST",
+      "name": "Razor Crest",
+      "type": "Ship",
+      "stars": 5,
+      "level": 1,
+      "gear": null,
+      "relic": null,
+      "mods": null,
+      "modLevels": null
+    },
+    {
       "id": "PLOKOON",
       "name": "Plo Koon",
       "type": "Character",
@@ -2231,8 +2242,8 @@
       "type": "Character",
       "stars": 7,
       "level": 85,
-      "gear": 12,
-      "relic": null,
+      "gear": 13,
+      "relic": 0,
       "mods": 6,
       "modLevels": [
         9,
@@ -2654,8 +2665,8 @@
       "name": "Adelphi Ranger",
       "type": "Character",
       "stars": 5,
-      "level": 31,
-      "gear": 6,
+      "level": 43,
+      "gear": 7,
       "relic": null,
       "mods": 0,
       "modLevels": []
@@ -3448,7 +3459,7 @@
       "id": "TIEREAPER",
       "name": "TIE Reaper",
       "type": "Ship",
-      "stars": 2,
+      "stars": 3,
       "level": 1,
       "gear": null,
       "relic": null,
