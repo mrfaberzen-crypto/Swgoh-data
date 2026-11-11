@@ -30,16 +30,29 @@ jobs:
 
       - name: Download latest SWGoH Comlink
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          release_json="$(curl --fail --silent --show-error --location https://api.github.com/repos/swgoh-utils/swgoh-comlink/releases/latest)"
+          # Authenticate API lookup to avoid the low anonymous GitHub API rate limit.
+          release_json="$(curl --fail --silent --show-error --location --retry 3 --retry-delay 2 \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header "Accept: application/vnd.github+json" \
+            --header "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/swgoh-utils/swgoh-comlink/releases/latest)"
           asset_url="$(jq -r '.assets[] | select(.name | test("^swgoh-comlink-linux-.*\\.tgz$")) | .browser_download_url' <<<"$release_json" | head -n 1)"
-          test -n "$asset_url"
-          curl --fail --silent --show-error --location "$asset_url" -o comlink.tgz
+          if [ -z "$asset_url" ]; then
+            echo "::error::No Linux Comlink .tgz asset found in the latest release."
+            exit 1
+          fi
+          curl --fail --silent --show-error --location --retry 3 --retry-delay 2 "$asset_url" -o comlink.tgz
           mkdir -p .comlink
           tar -xzf comlink.tgz -C .comlink
           binary="$(find .comlink -type f -name 'swgoh-comlink*' | head -n 1)"
-          test -n "$binary"
+          if [ -z "$binary" ]; then
+            echo "::error::Comlink release archive did not contain the expected executable."
+            exit 1
+          fi
           chmod +x "$binary"
           echo "COMLINK_BINARY=$binary" >> "$GITHUB_ENV"
 
