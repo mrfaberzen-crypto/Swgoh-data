@@ -2,11 +2,11 @@
   "name": "Faberzen",
   "allyCode": "843153117",
   "guild": "The Secondhand Scoundrels",
-  "refreshedAt": "2026-11-12T00:46:31Z",
+  "refreshedAt": "2026-11-12T23:40:20Z",
   "source": "SWGoH Comlink",
   "arena": {
     "1": 281,
-    "2": 55
+    "2": 65
   },
   "units": [
     {
@@ -132,7 +132,7 @@
       "stars": 5,
       "level": 85,
       "gear": 13,
-      "relic": null,
+      "relic": 0,
       "mods": 6,
       "modLevels": [
         12,
@@ -2176,7 +2176,7 @@
       "id": "DARKTROOPER",
       "name": "Dark Trooper",
       "type": "Character",
-      "stars": 6,
+      "stars": 7,
       "level": 85,
       "gear": 13,
       "relic": 5,
